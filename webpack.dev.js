@@ -10,7 +10,9 @@ module.exports = merge(common, {
     contentBase: path.resolve(__dirname, 'dist'),
     compress: true,
     stats: 'errors-only',
-    hot: true,
+    liveReload: true,
+    watchContentBase: true,
+    // hot: true,
     open: true,
     port: 9000
   },
