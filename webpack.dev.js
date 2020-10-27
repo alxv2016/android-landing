@@ -6,7 +6,6 @@ const DIST_PATH = path.join(__dirname, 'dist');
 module.exports = merge(common, {
   // https://webpack.js.org/configuration/mode/#usage
   mode: 'development',
-  watch: true,
   // https://webpack.js.org/configuration/devtool/#devtool
   // (inline = original sources)
   devtool: 'inline-source-map',
