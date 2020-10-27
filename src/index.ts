@@ -1,9 +1,19 @@
 import './scss/app.scss';
 import axios from 'axios';
 import material from './component';
+import scroll from 'scrollmagic';
 material.applyRipples();
 material.featherIcons();
 
+// const controller = new scroll.Controller();
+// const scene = new scroll.Scene({
+//   offset: 100,
+//   duration: 400
+// }).on('update', (e) => {
+//   console.log(e.target.controller().info('scrollPos'));
+// });
+// controller.addScene(scene);
+// console.log(controller.info(), scene);
 // async function getData() {
 //   const masterRef = await axios.get(`${process.env.API_URL}`).then((resp) => {
 //     return resp.data.refs[0].ref;

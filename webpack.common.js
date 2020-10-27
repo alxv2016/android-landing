@@ -16,7 +16,7 @@ module.exports = {
       import: `${SOURCE_PATH}/index.ts`,
       dependOn: 'vendor',
     },
-    vendor: ['lodash', 'feather-icons', 'axios'],
+    vendor: ['lodash', 'feather-icons', 'axios', 'scrollmagic'],
   },
   // 3 the output file(s)
   // https://webpack.js.org/configuration/output/#outputpath
