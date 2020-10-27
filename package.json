@@ -27,6 +27,7 @@
     "@babel/preset-env": "^7.12.1",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@types/feather-icons": "^4.7.0",
     "@types/lodash": "^4.14.162",
     "autoprefixer": "^10.0.1",
     "babel-loader": "^8.1.0",
@@ -54,6 +55,7 @@
   },
   "dependencies": {
     "axios": "^0.21.0",
+    "feather-icons": "^4.28.0",
     "lodash": "^4.17.20"
   },
   "husky": {
