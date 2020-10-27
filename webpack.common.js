@@ -24,6 +24,7 @@ module.exports = {
   // https://webpack.js.org/configuration/output/#outputpublicpath
   output: {
     path: DIST_PATH,
+    publicPath: './',
     filename: 'js/[name].[contenthash].bundle.js',
     assetModuleFilename: 'assets/[hash][ext][query]',
   },

@@ -17,6 +17,7 @@ module.exports = merge(common, {
   // https://webpack.js.org/configuration/dev-server/#devserverwatchcontentbase
   devServer: {
     contentBase: DIST_PATH,
+    publicPath: '/',
     compress: true,
     stats: 'errors-only',
     liveReload: true,
