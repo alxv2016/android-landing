@@ -3,6 +3,7 @@ import axios from 'axios';
 import material from './component';
 material.applyRipples();
 material.featherIcons();
+material.initTopBar();
 
 // async function getData() {
 //   const masterRef = await axios.get(`${process.env.API_URL}`).then((resp) => {
