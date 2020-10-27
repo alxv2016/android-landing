@@ -1,17 +1,23 @@
 import './scss/app.scss';
-import _ from 'lodash';
-import Axios from 'axios';
+import feather from 'feather-icons';
+import axios from 'axios';
+import {specialRun} from './component';
+feather.replace();
+
+specialRun();
 
 async function getData() {
-  const masterRef = await Axios.get(`${process.env.API_URL}`).then((resp) => {
+  const masterRef = await axios.get(`${process.env.API_URL}`).then((resp) => {
     return resp.data.refs[0].ref;
   });
 
-  const dataRef = Axios.get(`${process.env.API_URL}/documents/search`, {
-    params: {ref: masterRef, access_token: process.env.ACCESS_TOKEN},
-  }).then((resp) => {
-    return resp.data.results;
-  });
+  const dataRef = axios
+    .get(`${process.env.API_URL}/documents/search`, {
+      params: {ref: masterRef, access_token: process.env.ACCESS_TOKEN},
+    })
+    .then((resp) => {
+      return resp.data.results;
+    });
   return dataRef;
 }
 async function returnData() {
