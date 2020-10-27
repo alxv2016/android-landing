@@ -5,7 +5,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
 const SOURCE_PATH = path.resolve(__dirname, 'src');
 const DIST_PATH = path.resolve(__dirname, 'dist');
-// console.log('Current path', `${SOURCE_PATH}index.ts`);
 // Common webpack config
 module.exports = {
   // 1 base directory

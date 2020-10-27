@@ -2,7 +2,6 @@ const path = require('path');
 const {merge} = require('webpack-merge');
 const common = require('./webpack.common.js');
 const DIST_PATH = path.join(__dirname, 'dist');
-console.log('current path', path.join(__dirname, 'dist'));
 // Merge webpack dev config with common configs
 module.exports = merge(common, {
   // https://webpack.js.org/configuration/mode/#usage
