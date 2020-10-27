@@ -18,7 +18,6 @@ module.exports = {
       import: `${SOURCE_PATH}/index.ts`,
       dependOn: 'vendor',
     },
-    component: `${SOURCE_PATH}/component.ts`,
     vendor: ['lodash', 'feather-icons', 'axios'],
   },
   // 3 the output file(s)
