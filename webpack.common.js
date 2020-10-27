@@ -1,5 +1,4 @@
 const path = require('path');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
@@ -36,7 +35,6 @@ module.exports = {
   // 5 Plugins
   // https://webpack.js.org/configuration/plugins/#plugins
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
       filename: 'index.html',

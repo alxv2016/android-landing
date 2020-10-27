@@ -1,5 +1,8 @@
-function runTest(): void {
-  console.log('test ran from component.js');
-}
+import {MDCRipple} from '@material/ripple';
 
-export {runTest as specialRun};
+export function applyRipples() {
+  const matButtons = document.querySelectorAll('.mdc-button');
+  Array.from(matButtons).map((node) => {
+    return new MDCRipple(node);
+  });
+}

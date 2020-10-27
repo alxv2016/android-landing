@@ -21,6 +21,13 @@ legend {
   padding: 0;
 }
 //Remove trailing margins from nested lists.
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+//Remove trailing margins from nested lists.
 li > {
   ol,
   ul {

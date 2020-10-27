@@ -1,0 +1,29 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 68px;
+  background-color: lavender;
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    @include container-padding;
+  }
+  &__brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 124px;
+  }
+}
+
+.brand-logo {
+  display: block;
+  height: auto;
+  width: 100%;
+}

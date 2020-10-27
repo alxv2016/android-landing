@@ -1,10 +1,10 @@
 import './scss/app.scss';
 import feather from 'feather-icons';
 import axios from 'axios';
-import {specialRun} from './component';
+import {applyRipples} from './component';
 feather.replace();
 
-specialRun();
+applyRipples();
 
 async function getData() {
   const masterRef = await axios.get(`${process.env.API_URL}`).then((resp) => {
