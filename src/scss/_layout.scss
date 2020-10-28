@@ -4,46 +4,88 @@
   @include container-padding;
 }
 
+.content-section {
+  position: relative;
+  overflow: hidden;
+}
+
 .content-hero {
   position: relative;
-  padding-top: $spacing--4xl;
+  padding-top: $spacing--3xl;
   &__body {
     position: relative;
     max-width: 768px;
     margin: auto;
-    margin-bottom: $spacing--3xl;
+    margin-bottom: $spacing--xl;
+    @include breakpoint(md) {
+      margin-bottom: $spacing--3xl;
+    }
     .hero-title {
+      font-size: $title--1;
       font-weight: font-weight('bold');
-      margin-bottom: $spacing--xl;
+      margin-bottom: $spacing--lg;
+      @include breakpoint(md) {
+        font-size: $large--title;
+        margin-bottom: $spacing--xl;
+      }
+      @include breakpoint(lg) {
+        font-size: $huge--title;
+      }
     }
     .hero-overline {
+      font-size: $body--2;
       font-weight: font-weight('medium');
+      @include breakpoint(md) {
+        font-size: $body--1;
+      }
+      @include breakpoint(lg) {
+        font-size: $subtitle;
+      }
+    }
+    .hero-body {
+      font-size: $body--1;
+      @include breakpoint(md) {
+        font-size: $subtitle;
+      }
     }
   }
 }
 
 .pixel-hero {
   position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  width: 520px;
+  width: 100%;
+  max-width: 450px;
   height: auto;
-
-  &__circle {
-    position: absolute;
-    z-index: -1;
-    bottom: -288px;
-    margin: auto;
-    height: 768px;
-    width: 768px;
-    border-radius: 100%;
-    background-color: color('brand');
-  }
+  margin: auto;
 }
 
 #pixel5-1 {
   position: relative;
   z-index: 1;
+}
+
+.pixel-circle {
+  position: relative;
+  bottom: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  width: 420px;
+  height: 420px;
+  border-radius: 100%;
+  background-color: color('brand');
+
+  @include breakpoint(sm) {
+    width: 480px;
+    height: 480px;
+    bottom: 380px;
+  }
+  @include breakpoint(md) {
+    width: 568px;
+    height: 568px;
+  }
 }
