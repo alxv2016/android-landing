@@ -13,8 +13,8 @@
   }
 }
 
-@function ye-color($key: 'primary') {
-  @return map-get($kanye-colors, $key);
+@function color($key: 'primary') {
+  @return map-get($colors, $key);
 }
 
 @function font-weight($key: 'regular') {

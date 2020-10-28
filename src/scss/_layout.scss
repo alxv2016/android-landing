@@ -3,3 +3,47 @@
   width: 100%;
   @include container-padding;
 }
+
+.content-hero {
+  position: relative;
+  padding-top: $spacing--4xl;
+  &__body {
+    position: relative;
+    max-width: 768px;
+    margin: auto;
+    margin-bottom: $spacing--3xl;
+    .hero-title {
+      font-weight: font-weight('bold');
+      margin-bottom: $spacing--xl;
+    }
+    .hero-overline {
+      font-weight: font-weight('medium');
+    }
+  }
+}
+
+.pixel-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 520px;
+  height: auto;
+
+  &__circle {
+    position: absolute;
+    z-index: -1;
+    bottom: -288px;
+    margin: auto;
+    height: 768px;
+    width: 768px;
+    border-radius: 100%;
+    background-color: color('brand');
+  }
+}
+
+#pixel5-1 {
+  position: relative;
+  z-index: 1;
+}

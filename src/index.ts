@@ -4,7 +4,7 @@ import material from './component';
 import scroll from 'scrollmagic';
 material.applyRipples();
 material.featherIcons();
-
+material.inlineLineSVG();
 // const controller = new scroll.Controller();
 // const scene = new scroll.Scene({
 //   offset: 100,

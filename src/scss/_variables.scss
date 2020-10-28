@@ -24,8 +24,8 @@ $breakpoints: (
   xxl: 1440px,
 ) !default;
 // Colors
-$kanye-colors: (
-  primary-bg: #ecece2,
+$colors: (
+  primary-bg: #d0ebfe,
   secondary-bg: #f8f8f9,
   light-bg: #ffffff,
   dark: #3c393a,
@@ -35,7 +35,7 @@ $kanye-colors: (
   tertiary: #c2c0ba,
   primary-accent: #ffb147,
   secondary-accent: #d6e8ae,
-  brand: #ceccc5,
+  brand: #38d972,
 ) !default;
 // Border radius
 $border-radius: 1.25rem !default;
@@ -53,6 +53,7 @@ $title--3: 1.728rem; //(1.44 * 1.2) 27px
 $title--2: 2.074rem; //(1.728 * 1.2) 33px
 $title--1: 2.488rem; //(2.074 * 1.2) 39px
 $large--title: 2.986rem; //(2.489 * 1.2) 47px
+$huge--title: 3.58rem; // (2.968 * 1.2) 57px
 // Spacing scale
 $spacing--base: 1rem !default;
 $spacing--2xs: 0.125 * $spacing--base; // 2px;
