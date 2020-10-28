@@ -1,10 +1,12 @@
 .header {
   position: relative;
+  z-index: 4;
+  top: 0;
   display: flex;
   align-items: center;
   width: 100%;
   min-height: 68px;
-  background-color: lavender;
+  @include frosted-glass(color(light-bg));
   &__container {
     position: relative;
     display: flex;
