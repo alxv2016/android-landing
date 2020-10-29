@@ -8,40 +8,22 @@ const scrollmg = {
   initScrollMagic: () => {
     console.log('hi!');
     ScrollTrigger.create({
-      onUpdate: (self) => {
-        console.log(self.direction);
+      markers: true,
+      onUpdate: (self: any) => {
+        const scrollDirection = self.direction;
+        const scrollPos = self.scroller.pageYOffset;
+        let scrollingDown = false;
+        scrollDirection === 1 ? (scrollingDown = true) : (scrollingDown = false);
+        const headerNav = document.querySelector('#js-header');
+        const headerHeight = headerNav?.getBoundingClientRect().height;
+
+        if (headerHeight && scrollPos >= headerHeight) {
+          scrollingDown
+            ? headerNav?.classList.add('js-header--hidden')
+            : headerNav?.classList.remove('js-header--hidden');
+        }
       },
     });
-    // const controller = new scroll.Controller();
-    // const scene = new scroll.Scene({
-    //   triggerElement: '#trigger-one',
-    //   duration: 400,
-    // })
-    //   .addTo(controller)
-    //   .on('update', (e: UpdateEvent) => {
-    //     const scrollDirection = e.target.controller().info('scrollDirection');
-    //     const scrollPos = e.scrollPos;
-    //     let scrollingDown = false;
-    //     scrollDirection === 'FORWARD' ? (scrollingDown = true) : (scrollingDown = false);
-    //     const headerNav = document.querySelector('#js-header');
-    //     const headerHeight = headerNav?.getBoundingClientRect().height;
-    //     if (headerHeight && scrollPos >= headerHeight) {
-    //       scrollingDown
-    //         ? headerNav?.classList.add('js-header--hidden')
-    //         : headerNav?.classList.remove('js-header--hidden');
-    //     }
-    //   });
-    // const scene2 = new scroll.Scene({
-    //   triggerElement: '#trigger-two',
-    //   offset: 320,
-    // })
-    //   .on('enter leave', (e: EnterEvent) => {
-    //     const entered = e.type === 'enter' ? true : false;
-    //     const greendot = document.querySelector('#pixie');
-    //     entered ? greendot?.classList.remove('js-pixel-circle') : greendot?.classList.add('js-pixel-circle');
-    //     console.log(entered);
-    //   })
-    //   .addTo(controller);
   },
 };
 
