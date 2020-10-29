@@ -55,6 +55,7 @@
     "@material/button": "^7.0.0",
     "@material/ripple": "^7.0.0",
     "axios": "^0.21.0",
+    "butter-slider": "^1.1.1",
     "feather-icons": "^4.28.0",
     "lodash": "^4.17.20",
     "scrollmagic": "^2.0.7"
