@@ -1,4 +1,5 @@
 import scroll, {EnterEvent, UpdateEvent} from 'scrollmagic';
+import {gsap} from 'gsap';
 
 const scrollmg = {
   initScrollMagic: () => {

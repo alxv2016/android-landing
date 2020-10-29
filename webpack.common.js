@@ -16,7 +16,7 @@ module.exports = {
       import: path.resolve(__dirname, 'src/index.ts'),
       dependOn: 'vendor',
     },
-    vendor: ['lodash', 'axios', 'butter-slider', 'scrollmagic', '@material/button', '@material/trigger'],
+    vendor: ['lodash', 'axios', 'butter-slider', 'scrollmagic', 'gsap', '@material/button', '@material/trigger'],
   },
   // 3 the output file(s) Where webpack outputs the assets and bundles
   // https://webpack.js.org/configuration/output/#outputpath
