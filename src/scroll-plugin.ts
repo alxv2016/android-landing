@@ -8,7 +8,7 @@ const scrollmg = {
   initScrollMagic: () => {
     console.log('hi!');
     ScrollTrigger.create({
-      markers: true,
+      markers: false,
       onUpdate: (self: any) => {
         const scrollDirection = self.direction;
         const scrollPos = self.scroller.pageYOffset;
@@ -23,6 +23,19 @@ const scrollmg = {
             : headerNav?.classList.remove('js-header--hidden');
         }
       },
+    });
+
+    gsap.to('#pixie', {
+      scrollTrigger: {
+        markers: true,
+        trigger: '#pixie',
+        scrub: 0.3,
+        start: 'top center',
+        end: 'bottom center',
+      },
+      immediateRender: false,
+      scale: 4,
+      ease: 'none',
     });
   },
 };
