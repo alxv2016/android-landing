@@ -6,13 +6,14 @@
     <title>Hello world!</title>
   </head>
   <body>
-    <header class="header mdc-top-app-bar">
+    <header id="js-header" class="header">
       <div class="header__container">
         <div class="header__brand"><img class="brand-logo" src="./assets/android-icon.svg" /></div>
         <nav class="header__nav">
           <ul class="header__menu">
             <li class="header__menu-item">
-              <button class="mdc-button mdc-button--densed mdc-button--raised mdc-button--custom">
+              <button class="mdc-button mdc-button--outlined mdc-button--custom">
+                <div class="mdc-button__ripple"></div>
                 <span class="mdc-button__label">Download</span>
               </button>
             </li>
@@ -20,6 +21,23 @@
         </nav>
       </div>
     </header>
-    <div style="height: 3080px"></div>
+    <section id="trigger-one" class="content-section">
+      <div class="content-hero container">
+        <div class="content-hero__body">
+          <span class="hero-overline">Android 11</span>
+          <h1 class="hero-title">The OS that gets to what’s important.</h1>
+          <p class="hero-body">
+            Go straight to the stuff that matters most. Because Android 11 is optimized for how you use your phone.
+            Giving you powerful device controls. And easier ways to manage conversations, privacy settings and so much
+            more.
+          </p>
+        </div>
+        <div id="trigger-two" class="pixel-hero">
+          <img id="pixel5-1" src="./assets/pixel5-1.png" />
+        </div>
+        <div id="pixie" class="pixel-circle js-pixel-circle"></div>
+      </div>
+    </section>
+    <div style="height: 4000px"></div>
   </body>
 </html>

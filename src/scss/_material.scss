@@ -1,29 +1,10 @@
-@use "@material/theme" with (
-  $primary: #9c27b0,
-  $secondary: #76ff03,
-  $background: #fff,
-);
-// Material button
-// https://github.com/material-components/material-components-web/tree/master/packages/mdc-button#sass-mixins
 @use "@material/button";
 @use "@material/ripple";
-@use "@material/top-app-bar/mdc-top-app-bar";
 @include button.core-styles;
-// Customization
+
 .mdc-button--custom {
-  position: relative;
-  // @include button.ink-color(#84565E);
-  // @include button.container-fill-color(red);
-  // @include button.disabled-container-fill-color(blue);
-  // @include button.icon-color(yellow);
-  // @include button.disabled-icon-color(yellow);
-  // @include button.disabled-ink-color(yellow);
-  // Sets density scale for button. Supported density scale values (-3, -2, -1, 0).
-  // @include button.density(0);
-  // @include button.height(4px);
-  // @include button.shape-radius($radius, $density-scale, $rtl-reflexive)
-  // @include button.horizontal-padding($padding);
-  // @include button.outline-color($color);
-  // @include button.disabled-outline-color($color);
-  // @include button.outline-width($width, $padding);
+  font-size: $body--2;
+  text-transform: capitalize;
+  @include button.ink-color(#333333);
+  //@include button.horizontal-padding(14px);
 }

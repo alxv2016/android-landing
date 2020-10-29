@@ -1,9 +1,10 @@
 import './scss/app.scss';
 import axios from 'axios';
 import material from './component';
+import scrollmg from './scroll-plugin';
 material.applyRipples();
 material.featherIcons();
-material.initTopBar();
+scrollmg.initScrollMagic();
 
 // async function getData() {
 //   const masterRef = await axios.get(`${process.env.API_URL}`).then((resp) => {
