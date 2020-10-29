@@ -12,6 +12,10 @@
 .content-hero {
   position: relative;
   padding-top: $spacing--3xl;
+  margin-top: $spacing--2xl;
+  @include breakpoint(md) {
+    margin-top: $spacing--3xl;
+  }
   &__body {
     position: relative;
     max-width: 768px;
@@ -72,7 +76,8 @@
   position: relative;
   bottom: 280px;
   left: 50%;
-  transform: translateX(-50%);
+  transition: transform 0.6s ease;
+  transform: translateX(-50%) scale(9);
   z-index: -1;
   width: 420px;
   height: 420px;
@@ -88,4 +93,8 @@
     width: 568px;
     height: 568px;
   }
+}
+
+.js-pixel-circle {
+  transform: translateX(-50%) scale(1);
 }

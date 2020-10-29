@@ -1,11 +1,13 @@
 .header {
-  position: relative;
+  position: fixed;
   z-index: 4;
   top: 0;
   display: flex;
   align-items: center;
   width: 100%;
   min-height: 68px;
+  transform: translateY(0);
+  transition: transform 0.3s ease-out;
   @include frosted-glass(color(light-bg));
   &__container {
     position: relative;
@@ -22,6 +24,10 @@
     height: auto;
     width: 124px;
   }
+}
+
+.js-header--hidden {
+  transform: translateY(-80px);
 }
 
 .brand-logo {
