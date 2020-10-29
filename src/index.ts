@@ -4,7 +4,6 @@ import material from './component';
 import scrollmg from './scroll-plugin';
 material.applyRipples();
 material.featherIcons();
-// material.inlineLineSVG();
 scrollmg.initScrollMagic();
 
 // async function getData() {
