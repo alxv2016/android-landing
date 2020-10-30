@@ -6,11 +6,11 @@
 
 .content-section {
   position: relative;
-  overflow: hidden;
 }
 
 .content-hero {
   position: relative;
+  width: 100%;
   padding-top: $spacing--3xl;
   margin-top: $spacing--2xl;
   @include breakpoint(md) {
@@ -55,8 +55,20 @@
   }
 }
 
+.hero-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-section--green {
+  background-color: color('brand');
+}
+
 .pixel-hero {
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
   display: flex;
   align-items: center;
@@ -64,7 +76,6 @@
   width: 100%;
   max-width: 450px;
   height: auto;
-  margin: auto;
 }
 
 #pixel5-1 {
@@ -72,11 +83,30 @@
   z-index: 1;
 }
 
-.pixel-circle {
+.pixels-container {
   position: relative;
-  bottom: 280px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .pixel-hero {
+    display: flex;
+    flex-shrink: 0;
+    width: 50%;
+    left: 0;
+    transform: none;
+  }
+}
+
+.pixel-circle {
+  position: absolute;
+  top: 380px;
+  overflow: hidden;
   left: 50%;
   transform: translateX(-50%);
+  //top: -380px;
   z-index: -1;
   width: 420px;
   height: 420px;
@@ -86,7 +116,6 @@
   @include breakpoint(sm) {
     width: 480px;
     height: 480px;
-    bottom: 380px;
   }
   @include breakpoint(md) {
     width: 568px;

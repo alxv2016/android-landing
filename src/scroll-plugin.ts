@@ -1,8 +1,7 @@
 import {gsap} from 'gsap';
-import {CSSRulePlugin} from 'gsap/CSSRulePlugin';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(CSSRulePlugin, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const scrollmg = {
   initScrollMagic: () => {
@@ -24,17 +23,17 @@ const scrollmg = {
         }
       },
     });
-
     gsap.to('#pixie', {
       scrollTrigger: {
         markers: true,
         trigger: '#pixie',
-        scrub: 0.3,
+        scrub: 0.4,
         start: 'top center',
-        end: 'bottom center',
+        end: '300px center',
       },
-      immediateRender: false,
       scale: 4,
+      y: 200,
+      borderRadius: 0,
       ease: 'none',
     });
   },
