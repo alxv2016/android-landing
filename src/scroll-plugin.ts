@@ -23,28 +23,43 @@ const scrollmg = {
         }
       },
     });
-    gsap.to('#pixie', {
+    const tl = gsap.timeline({
       scrollTrigger: {
         // markers: true,
         trigger: '#pixie',
-        scrub: 0.4,
+        scrub: 0.6,
         start: 'top center',
         end: '300px center',
       },
-      scale: 4,
-      y: 200,
-      ease: 'none',
+      defaults: {ease: 'none'},
     });
+    tl.to('#pixie', {
+      scale: 2,
+      y: 200,
+    }).to('#pixie', {
+      scale: 4,
+      y: 600,
+    });
+    // gsap.to('#pixie', {
+    //   scrollTrigger: {
+    //     // markers: true,
+    //     trigger: '#pixie',
+    //     scrub: 0.4,
+    //     start: 'top center',
+    //     end: '300px center',
+    //   },
+    //   scale: 4,
+    //   y: 200,
+    //   ease: 'none',
+    // });
 
     gsap.to('#pixel5-1', {
-      yPercent: 60,
+      yPercent: 200,
       ease: 'none',
       scrollTrigger: {
         markers: true,
-        trigger: '#trigger-one',
+        trigger: '#trigger-2',
         scrub: true,
-        start: '200px center',
-        end: 'bottom center',
       },
     });
   },

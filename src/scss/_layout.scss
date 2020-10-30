@@ -4,8 +4,14 @@
   @include container-padding;
 }
 
-.content-section {
+.section {
   position: relative;
+
+  &--overflow {
+    width: 100%;
+    border: 1px solid cyan;
+    overflow: hidden;
+  }
 }
 
 .content-hero {
@@ -55,51 +61,14 @@
   }
 }
 
-.hero-section {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.pixel-hero {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 450px;
-  height: auto;
-}
-
-#pixel5-1 {
-  position: relative;
-  z-index: 1;
-}
-
-.pixels-container {
-  position: relative;
-  width: 100%;
-  margin-bottom: $spacing--4xl;
-  .pixel-hero {
-    width: 50%;
-    left: 0;
-    transform: none;
-  }
-}
-
 .pixel-circle {
   position: absolute;
-  top: 380px;
-  overflow: hidden;
+  top: 25%;
   left: 50%;
   transform: translateX(-50%);
-  //top: -380px;
   z-index: -1;
-  width: 420px;
-  height: 420px;
+  width: 320px;
+  height: 320px;
   border-radius: 100%;
   background-color: color('brand');
 
@@ -112,3 +81,38 @@
     height: 568px;
   }
 }
+
+.pixel-hero {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  min-width: 280px;
+  max-width: 450px;
+  height: auto;
+  margin-bottom: $spacing--4xl;
+}
+
+#pixel5-1 {
+  position: relative;
+  z-index: 1;
+}
+
+// .pixels-container {
+//   position: relative;
+//   top: 84px;
+//   display: flex;
+//   justify-content: center;
+//   width: 100%;
+//   margin-bottom: $spacing--4xl;
+//   .pixel-hero2 {
+//     flex-shrink: 0;
+//     width: 50%;
+//     min-width: 200px;
+//     max-width: 450px;
+//   }
+// }
