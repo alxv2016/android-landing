@@ -61,10 +61,6 @@
   overflow: hidden;
 }
 
-.hero-section--green {
-  background-color: color('brand');
-}
-
 .pixel-hero {
   position: relative;
   left: 50%;
@@ -86,14 +82,8 @@
 .pixels-container {
   position: relative;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  margin-bottom: $spacing--4xl;
   .pixel-hero {
-    display: flex;
-    flex-shrink: 0;
     width: 50%;
     left: 0;
     transform: none;

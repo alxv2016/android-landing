@@ -25,7 +25,7 @@ const scrollmg = {
     });
     gsap.to('#pixie', {
       scrollTrigger: {
-        markers: true,
+        // markers: true,
         trigger: '#pixie',
         scrub: 0.4,
         start: 'top center',
@@ -33,8 +33,19 @@ const scrollmg = {
       },
       scale: 4,
       y: 200,
-      borderRadius: 0,
       ease: 'none',
+    });
+
+    gsap.to('#pixel5-1', {
+      yPercent: 60,
+      ease: 'none',
+      scrollTrigger: {
+        markers: true,
+        trigger: '#trigger-one',
+        scrub: true,
+        start: '200px center',
+        end: 'bottom center',
+      },
     });
   },
 };
