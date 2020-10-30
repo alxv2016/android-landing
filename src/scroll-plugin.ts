@@ -26,17 +26,17 @@ const scrollmg = {
     const tl = gsap.timeline({
       scrollTrigger: {
         // markers: true,
-        trigger: '#pixie',
-        scrub: 0.6,
+        trigger: '#product-spotlight',
+        scrub: 0.4,
         start: 'top center',
         end: '300px center',
       },
       defaults: {ease: 'none'},
     });
-    tl.to('#pixie', {
+    tl.to('#product-spotlight', {
       scale: 2,
       y: 200,
-    }).to('#pixie', {
+    }).to('#product-spotlight', {
       scale: 4,
       y: 600,
     });
@@ -53,8 +53,38 @@ const scrollmg = {
     //   ease: 'none',
     // });
 
-    gsap.to('#pixel5-1', {
-      yPercent: 200,
+    gsap.to('#pixel5', {
+      yPercent: 80,
+      ease: 'none',
+      scrollTrigger: {
+        markers: true,
+        trigger: '#trigger-2',
+        scrub: true,
+      },
+    });
+
+    gsap.to('#pixel5-2', {
+      yPercent: 30,
+      ease: 'none',
+      scrollTrigger: {
+        markers: true,
+        trigger: '#trigger-2',
+        scrub: true,
+      },
+    });
+
+    gsap.to('#pixel5-3', {
+      yPercent: -45,
+      ease: 'none',
+      scrollTrigger: {
+        markers: true,
+        trigger: '#trigger-2',
+        scrub: true,
+      },
+    });
+
+    gsap.to('#pixel5-4', {
+      yPercent: 65,
       ease: 'none',
       scrollTrigger: {
         markers: true,

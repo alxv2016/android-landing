@@ -6,10 +6,8 @@
 
 .section {
   position: relative;
-
+  width: 100%;
   &--overflow {
-    width: 100%;
-    border: 1px solid cyan;
     overflow: hidden;
   }
 }
@@ -18,25 +16,25 @@
   position: relative;
   width: 100%;
   padding-top: $spacing--3xl;
-  margin-top: $spacing--2xl;
+  margin-top: $margin--xl;
   @include breakpoint(md) {
-    margin-top: $spacing--3xl;
+    margin-top: $margin--2xl;
   }
   &__body {
     position: relative;
     max-width: 768px;
     margin: auto;
-    margin-bottom: $spacing--xl;
+    margin-bottom: $margin--lg;
     @include breakpoint(md) {
-      margin-bottom: $spacing--3xl;
+      margin-bottom: $margin--xl;
     }
     .hero-title {
       font-size: $title--1;
       font-weight: font-weight('bold');
-      margin-bottom: $spacing--lg;
+      margin-bottom: $margin--xs;
       @include breakpoint(md) {
         font-size: $large--title;
-        margin-bottom: $spacing--xl;
+        margin-bottom: $margin--sm;
       }
       @include breakpoint(lg) {
         font-size: $huge--title;
@@ -61,7 +59,22 @@
   }
 }
 
-.pixel-circle {
+.product-hero {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  min-width: 220px;
+  max-width: 280px;
+  height: auto;
+  margin-bottom: $margin--xl;
+}
+
+#product-spotlight {
   position: absolute;
   top: 25%;
   left: 50%;
@@ -82,37 +95,36 @@
   }
 }
 
-.pixel-hero {
+.products-container {
   position: relative;
+  z-index: 3;
+  width: 100%;
+  padding-bottom: $spacing--4xl;
+  height: 1440px;
+}
+
+#pixel5-2,
+#pixel5-3,
+#pixel5-4 {
+  position: absolute;
+  width: 50%;
+  min-width: 220px;
+  max-width: 280px;
+  height: auto;
+}
+
+#pixel5-2 {
+  top: 0;
+  left: -120px;
+}
+
+#pixel5-3 {
+  top: 0;
+  right: -120px;
+}
+
+#pixel5-4 {
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  min-width: 280px;
-  max-width: 450px;
-  height: auto;
-  margin-bottom: $spacing--4xl;
 }
-
-#pixel5-1 {
-  position: relative;
-  z-index: 1;
-}
-
-// .pixels-container {
-//   position: relative;
-//   top: 84px;
-//   display: flex;
-//   justify-content: center;
-//   width: 100%;
-//   margin-bottom: $spacing--4xl;
-//   .pixel-hero2 {
-//     flex-shrink: 0;
-//     width: 50%;
-//     min-width: 200px;
-//     max-width: 450px;
-//   }
-// }

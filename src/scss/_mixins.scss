@@ -76,12 +76,12 @@
 
 // contain screen size
 @mixin container-padding {
-  padding: 0 $spacing--base;
+  padding: 0 $spacing--lg;
   @include breakpoint(md) {
     padding: 0 $spacing--xl;
   }
   @include breakpoint(lg) {
-    padding: 0 $spacing--3xl;
+    padding: 0 $spacing--4xl;
   }
   @include breakpoint(xl) {
     max-width: $max-screen-size;

@@ -1,6 +1,6 @@
 /* Typography styles */
 p {
-  margin-bottom: $spacing--lg;
+  margin-bottom: $spacing--xl;
 }
 
 h1,
@@ -10,7 +10,7 @@ h4,
 form legend {
   line-height: $heading-line-height;
   font-weight: inherit;
-  margin: $spacing--lg 0 $spacing--sm;
+  margin: $spacing--xl 0 $spacing--sm;
 }
 
 .huge--title {

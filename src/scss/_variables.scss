@@ -55,13 +55,20 @@ $title--1: 2.488rem; //(2.074 * 1.2) 39px
 $large--title: 2.986rem; //(2.489 * 1.2) 47px
 $huge--title: 3.58rem; // (2.968 * 1.2) 57px
 // Spacing scale
-$spacing--base: 1rem !default;
-$spacing--2xs: 0.125 * $spacing--base; // 2px;
-$spacing--xs: 0.25 * $spacing--base; // 4px
-$spacing--sm: 0.5 * $spacing--base; // 8px
-$spacing--md: 0.75 * $spacing--base; // 12px
-$spacing--lg: 1.25 * $spacing--base; // 20px
-$spacing--xl: 2 * $spacing--base; // 32px
-$spacing--2xl: 3.25 * $spacing--base; // 52px
-$spacing--3xl: 5.25 * $spacing--base; // 84px
-$spacing--4xl: 8.5 * $spacing--base; // 136px
+$spacing--2xs: 0.125rem; // 2px
+$spacing--xs: 0.25rem; // 4px
+$spacing--sm: 0.5rem; // 8px
+$spacing--md: 0.75rem; // 12px
+$spacing--lg: 1rem; // 16px
+$spacing--xl: 1.5rem; // 24px
+$spacing--2xl: 2rem; // 32px
+$spacing--3xl: 2.5rem; // 40px
+$spacing--4xl: 3rem; // 48px
+// layout scale
+$margin--2xs: 1rem; // 16px
+$margin--xs: 1.5rem; // 24px
+$margin--sm: 2rem; // 32px
+$margin--md: 3rem; // 48px
+$margin--lg: 4rem; // 64px
+$margin--xl: 6rem; // 96px
+$margin--2xl: 10rem; // 160px
