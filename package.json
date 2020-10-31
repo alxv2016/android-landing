@@ -53,8 +53,8 @@
     "@material/button": "^7.0.0",
     "@material/ripple": "^7.0.0",
     "@material/top-app-bar": "^7.0.0",
+    "@splidejs/splide": "^2.4.14",
     "axios": "^0.21.0",
-    "butter-slider": "^1.1.1",
     "feather-icons": "^4.28.0",
     "gsap": "^3.5.1"
   },

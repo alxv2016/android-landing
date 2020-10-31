@@ -25,17 +25,14 @@ $breakpoints: (
 ) !default;
 // Colors
 $colors: (
-  primary-bg: #d0ebfe,
-  secondary-bg: #f8f8f9,
-  light-bg: #ffffff,
+  section-1: #d0ebfe,
+  section-2: #f0f7cf,
+  section-3: #073042,
+  primary: #38d972,
+  secondary: #4285f4,
+  tertiary: #f86735,
+  light: #ffffff,
   dark: #3c393a,
-  medium: #96918f,
-  primary: #737a7c,
-  secondary: #b1c4b4,
-  tertiary: #c2c0ba,
-  primary-accent: #ffb147,
-  secondary-accent: #d6e8ae,
-  brand: #38d972,
 ) !default;
 // Border radius
 $border-radius: 1.25rem !default;

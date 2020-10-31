@@ -10,6 +10,38 @@
   &--overflow {
     overflow: hidden;
   }
+  &--2 {
+    background-color: color('section-2');
+  }
+}
+
+.hero-title {
+  font-size: $title--1;
+  font-weight: font-weight('bold');
+  margin-bottom: $margin--xs;
+  @include breakpoint(md) {
+    font-size: $large--title;
+    margin-bottom: $margin--sm;
+  }
+  @include breakpoint(lg) {
+    font-size: $huge--title * 1.15;
+  }
+}
+.hero-overline {
+  font-size: $body--2;
+  font-weight: font-weight('medium');
+  @include breakpoint(md) {
+    font-size: $body--1;
+  }
+  @include breakpoint(lg) {
+    font-size: $subtitle;
+  }
+}
+.hero-body {
+  font-size: $body--1;
+  @include breakpoint(md) {
+    font-size: $subtitle;
+  }
 }
 
 .content-hero {
@@ -27,34 +59,6 @@
     margin-bottom: $margin--lg;
     @include breakpoint(md) {
       margin-bottom: $margin--xl;
-    }
-    .hero-title {
-      font-size: $title--1;
-      font-weight: font-weight('bold');
-      margin-bottom: $margin--xs;
-      @include breakpoint(md) {
-        font-size: $large--title;
-        margin-bottom: $margin--sm;
-      }
-      @include breakpoint(lg) {
-        font-size: $huge--title;
-      }
-    }
-    .hero-overline {
-      font-size: $body--2;
-      font-weight: font-weight('medium');
-      @include breakpoint(md) {
-        font-size: $body--1;
-      }
-      @include breakpoint(lg) {
-        font-size: $subtitle;
-      }
-    }
-    .hero-body {
-      font-size: $body--1;
-      @include breakpoint(md) {
-        font-size: $subtitle;
-      }
     }
   }
 }
@@ -83,7 +87,7 @@
   width: 320px;
   height: 320px;
   border-radius: 100%;
-  background-color: color('brand');
+  background-color: color('primary');
 
   @include breakpoint(sm) {
     width: 480px;
@@ -99,9 +103,8 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  padding-bottom: $spacing--4xl;
-  height: 1440px;
-  margin-top: $margin--3xl;
+  height: 1200px;
+  margin-top: $margin--2xl;
 }
 
 #pixel5-2,
@@ -150,5 +153,47 @@
   letter-spacing: -88px;
   @include breakpoint(md) {
     font-size: 688px;
+  }
+}
+
+.content-highlights {
+  position: relative;
+  padding-top: $spacing--4xl;
+  padding-bottom: $spacing--4xl;
+  &-cards {
+    margin-top: $margin--lg;
+  }
+}
+
+.highlight-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: color('light');
+  padding: $spacing--2xl;
+  border-radius: $border-radius;
+  width: 100%;
+  height: 320px;
+  .title--2 {
+    font-weight: font-weight('medium');
+    margin: 0;
+  }
+  &__header {
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  &__footer {
+    position: relative;
+    width: 100%;
+  }
+  &__icon {
+    height: 48px;
+    width: 48px;
+    @include breakpoint(sm) {
+      height: 64px;
+      width: 64px;
+    }
   }
 }
