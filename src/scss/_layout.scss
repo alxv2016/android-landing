@@ -73,9 +73,61 @@
   justify-content: center;
   width: 50%;
   min-width: 220px;
-  max-width: 280px;
-  height: auto;
-  margin-bottom: $margin--xl;
+  max-width: 360px;
+  height: 768px;
+}
+
+.pixel-phone {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: solid 1px red;
+  // &__frame {
+  //   position: relative;
+  //   z-index: 1;
+  // }
+  // &-screen {
+  //   position: absolute;
+  //   z-index: 0;
+  //   top: 24px;
+  //   left:50%;
+  //   transform: translateX(-50%);
+  // }
+  &__back,
+  &__group {
+    position: absolute;
+    top: 0;
+  }
+
+  &__back {
+    z-index: 0;
+    left: -80px;
+    @include breakpoint(sm) {
+      left: -100px;
+    }
+  }
+
+  &__group {
+    width: 100%;
+    height: 100%;
+    left: 0;
+
+    &-shadow,
+    &-front {
+      position: absolute;
+    }
+    &-shadow {
+      z-index: 1;
+      left: 0;
+      top: -110px;
+      transform: scale(0.8);
+    }
+    &-front {
+      top: 0;
+      left: 98px;
+      z-index: 2;
+    }
+  }
 }
 
 #product-spotlight {

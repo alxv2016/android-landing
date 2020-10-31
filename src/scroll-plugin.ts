@@ -63,8 +63,32 @@ const scrollmg = {
       },
     });
 
-    gsap.to('#pixel5-2', {
+    gsap.to('#pixel-front', {
       yPercent: 30,
+      xPercent: 30,
+      rotate: -15,
+      ease: 'none',
+      scrollTrigger: {
+        markers: true,
+        trigger: '#trigger-2',
+        scrub: true,
+      },
+    });
+
+    gsap.to('#pixel-back', {
+      yPercent: -30,
+      xPercent: -30,
+      rotate: -15,
+      ease: 'none',
+      scrollTrigger: {
+        markers: true,
+        trigger: '#trigger-2',
+        scrub: true,
+      },
+    });
+
+    gsap.to('#pixel5-2', {
+      yPercent: -65,
       ease: 'none',
       scrollTrigger: {
         markers: true,
@@ -74,7 +98,7 @@ const scrollmg = {
     });
 
     gsap.to('#pixel5-3', {
-      yPercent: -45,
+      yPercent: -25,
       ease: 'none',
       scrollTrigger: {
         markers: true,
@@ -84,7 +108,7 @@ const scrollmg = {
     });
 
     gsap.to('#pixel5-4', {
-      yPercent: 65,
+      yPercent: 45,
       ease: 'none',
       scrollTrigger: {
         markers: true,
