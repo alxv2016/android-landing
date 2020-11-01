@@ -75,7 +75,7 @@ const scrollmg = {
     gsap.to('#pixel-front', {
       yPercent: 30,
       xPercent: 30,
-      rotate: -15,
+      rotate: 15,
       ease: 'none',
       scrollTrigger: {
         trigger: '#products',
