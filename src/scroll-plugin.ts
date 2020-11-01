@@ -120,6 +120,49 @@ const scrollmg = {
         scrub: true,
       },
     });
+
+    const newTl = gsap.timeline({
+      defaults: {
+        ease: 'bounce',
+        duration: 0.7,
+      },
+      scrollTrigger: {
+        markers: true,
+        trigger: '#trigger-3',
+        toggleActions: 'play pause resume reverse',
+        start: 'top center',
+        end: 'bottom center',
+      },
+    });
+
+    newTl
+      .to('#bubble-1', {
+        yPercent: -115,
+        scale: 1,
+      })
+      .to(
+        '#bubble-3',
+        {
+          yPercent: 115,
+          scale: 1,
+        },
+        0
+      )
+      .to('#bubble-2', {
+        scale: 1,
+      });
+
+    // gsap.to('#bubble-1', {
+    //   yPercent: 200,
+    //   ease: 'none',
+    //   scrollTrigger: {
+    //     markers: true,
+    //     trigger: '#trigger-3',
+    //     toggleActions: 'play reverse play reverse',
+    //     start: 'top center',
+    //     end: 'bottom center'
+    //   },
+    // });
   },
 };
 

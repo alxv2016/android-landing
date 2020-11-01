@@ -371,13 +371,13 @@
 }
 
 .conversations-bubble {
-  position: relative;
+  position: absolute;
   flex-shrink: 0;
   width: 320px;
   height: 130px;
   border-radius: 100px;
   background-color: color('section-1');
-  margin: $layout--xs;
+  transform: scale(0.85);
   @include breakpoint(md) {
     width: 468px;
     height: 200px;
