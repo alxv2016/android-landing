@@ -17,6 +17,10 @@
   @return map-get($colors, $key);
 }
 
+@function icon-size($key: 'xs') {
+  @return map-get($icon-sizes, $key);
+}
+
 @function font-weight($key: 'regular') {
   @return map-get($font-weights, $key);
 }

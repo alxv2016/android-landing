@@ -13,34 +13,42 @@
   &--2 {
     background-color: color('section-2');
   }
-}
+  &--3 {
+    background-color: color('light');
+  }
 
-.hero-title {
-  font-size: $title--1;
-  font-weight: font-weight('bold');
-  margin-bottom: $margin--xs;
-  @include breakpoint(md) {
+  &-title {
     font-size: $large--title;
-    margin-bottom: $margin--sm;
+    font-weight: font-weight('bold');
+    margin: 0;
+    margin-bottom: $layout--sm;
+    @include breakpoint(md) {
+      font-size: $huge--title;
+    }
+
+    &--hero {
+      @include breakpoint(lg) {
+        font-size: $huge--title * 1.25;
+      }
+    }
   }
-  @include breakpoint(lg) {
-    font-size: $huge--title * 1.15;
+
+  &-overline {
+    font-size: $body--2;
+    font-weight: font-weight('medium');
+    @include breakpoint(md) {
+      font-size: $body--1;
+    }
+    @include breakpoint(lg) {
+      font-size: $subtitle;
+    }
   }
-}
-.hero-overline {
-  font-size: $body--2;
-  font-weight: font-weight('medium');
-  @include breakpoint(md) {
+
+  &-body {
     font-size: $body--1;
-  }
-  @include breakpoint(lg) {
-    font-size: $subtitle;
-  }
-}
-.hero-body {
-  font-size: $body--1;
-  @include breakpoint(md) {
-    font-size: $subtitle;
+    @include breakpoint(md) {
+      font-size: $subtitle;
+    }
   }
 }
 
@@ -48,17 +56,17 @@
   position: relative;
   width: 100%;
   padding-top: $spacing--3xl;
-  margin-top: $margin--xl;
+  margin-top: $layout--xl;
   @include breakpoint(md) {
-    margin-top: $margin--2xl;
+    margin-top: $layout--2xl;
   }
   &__body {
     position: relative;
     max-width: 768px;
     margin: auto;
-    margin-bottom: $margin--lg;
+    margin-bottom: $layout--lg;
     @include breakpoint(md) {
-      margin-bottom: $margin--xl;
+      margin-bottom: $layout--xl;
     }
   }
 }
@@ -165,10 +173,14 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  height: 768px;
+  max-width: 868px;
+  height: 480px;
   transform: translateY(20%);
-  margin-top: $margin--2xl;
-  margin-bottom: $margin--lg;
+  margin-top: $layout--2xl;
+  margin-bottom: $layout--lg;
+  @include breakpoint(sm) {
+    height: 667px;
+  }
 }
 
 #pixel5-2,
@@ -185,7 +197,7 @@
   top: 0;
   left: -120px;
   @include breakpoint(md) {
-    left: 120px;
+    left: 0;
   }
 }
 
@@ -193,7 +205,7 @@
   top: 0;
   right: -120px;
   @include breakpoint(md) {
-    right: 120px;
+    right: 0;
   }
 }
 
@@ -222,15 +234,17 @@
 
 .content-highlights {
   position: relative;
-  margin-top: $margin--2xl;
-  padding-top: $spacing--4xl;
-  padding-bottom: $spacing--4xl;
-  margin-bottom: $margin--2xl;
+  width: 100%;
+  max-width: 768px;
+  margin: $layout--2xl auto;
   &-cards {
     position: relative;
-    margin-top: $margin--lg;
+    margin-top: $layout--lg;
     width: 100%;
-    max-width: $max-screen-size;
+    max-width: 576px;
+    @include breakpoint(sm) {
+      max-width: 768px;
+    }
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -249,18 +263,14 @@
   flex-shrink: 0;
   width: calc(50% - #{$spacing--sm});
   height: calc(100vw / 2.5);
-  max-height: calc(1280px / 4);
+  max-height: calc(998px / 4);
   margin: $spacing--sm 0;
 
   @include breakpoint(md) {
-    height: calc(100vw / 3.5);
+    padding: $spacing--xl;
     margin: $spacing--md 0;
     width: calc(33.33% - #{$spacing--md});
-  }
-  @include breakpoint(lg) {
-    padding: $spacing--2xl;
-    margin: $spacing--lg 0;
-    width: calc(33.33% - #{$spacing--lg});
+    height: calc(100vw / 3.5);
   }
   @include elevate-3(color('dark'), 0.035);
 
@@ -283,15 +293,12 @@
       opacity: 1;
     }
   }
-  .title--2 {
+  &-title {
     font-weight: font-weight('medium');
     margin: 0;
-    font-size: $subtitle;
+    font-size: $body--1;
     @include breakpoint(sm) {
-      font-size: $title--3;
-    }
-    @include breakpoint(lg) {
-      font-size: $title--2;
+      font-size: $subtitle--2;
     }
   }
   &__header {
@@ -305,11 +312,42 @@
     width: 100%;
   }
   &__icon {
-    height: 48px;
-    width: 48px;
+    height: icon-size('md');
+    width: icon-size('md');
     @include breakpoint(sm) {
-      height: 64px;
-      width: 64px;
+      height: icon-size('lg');
+      width: icon-size('lg');
     }
   }
+}
+
+.content-conversations {
+  position: relative;
+  margin-top: $layout--2xl;
+  margin-bottom: $layout--2xl;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  @include breakpoint(lg) {
+    flex-direction: row;
+  }
+
+  &__col {
+    border: 1px solid red;
+    flex-shrink: 0;
+    width: 100%;
+    margin-bottom: $layout--lg;
+    @include breakpoint(lg) {
+      width: calc(50% - #{$spacing--md});
+    }
+  }
+}
+
+.conversations-phone {
+  display: block;
+  border: 1px solid blue;
+  width: 296px;
+  margin: auto;
 }
