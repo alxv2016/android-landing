@@ -3,13 +3,13 @@ import Splide from '@splidejs/splide';
 const slider = {
   initSlider: () => {
     const sliding = new Splide('#superSlide', {
-      perPage: 3,
-      // type: 'loop',
+      width: '100%',
+      fixedWidth: '30%',
       waitForTransition: true,
+      speed: 225,
       perMove: 1,
-      focus: 'center',
       gap: '1em',
-      padding: '2em',
+      padding: '1rem',
       arrows: true,
       pagination: true,
       keyboard: 'focused',
@@ -26,8 +26,13 @@ const slider = {
       //   page      : 'splide__pagination__page your-class-page', // each button
       // },
       breakpoints: {
-        640: {
-          perPage: 2,
+        1200: {
+          //perPage: 4,
+          fixedWidth: '40%',
+        },
+        576: {
+          focus: 'center',
+          fixedWidth: '85%',
         },
       },
     });

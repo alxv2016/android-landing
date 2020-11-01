@@ -57,9 +57,18 @@ const scrollmg = {
       yPercent: 80,
       ease: 'none',
       scrollTrigger: {
-        markers: true,
-        trigger: '#trigger-2',
+        trigger: '#products',
         scrub: true,
+      },
+    });
+
+    gsap.to('#products', {
+      ease: 'none',
+      opacity: 1,
+      scrollTrigger: {
+        trigger: '#pixel5',
+        scrub: 0,
+        start: '900px bottom',
       },
     });
 
@@ -69,20 +78,18 @@ const scrollmg = {
       rotate: -15,
       ease: 'none',
       scrollTrigger: {
-        markers: true,
-        trigger: '#trigger-2',
+        trigger: '#products',
         scrub: true,
       },
     });
 
     gsap.to('#pixel-back', {
-      yPercent: -30,
-      xPercent: -30,
-      rotate: -15,
+      yPercent: -40,
+      xPercent: -40,
+      rotate: 15,
       ease: 'none',
       scrollTrigger: {
-        markers: true,
-        trigger: '#trigger-2',
+        trigger: '#products',
         scrub: true,
       },
     });
@@ -91,8 +98,7 @@ const scrollmg = {
       yPercent: -65,
       ease: 'none',
       scrollTrigger: {
-        markers: true,
-        trigger: '#trigger-2',
+        trigger: '#products',
         scrub: true,
       },
     });
@@ -101,8 +107,7 @@ const scrollmg = {
       yPercent: -25,
       ease: 'none',
       scrollTrigger: {
-        markers: true,
-        trigger: '#trigger-2',
+        trigger: '#products',
         scrub: true,
       },
     });
@@ -111,8 +116,7 @@ const scrollmg = {
       yPercent: 45,
       ease: 'none',
       scrollTrigger: {
-        markers: true,
-        trigger: '#trigger-2',
+        trigger: '#products',
         scrub: true,
       },
     });
