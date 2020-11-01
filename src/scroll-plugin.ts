@@ -64,10 +64,10 @@ const scrollmg = {
 
     gsap.to('#products', {
       ease: 'none',
-      opacity: 1,
+      yPercent: -30,
       scrollTrigger: {
         trigger: '#pixel5',
-        scrub: 0,
+        scrub: true,
         start: '900px bottom',
       },
     });
