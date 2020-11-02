@@ -123,11 +123,9 @@ const scrollmg = {
 
     const newTl = gsap.timeline({
       defaults: {
-        ease: 'bounce',
-        duration: 0.7,
+        ease: 'ease',
       },
       scrollTrigger: {
-        markers: true,
         trigger: '#trigger-3',
         toggleActions: 'play pause resume reverse',
         start: 'top center',
@@ -152,17 +150,16 @@ const scrollmg = {
         scale: 1,
       });
 
-    // gsap.to('#bubble-1', {
-    //   yPercent: 200,
-    //   ease: 'none',
-    //   scrollTrigger: {
-    //     markers: true,
-    //     trigger: '#trigger-3',
-    //     toggleActions: 'play reverse play reverse',
-    //     start: 'top center',
-    //     end: 'bottom center'
-    //   },
-    // });
+    gsap.to('#all-bubbles', {
+      x: 0,
+      ease: 'ease',
+      scrollTrigger: {
+        trigger: '#trigger-4',
+        toggleActions: 'play pause resume reverse',
+        start: 'top center',
+        end: 'bottom center',
+      },
+    });
   },
 };
 
