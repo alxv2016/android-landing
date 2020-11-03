@@ -2,9 +2,9 @@ import Splide from '@splidejs/splide';
 
 const slider = {
   initSlider: () => {
-    const sliding = new Splide('#superSlide', {
+    const sliding = new Splide('#splider', {
       width: '100%',
-      fixedWidth: '30%',
+      destroy: true,
       waitForTransition: true,
       speed: 225,
       perMove: 1,
@@ -26,12 +26,7 @@ const slider = {
       //   page      : 'splide__pagination__page your-class-page', // each button
       // },
       breakpoints: {
-        1200: {
-          //perPage: 4,
-          fixedWidth: '40%',
-        },
-        576: {
-          focus: 'center',
+        767: {
           fixedWidth: '85%',
         },
       },
@@ -40,7 +35,7 @@ const slider = {
       console.log('Iam mounted!!');
     });
     sliding.mount();
-    sliding.root.classList.add('my-slider');
+    sliding.root.classList.add('capture-slide');
     sliding.on('moved', () => {
       console.log('I moved!!');
     });

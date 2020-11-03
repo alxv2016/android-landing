@@ -119,8 +119,4 @@
   @include breakpoint(lg) {
     padding: 0 $spacing--4xl;
   }
-  @include breakpoint(xl) {
-    max-width: $max-screen-size;
-    margin: auto;
-  }
 }
