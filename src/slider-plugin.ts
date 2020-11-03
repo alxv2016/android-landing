@@ -11,7 +11,7 @@ const slider = {
       gap: '1em',
       padding: '1rem',
       arrows: true,
-      pagination: true,
+      pagination: false,
       keyboard: 'focused',
       updateOnMove: true,
       // classes: {

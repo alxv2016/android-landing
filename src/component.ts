@@ -26,6 +26,10 @@ const material = {
     Array.from(matButtons).map((node) => {
       return new MDCRipple(node);
     });
+    const rippleComp = document.querySelector('.splide__arrow');
+    if (rippleComp) {
+      MDCRipple.attachTo(rippleComp);
+    }
   },
   featherIcons: () => {
     feather.replace();

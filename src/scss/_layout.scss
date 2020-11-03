@@ -471,6 +471,33 @@
   width: 100%;
   max-width: 1024px !important;
   margin: auto;
+  .splide__arrows {
+    position: relative;
+    margin-top: $layout--xs;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include container-padding;
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+  .splide__arrow {
+    @include button-reset;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 90px;
+    padding: $spacing--xs;
+    overflow: hidden;
+    & ~ .splide__arrow {
+      margin-left: $spacing--sm;
+    }
+  }
   @include breakpoint(md) {
     @include container-padding;
     .splide__list {

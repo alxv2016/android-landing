@@ -8,3 +8,9 @@
   @include button.ink-color(#333333);
   //@include button.horizontal-padding(14px);
 }
+
+.splide__arrow {
+  @include ripple.surface;
+  @include ripple.radius-bounded;
+  @include ripple.states;
+}
