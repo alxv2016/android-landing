@@ -23,35 +23,18 @@ const scrollmg = {
         }
       },
     });
-    const tl = gsap.timeline({
+    gsap.to('#product-spotlight', {
       scrollTrigger: {
         // markers: true,
         trigger: '#product-spotlight',
-        scrub: 0.4,
+        scrub: 0.6,
         start: 'top center',
         end: '300px center',
       },
-      defaults: {ease: 'none'},
+      scale: 2.5,
+      y: 300,
+      ease: 'none',
     });
-    tl.to('#product-spotlight', {
-      scale: 2,
-      y: 200,
-    }).to('#product-spotlight', {
-      scale: 4,
-      y: 600,
-    });
-    // gsap.to('#pixie', {
-    //   scrollTrigger: {
-    //     // markers: true,
-    //     trigger: '#pixie',
-    //     scrub: 0.4,
-    //     start: 'top center',
-    //     end: '300px center',
-    //   },
-    //   scale: 4,
-    //   y: 200,
-    //   ease: 'none',
-    // });
 
     gsap.to('#pixel5', {
       yPercent: 80,
