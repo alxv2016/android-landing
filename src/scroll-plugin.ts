@@ -78,20 +78,20 @@ const scrollmg = {
     });
 
     gsap.to('#pixel5-2', {
-      yPercent: -65,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '#products',
-        scrub: true,
-      },
-    });
-
-    gsap.to('#pixel5-3', {
       yPercent: -25,
       ease: 'none',
       scrollTrigger: {
         trigger: '#products',
-        scrub: true,
+        scrub: 0.4,
+      },
+    });
+
+    gsap.to('#pixel5-3', {
+      yPercent: -45,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#products',
+        scrub: 0.4,
       },
     });
 
@@ -100,7 +100,7 @@ const scrollmg = {
       ease: 'none',
       scrollTrigger: {
         trigger: '#products',
-        scrub: true,
+        scrub: 0.2,
       },
     });
 
@@ -131,7 +131,17 @@ const scrollmg = {
       )
       .to('#bubble-2', {
         scale: 1,
-      });
+      })
+      .to(
+        '#notification',
+        {
+          scale: 1,
+          opacity: 1,
+          ease: 'ease-in',
+          duration: 0.3,
+        },
+        0.45
+      );
 
     gsap.to('#all-bubbles', {
       x: 0,
