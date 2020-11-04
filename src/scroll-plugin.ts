@@ -159,24 +159,22 @@ const scrollmg = {
       },
     });
 
-    gsap.to('.convo-bubbles', {
-      yPercent: 80,
+    gsap.to('.chat-1', {
+      y: 0,
       ease: 'ease',
       scrollTrigger: {
         trigger: '#trigger-4',
-        // toggleActions: 'play pause resume reverse',
         start: 'top center',
         end: 'bottom center',
         scrub: true,
       },
     });
 
-    gsap.to('.chat-1', {
-      y: 0,
+    gsap.from('.chat-2', {
+      yPercent: -80,
       ease: 'ease',
       scrollTrigger: {
         trigger: '#trigger-4',
-        // toggleActions: 'play pause resume reverse',
         start: 'top center',
         end: 'bottom center',
         scrub: true,
