@@ -425,6 +425,38 @@
   }
 }
 
+.convo-bubbles {
+  position: absolute;
+  z-index: 1;
+  top: 88px;
+  left: 48px;
+  width: 64px;
+  height: 64px;
+  @include breakpoint(md) {
+    left: 188px;
+  }
+  @include breakpoint(lg) {
+    left: 68px;
+  }
+}
+
+.chat-1,
+.chat-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.chat-2 {
+  z-index: 1;
+}
+
+.chat-1 {
+  z-index: 0;
+  top: 8px;
+  transform: translateY(88px);
+}
+
 .chat-bubbles {
   position: absolute;
   display: flex;

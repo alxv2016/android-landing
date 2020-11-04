@@ -106,13 +106,14 @@ const scrollmg = {
 
     const newTl = gsap.timeline({
       defaults: {
-        ease: 'ease',
+        ease: 'none',
       },
       scrollTrigger: {
         trigger: '#trigger-3',
         toggleActions: 'play pause resume reverse',
         start: 'top center',
         end: 'bottom center',
+        scrub: true,
       },
     });
 
@@ -131,26 +132,54 @@ const scrollmg = {
       )
       .to('#bubble-2', {
         scale: 1,
-      })
-      .to(
-        '#notification',
-        {
-          scale: 1,
-          opacity: 1,
-          ease: 'ease-in',
-          duration: 0.3,
-        },
-        0.45
-      );
+      });
 
-    gsap.to('#all-bubbles', {
-      x: 0,
+    gsap.to('#notification', {
+      scale: 1,
+      opacity: 1,
       ease: 'ease',
+      duration: 0.3,
       scrollTrigger: {
-        trigger: '#trigger-4',
+        trigger: '#trigger-3',
         toggleActions: 'play pause resume reverse',
         start: 'top center',
         end: 'bottom center',
+      },
+    });
+
+    gsap.to('#all-bubbles', {
+      x: 0,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#trigger-4',
+        //toggleActions: 'play pause resume reverse',
+        start: 'top center',
+        end: 'bottom center',
+        scrub: true,
+      },
+    });
+
+    gsap.to('.convo-bubbles', {
+      yPercent: 80,
+      ease: 'ease',
+      scrollTrigger: {
+        trigger: '#trigger-4',
+        // toggleActions: 'play pause resume reverse',
+        start: 'top center',
+        end: 'bottom center',
+        scrub: true,
+      },
+    });
+
+    gsap.to('.chat-1', {
+      y: 0,
+      ease: 'ease',
+      scrollTrigger: {
+        trigger: '#trigger-4',
+        // toggleActions: 'play pause resume reverse',
+        start: 'top center',
+        end: 'bottom center',
+        scrub: true,
       },
     });
   },
