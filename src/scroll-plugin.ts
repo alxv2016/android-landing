@@ -6,6 +6,10 @@ gsap.registerPlugin(ScrollTrigger);
 const scrollmg = {
   initScrollMagic: () => {
     console.log('hi!');
+    let proxy = {skew: 0};
+    const skewSetter = gsap.quickSetter('.highlight-card', 'skewY', 'deg');
+    const speed = gsap.utils.pipe(gsap.utils.clamp(-20, 20), gsap.utils.snap(1));
+
     ScrollTrigger.create({
       markers: false,
       onUpdate: (self: any) => {
@@ -21,8 +25,24 @@ const scrollmg = {
             ? headerNav?.classList.add('js-header--hidden')
             : headerNav?.classList.remove('js-header--hidden');
         }
+
+        let skew = speed(self.getVelocity() / 200);
+        if (Math.abs(skew) > proxy.skew) {
+          proxy.skew = skew;
+          gsap.to(proxy, {
+            duration: 0.8,
+            skew: 0,
+            y: 0,
+            ease: 'power3',
+            overwrite: true,
+            onUpdate: () => {
+              skewSetter(proxy.skew);
+            },
+          });
+        }
       },
     });
+
     gsap.to('#product-spotlight', {
       scrollTrigger: {
         // markers: true,
@@ -171,7 +191,7 @@ const scrollmg = {
     });
 
     gsap.from('.chat-2', {
-      yPercent: -80,
+      yPercent: -20,
       ease: 'ease',
       scrollTrigger: {
         trigger: '#trigger-4',
