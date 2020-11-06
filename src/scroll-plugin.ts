@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 const scrollmg = {
   initScrollMagic: () => {
     console.log('hi!');
-    let proxy = {skew: 0};
+    let initial = {skew: 0};
     const skewSetter = gsap.quickSetter('.highlight-card', 'skewY', 'deg');
     const speed = gsap.utils.pipe(gsap.utils.clamp(-20, 20), gsap.utils.snap(1));
 
@@ -26,17 +26,17 @@ const scrollmg = {
             : headerNav?.classList.remove('js-header--hidden');
         }
 
-        let skew = speed(self.getVelocity() / 200);
-        if (Math.abs(skew) > proxy.skew) {
-          proxy.skew = skew;
-          gsap.to(proxy, {
+        const skew = speed(self.getVelocity() / 200);
+
+        if (Math.abs(skew) > initial.skew) {
+          initial.skew = skew;
+          gsap.to(initial, {
             duration: 0.8,
             skew: 0,
-            y: 0,
             ease: 'power3',
             overwrite: true,
             onUpdate: () => {
-              skewSetter(proxy.skew);
+              skewSetter(initial.skew);
             },
           });
         }
@@ -200,6 +200,29 @@ const scrollmg = {
         scrub: true,
       },
     });
+
+    const recordTL = gsap.timeline({
+      defaults: {
+        ease: 'none',
+      },
+      scrollTrigger: {
+        trigger: '#trigger-5',
+        toggleActions: 'play pause resume reverse',
+        start: 'top center',
+        end: 'center center',
+        scrub: true,
+      },
+    });
+
+    recordTL
+      .to('.record-screen', {
+        y: 88,
+      })
+      .to('.record-modal', {
+        y: 0,
+        opacity: 1,
+        ease: 'ease',
+      });
   },
 };
 
