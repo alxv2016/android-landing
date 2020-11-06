@@ -1,0 +1,162 @@
+.content-hero {
+  position: relative;
+  width: 100%;
+  padding-top: $spacing--3xl;
+  margin-top: $layout--xl;
+  @include breakpoint(md) {
+    margin-top: $layout--2xl;
+  }
+  &__body {
+    position: relative;
+    max-width: 768px;
+    margin: auto;
+    margin-bottom: $layout--lg;
+    @include breakpoint(md) {
+      margin-bottom: $layout--xl;
+    }
+  }
+}
+
+.product-hero {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  min-width: 220px;
+  max-width: 360px;
+  height: 568px;
+  @include breakpoint(sm) {
+    height: 768px;
+  }
+}
+
+.pixel-phone {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  // &__frame {
+  //   position: relative;
+  //   z-index: 1;
+  // }
+  // &-screen {
+  //   position: absolute;
+  //   z-index: 0;
+  //   top: 24px;
+  //   left:50%;
+  //   transform: translateX(-50%);
+  // }
+  &__back,
+  &__group {
+    position: absolute;
+    top: 0;
+  }
+
+  &__back {
+    z-index: 0;
+    left: -40px;
+    @include breakpoint(sm) {
+      left: -100px;
+    }
+  }
+
+  &__group {
+    width: 100%;
+    height: 100%;
+    left: -55px;
+    @include breakpoint(sm) {
+      left: 0;
+    }
+
+    &-shadow,
+    &-front {
+      position: absolute;
+    }
+    &-shadow {
+      z-index: 1;
+      left: 44px;
+      top: -60px;
+      transform: scale(0.8);
+      opacity: 0.75;
+      @include breakpoint(sm) {
+        left: 0;
+        top: -110px;
+      }
+    }
+    &-front {
+      top: 0;
+      left: 98px;
+      z-index: 2;
+    }
+  }
+}
+
+#product-spotlight {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  width: 320px;
+  height: 320px;
+  border-radius: 100%;
+  background-color: color('primary');
+
+  @include breakpoint(sm) {
+    width: 480px;
+    height: 480px;
+  }
+  @include breakpoint(md) {
+    width: 568px;
+    height: 568px;
+  }
+}
+
+.products-container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 868px;
+  height: 480px;
+  transform: translateY(20%);
+  margin-top: $layout--2xl;
+  margin-bottom: $layout--lg;
+  @include breakpoint(sm) {
+    height: 667px;
+  }
+}
+
+#pixel5-2,
+#pixel5-3,
+#pixel5-4 {
+  position: absolute;
+  width: 50%;
+  min-width: 220px;
+  max-width: 280px;
+  height: auto;
+}
+
+#pixel5-2 {
+  top: 0;
+  left: -120px;
+  @include breakpoint(md) {
+    left: 0;
+  }
+}
+
+#pixel5-3 {
+  top: 0;
+  right: -120px;
+  @include breakpoint(md) {
+    right: 0;
+  }
+}
+
+#pixel5-4 {
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
