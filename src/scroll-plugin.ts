@@ -222,6 +222,11 @@ const scrollmg = {
         y: 0,
         opacity: 1,
         ease: 'ease',
+      })
+      .to('.share-modal', {
+        y: 0,
+        opacity: 1,
+        ease: 'ease',
       });
   },
 };
