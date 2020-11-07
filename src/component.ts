@@ -1,6 +1,6 @@
 import feather from 'feather-icons';
 import {MDCRipple} from '@material/ripple';
-import {MDCTopAppBar} from '@material/top-app-bar';
+import {MDCTabBar, MDCTabBarFoundation} from '@material/tab-bar';
 
 // Instantiation
 const material = {
@@ -21,6 +21,15 @@ const material = {
   //     });
   //   }
   // },
+  initTabs: () => {
+    const tabEl = document.querySelector('.mdc-tab-bar');
+    if (tabEl) {
+      const tabs = MDCTabBar.attachTo(tabEl);
+      tabs.listen('MDCTabBar:activated', (ev) => {
+        console.log(ev);
+      });
+    }
+  },
   applyRipples: () => {
     const matButtons = document.querySelectorAll('.mdc-button');
     Array.from(matButtons).map((node) => {

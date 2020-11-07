@@ -5,6 +5,7 @@ import scrollmg from './scroll-plugin';
 import slider from './slider-plugin';
 material.applyRipples();
 material.featherIcons();
+material.initTabs();
 scrollmg.initScrollMagic();
 slider.initSlider();
 
