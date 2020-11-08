@@ -1,0 +1,42 @@
+.panel-group {
+  position: relative;
+  border: 1px solid blue;
+  width: 100%;
+}
+
+.smart-panel {
+  position: relative;
+  display: block;
+  width: 70%;
+  max-width: 296px;
+  margin: auto;
+  z-index: 1;
+  border: 1px solid red;
+
+  &--apps {
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+    overflow: hidden;
+    transform: translate(-50%, 100%);
+  }
+  &--folders {
+    z-index: 3;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+    overflow: hidden;
+    transform: translate(-50%, 100%);
+  }
+}
+
+.smart-apps {
+  transform: translateY(-100%);
+}
+
+.smart-folders {
+  transform: translateY(-100%);
+}

@@ -20,6 +20,12 @@
   &--overflow {
     overflow: hidden;
   }
+
+  &--padding {
+    padding-top: $layout--2xl;
+    padding-bottom: $layout--2xl;
+  }
+
   &--2 {
     background-color: color('section-2');
   }
@@ -74,8 +80,6 @@
 
 .grid-2cols {
   position: relative;
-  margin-top: $layout--2xl;
-  margin-bottom: $layout--2xl;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -88,7 +92,7 @@
     position: relative;
     flex-shrink: 0;
     width: 100%;
-    margin-bottom: $layout--xl;
+    // margin-bottom: $layout--xl;
     @include breakpoint(lg) {
       width: calc(50% - #{$spacing--md});
     }

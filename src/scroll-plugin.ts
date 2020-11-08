@@ -229,19 +229,49 @@ const scrollmg = {
         ease: 'ease',
       });
 
-    gsap.to('#pin-me', {
-      // yPercent: -20,
-      ease: 'ease',
+    const tl = gsap.timeline({
       scrollTrigger: {
+        trigger: '.panel-1',
         markers: true,
-        trigger: '#pin-me',
-        start: 'top center',
-        end: 'bottom center',
-        pinSpacing: false,
-        pin: true,
+        start: 'top top',
+        end: 'bottom top',
+        pin: '.panel-group',
         scrub: true,
+        pinSpacing: false,
       },
     });
+    tl.to('.smart-panel--apps', {
+      yPercent: -100,
+    }).to(
+      '.smart-apps',
+      {
+        yPercent: 100,
+      },
+      0
+    );
+
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.panel-2',
+        markers: true,
+        start: 'top top',
+        end: 'bottom top',
+        pin: '.panel-group',
+        scrub: true,
+        pinSpacing: false,
+      },
+    });
+    tl2
+      .to('.smart-panel--folders', {
+        yPercent: -100,
+      })
+      .to(
+        '.smart-folders',
+        {
+          yPercent: 100,
+        },
+        0
+      );
   },
 };
 
