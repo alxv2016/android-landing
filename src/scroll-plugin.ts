@@ -228,6 +228,20 @@ const scrollmg = {
         opacity: 1,
         ease: 'ease',
       });
+
+    gsap.to('#pin-me', {
+      // yPercent: -20,
+      ease: 'ease',
+      scrollTrigger: {
+        markers: true,
+        trigger: '#pin-me',
+        start: 'top center',
+        end: 'bottom center',
+        pinSpacing: false,
+        pin: true,
+        scrub: true,
+      },
+    });
   },
 };
 
