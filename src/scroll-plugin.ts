@@ -229,11 +229,9 @@ const scrollmg = {
         ease: 'ease',
       });
 
-    const panels = gsap.utils.toArray('.smart-screen');
-
+    const panels = gsap.utils.toArray('.smart-section');
     panels.forEach((screen: any) => {
       ScrollTrigger.create({
-        markers: true,
         trigger: screen,
         start: 'top top',
         end: 'bottom top',
@@ -243,17 +241,17 @@ const scrollmg = {
       });
     });
 
-    // const tl2 = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: '.helpful-content',
-    //     start: 'top center',
-    //     end: 'bottom center',
-    //     scrub: true,
-    //   },
-    // });
-    // tl2.to('.screen', {
-    //   yPercent: 100
-    // })
+    gsap.to('.smart-bubbles', {
+      x: 0,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#smart-section-1',
+        //toggleActions: 'play pause resume reverse',
+        start: 'top center',
+        end: 'bottom center',
+        scrub: true,
+      },
+    });
   },
 };
 
