@@ -229,49 +229,31 @@ const scrollmg = {
         ease: 'ease',
       });
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.panel-1',
-        markers: true,
-        start: 'top top',
-        end: 'bottom top',
-        pin: '.panel-group',
-        scrub: true,
-        pinSpacing: false,
-      },
-    });
-    tl.to('.smart-panel--apps', {
-      yPercent: -100,
-    }).to(
-      '.smart-apps',
-      {
-        yPercent: 100,
-      },
-      0
-    );
+    const panels = gsap.utils.toArray('.smart-screen');
 
-    const tl2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.panel-2',
+    panels.forEach((screen: any) => {
+      ScrollTrigger.create({
         markers: true,
+        trigger: screen,
         start: 'top top',
         end: 'bottom top',
-        pin: '.panel-group',
+        pin: true,
         scrub: true,
         pinSpacing: false,
-      },
+      });
     });
-    tl2
-      .to('.smart-panel--folders', {
-        yPercent: -100,
-      })
-      .to(
-        '.smart-folders',
-        {
-          yPercent: 100,
-        },
-        0
-      );
+
+    // const tl2 = gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: '.helpful-content',
+    //     start: 'top center',
+    //     end: 'bottom center',
+    //     scrub: true,
+    //   },
+    // });
+    // tl2.to('.screen', {
+    //   yPercent: 100
+    // })
   },
 };
 

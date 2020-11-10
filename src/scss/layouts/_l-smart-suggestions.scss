@@ -1,42 +1,33 @@
-.panel-group {
+.helpful-content {
   position: relative;
-  border: 1px solid blue;
   width: 100%;
+  .section-title {
+    max-width: 80%;
+  }
 }
 
 .smart-panel {
   position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  // margin: $layout--xl 0;
+}
+
+.smart-screen {
   display: block;
-  width: 70%;
-  max-width: 296px;
-  margin: auto;
-  z-index: 1;
-  border: 1px solid red;
-
-  &--apps {
-    z-index: 2;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    position: absolute;
-    overflow: hidden;
-    transform: translate(-50%, 100%);
-  }
-  &--folders {
-    z-index: 3;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    position: absolute;
-    overflow: hidden;
-    transform: translate(-50%, 100%);
-  }
+  position: relative;
+  width: 100%;
+  background-color: color('light');
+  //overflow: hidden;
+  // width: calc(50% - #{$spacing--md});
+  padding: $layout--xl;
 }
 
-.smart-apps {
-  transform: translateY(-100%);
-}
-
-.smart-folders {
-  transform: translateY(-100%);
+.screen {
+  position: relative;
+  width: 292px;
+  margin: $layout--lg;
+  margin-left: auto;
+  margin-right: auto;
+  //transform: translateY(-100%);
 }
