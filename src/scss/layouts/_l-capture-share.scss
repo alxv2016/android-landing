@@ -1,3 +1,9 @@
+.section--5 {
+  .container--sm {
+    padding-bottom: 0;
+  }
+}
+
 .capture-card {
   position: relative;
   width: 100%;
@@ -17,11 +23,9 @@
   }
 }
 
-.record-screen {
+.capture-share-feature {
   position: relative;
   transform: translateY(168px);
-  width: 100%;
-  max-width: 60%;
 }
 
 .record-modal {
@@ -38,19 +42,15 @@
   opacity: 0;
 }
 
-.capture-pixel5 {
-  position: relative;
-  transform: translateY(128px);
-  width: 100%;
-  max-width: 60%;
-}
-
 .capture-slide {
   position: relative;
   width: 100%;
   max-width: 1024px !important;
   margin: auto;
-  margin-top: $layout--lg;
+  margin-bottom: $layout--lg;
+  @include breakpoint(mg) {
+    margin-bottom: $layout--xl;
+  }
   .splide__arrows {
     position: relative;
     margin-top: $layout--xs;

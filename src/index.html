@@ -43,9 +43,9 @@
           <div id="product-spotlight"></div>
         </div>
         <div id="products" class="products-container container">
-          <img id="pixel5-2" src="./assets/android-2.png" />
-          <img id="pixel5-3" src="./assets/android-3.png" />
-          <img id="pixel5-4" src="./assets/android-4.png" />
+          <img id="pixel5-2" class="feature-screen" src="./assets/android-2.png" />
+          <img id="pixel5-3" class="feature-screen" src="./assets/android-3.png" />
+          <img id="pixel5-4" class="feature-screen" src="./assets/android-4.png" />
         </div>
       </div>
     </section>
@@ -117,7 +117,7 @@
         </div>
         <div id="trigger-3" class="grid-2cols__col">
           <img id="notification" class="conversations-notification" src="assets/convo-bubble.png" />
-          <img class="conversations-phone" src="assets/android-2.png" />
+          <img class="feature-screen" src="assets/android-2.png" />
           <div class="conversations-bubbles">
             <div id="bubble-1" class="conversations-bubble"></div>
             <div id="bubble-2" class="conversations-bubble conversations-bubble--outline"></div>
@@ -129,15 +129,15 @@
     <section class="section section--4 section--overflow">
       <div class="grid-2cols container--sm">
         <div id="trigger-4" class="grid-2cols__col">
-          <div class="chat-phone">
-            <img class="chat-2" src="assets/bubble-2.png" />
-            <img class="chat-1" src="assets/bubble-1.png" />
+          <div class="feature-screen">
+            <img class="chat-bubble" src="assets/bubble-2.png" />
+            <img class="chat-bubble chat-bubble--2" src="assets/bubble-1.png" />
             <img src="assets/android-3.png" />
           </div>
-          <div id="all-bubbles" class="chat-bubbles">
-            <div class="chat-bubbles__bubble"></div>
-            <div class="chat-bubbles__bubble"></div>
-            <div class="chat-bubbles__bubble chat-bubbles__bubble--outline"></div>
+          <div id="all-bubbles" class="background-bubbles">
+            <div class="background-bubbles__bubble"></div>
+            <div class="background-bubbles__bubble"></div>
+            <div class="background-bubbles__bubble background-bubbles__bubble--outline"></div>
           </div>
         </div>
         <div class="grid-2cols__col grid-2cols__col--order-1">
@@ -151,7 +151,7 @@
         </div>
       </div>
     </section>
-    <section id="trigger-5" class="section section--5 section--overflow section--padding">
+    <section id="trigger-5" class="section section--5 section--overflow">
       <div class="container--sm">
         <h2 class="section-title">Capture and share content</h2>
       </div>
@@ -161,7 +161,7 @@
             <li class="splide__slide">
               <div class="capture-card">
                 <div class="capture-card__hero">
-                  <div class="record-screen">
+                  <div class="feature-screen capture-share-feature">
                     <img class="record-modal" src="assets/record-modal.png" />
                     <img src="assets/record-screen.png" />
                   </div>
@@ -178,7 +178,7 @@
             <li class="splide__slide">
               <div class="capture-card">
                 <div class="capture-card__hero">
-                  <div class="record-screen">
+                  <div class="feature-screen capture-share-feature">
                     <img class="share-modal" src="assets/share-modal.png" />
                     <img src="assets/share-screen.png" />
                   </div>
@@ -204,12 +204,10 @@
         </div>
       </div>
     </section>
-    <section class="section section--padding">
-      <div id="smart-section-1" class="smart-section">
+    <section class="section">
+      <div class="feature-panel">
         <div class="container--sm">
           <h2 class="section-title">Helpful tools that predict what you want.</h2>
-        </div>
-        <div class="smart-panel container--sm">
           <h3 class="section-subtitle">Smart reply</h3>
           <p class="section-body"><strong>Get suggested responses in conversations.</strong></p>
           <p class="section-body">
@@ -218,17 +216,17 @@
             fingertips.2
           </p>
         </div>
-        <div class="screen">
+        <div class="feature-screen">
           <img src="assets/smart-reply.png" />
-          <div class="smart-bubbles">
-            <div class="smart-bubbles__bubble"></div>
-            <div class="smart-bubbles__bubble smart-bubbles__bubble--red"></div>
-            <div class="smart-bubbles__bubble"></div>
+          <div class="reply-bubbles">
+            <div class="reply-bubbles__bubble"></div>
+            <div class="reply-bubbles__bubble reply-bubbles__bubble--red"></div>
+            <div class="reply-bubbles__bubble"></div>
           </div>
         </div>
       </div>
-      <div class="smart-section smart-section--section-1">
-        <div class="smart-panel container--sm">
+      <div class="feature-panel feature-panel--1">
+        <div class="container--sm">
           <h3 class="section-subtitle">App suggestions</h3>
           <p class="section-body"><strong>Easily get to apps you need most.</strong></p>
           <p class="section-body">
@@ -237,12 +235,12 @@
             when you wake up. Or to access the TV app you use when it’s time to relax.
           </p>
         </div>
-        <div class="screen">
+        <div class="feature-screen">
           <img src="assets/app-suggestions.png" />
         </div>
       </div>
-      <div class="smart-section smart-section--section-2">
-        <div class="smart-panel container--sm">
+      <div class="feature-panel feature-panel--2">
+        <div class="container--sm">
           <h3 class="section-subtitle">Smart folders</h3>
           <p class="section-body"><strong>Smarter ways to organize your apps.</strong></p>
           <p class="section-body">
@@ -250,7 +248,7 @@
             Names are based on theme—like work, photo, fitness and more.
           </p>
         </div>
-        <div class="screen">
+        <div class="feature-screen">
           <img src="assets/smart-folders.png" />
         </div>
       </div>

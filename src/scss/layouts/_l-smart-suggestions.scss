@@ -1,32 +1,21 @@
-.smart-panel {
+.feature-panel {
   position: relative;
   width: 100%;
-}
-
-.smart-section {
-  display: block;
-  position: relative;
-  width: 100%;
+  overflow: hidden;
+  padding-bottom: $layout--lg;
   background-color: color('light');
-  padding: $layout--xl 0;
-  &--section-1 {
+  &--1 {
     background-color: color('section-1');
   }
-  &--section-2 {
+  &--2 {
     background-color: color('section-2');
+  }
+  .section-title {
+    margin-bottom: $layout--lg;
   }
 }
 
-.screen {
-  position: relative;
-  width: 292px;
-  margin-top: $layout--lg;
-  margin-bottom: $layout--lg;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.smart-bubbles {
+.reply-bubbles {
   position: absolute;
   display: flex;
   align-items: center;

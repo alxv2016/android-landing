@@ -179,7 +179,7 @@ const scrollmg = {
       },
     });
 
-    gsap.to('.chat-1', {
+    gsap.to('.chat-bubble', {
       y: 0,
       ease: 'ease',
       scrollTrigger: {
@@ -190,7 +190,7 @@ const scrollmg = {
       },
     });
 
-    gsap.from('.chat-2', {
+    gsap.from('.chat-bubble--2', {
       yPercent: -20,
       ease: 'ease',
       scrollTrigger: {
@@ -215,7 +215,7 @@ const scrollmg = {
     });
 
     recordTL
-      .to('.record-screen', {
+      .to('.capture-share-feature', {
         y: 88,
       })
       .to('.record-modal', {
@@ -229,10 +229,11 @@ const scrollmg = {
         ease: 'ease',
       });
 
-    const panels = gsap.utils.toArray('.smart-section');
+    const panels = gsap.utils.toArray('.feature-panel');
     panels.forEach((screen: any) => {
       ScrollTrigger.create({
         trigger: screen,
+        markers: true,
         start: 'top top',
         end: 'bottom top',
         pin: true,
@@ -241,11 +242,11 @@ const scrollmg = {
       });
     });
 
-    gsap.to('.smart-bubbles', {
+    gsap.to('.reply-bubbles', {
       x: 0,
       ease: 'none',
       scrollTrigger: {
-        trigger: '#smart-section-1',
+        trigger: '.feature-panel',
         //toggleActions: 'play pause resume reverse',
         start: 'top center',
         end: 'bottom center',

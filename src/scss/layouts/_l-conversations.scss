@@ -1,15 +1,3 @@
-.conversations-phone {
-  position: relative;
-  display: block;
-  width: 240px;
-  height: auto;
-  @include breakpoint(lg) {
-    width: 280px;
-  }
-  margin: auto;
-  z-index: 1;
-}
-
 .conversations-notification {
   position: absolute;
   z-index: 2;

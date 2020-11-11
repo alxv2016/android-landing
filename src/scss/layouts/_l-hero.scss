@@ -103,11 +103,6 @@
 #pixel5-3,
 #pixel5-4 {
   position: absolute;
-  width: 240px;
-  height: auto;
-  @include breakpoint(lg) {
-    width: 280px;
-  }
 }
 
 #pixel5-2 {
