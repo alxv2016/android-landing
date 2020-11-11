@@ -11,7 +11,26 @@
   width: 100%;
   max-width: 1024px;
   margin: auto;
+  border: 1px solid red;
   @include container-padding;
+  padding-top: $spacing--4xl;
+  padding-bottom: $spacing--4xl;
+  @include breakpoint(md) {
+    padding-top: $layout--lg;
+    padding-bottom: $layout--lg;
+  }
+}
+
+.content-container {
+  position: relative;
+  width: 100%;
+  max-width: $max-content-size;
+  padding-top: $spacing--4xl;
+  padding-bottom: $spacing--4xl;
+  @include breakpoint(md) {
+    padding-top: $layout--lg;
+    padding-bottom: $layout--lg;
+  }
 }
 
 .section {
@@ -19,11 +38,6 @@
   width: 100%;
   &--overflow {
     overflow: hidden;
-  }
-
-  &--padding {
-    padding-top: $layout--2xl;
-    padding-bottom: $layout--2xl;
   }
 
   &--2 {
@@ -34,17 +48,18 @@
   }
 
   &-title {
-    font-size: $large--title;
+    font-size: $title--1;
     font-weight: font-weight('bold');
     margin: 0;
-    margin-bottom: $layout--sm;
+    margin-bottom: $layout--xs;
     @include breakpoint(md) {
-      font-size: $huge--title;
+      font-size: $large--title;
+      margin-bottom: $layout--sm;
     }
 
     &--hero {
       @include breakpoint(lg) {
-        font-size: $huge--title * 1.25;
+        font-size: $huge--title;
       }
     }
   }
@@ -72,9 +87,14 @@
 
   &-body {
     font-size: $body--1;
+    margin: 0;
     @include breakpoint(md) {
       font-size: $subtitle;
     }
+  }
+
+  &-body ~ &-body {
+    margin-top: $spacing--md;
   }
 }
 
@@ -102,6 +122,13 @@
     order: -1;
     @include breakpoint(lg) {
       order: 0;
+    }
+  }
+
+  &__col--margin-top {
+    margin-top: $layout--lg;
+    @include breakpoint(lg) {
+      margin-top: 0;
     }
   }
 }

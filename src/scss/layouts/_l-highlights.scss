@@ -1,22 +1,9 @@
-.content-highlights {
+.highlights-cards {
   position: relative;
   width: 100%;
-  max-width: 768px;
-  margin: $layout--2xl auto;
-  &-cards {
-    position: relative;
-    margin-top: $layout--lg;
-    width: 100%;
-    max-width: 576px;
-    @include breakpoint(sm) {
-      max-width: 768px;
-    }
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .highlight-card {

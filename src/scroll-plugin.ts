@@ -6,9 +6,9 @@ gsap.registerPlugin(ScrollTrigger);
 const scrollmg = {
   initScrollMagic: () => {
     console.log('hi!');
-    let initial = {skew: 0};
-    const skewSetter = gsap.quickSetter('.highlight-card', 'skewY', 'deg');
-    const speed = gsap.utils.pipe(gsap.utils.clamp(-20, 20), gsap.utils.snap(1));
+    //let initial = {skew: 0};
+    //const skewSetter = gsap.quickSetter('.highlight-card', 'skewY', 'deg');
+    //const speed = gsap.utils.pipe(gsap.utils.clamp(-20, 20), gsap.utils.snap(1));
 
     ScrollTrigger.create({
       markers: false,
@@ -26,20 +26,20 @@ const scrollmg = {
             : headerNav?.classList.remove('js-header--hidden');
         }
 
-        const skew = speed(self.getVelocity() / 200);
+        //const skew = speed(self.getVelocity() / 200);
 
-        if (Math.abs(skew) > initial.skew) {
-          initial.skew = skew;
-          gsap.to(initial, {
-            duration: 0.8,
-            skew: 0,
-            ease: 'power3',
-            overwrite: true,
-            onUpdate: () => {
-              skewSetter(initial.skew);
-            },
-          });
-        }
+        // if (Math.abs(skew) > initial.skew) {
+        //   initial.skew = skew;
+        //   gsap.to(initial, {
+        //     duration: 0.8,
+        //     skew: 0,
+        //     ease: 'power3',
+        //     overwrite: true,
+        //     onUpdate: () => {
+        //       skewSetter(initial.skew);
+        //     },
+        //   });
+        // }
       },
     });
 

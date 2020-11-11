@@ -1,14 +1,13 @@
 .content-hero {
   position: relative;
   width: 100%;
-  padding-top: $spacing--3xl;
   margin-top: $layout--xl;
   @include breakpoint(md) {
     margin-top: $layout--2xl;
   }
   &__body {
     position: relative;
-    max-width: 768px;
+    max-width: $max-content-size;
     margin: auto;
     margin-bottom: $layout--lg;
     @include breakpoint(md) {
@@ -19,77 +18,48 @@
 
 .product-hero {
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   z-index: 2;
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 50%;
-  min-width: 220px;
-  max-width: 360px;
-  height: 568px;
-  @include breakpoint(sm) {
-    height: 768px;
-  }
 }
 
 .pixel-phone {
   position: relative;
-  width: 100%;
-  height: 100%;
-  // &__frame {
-  //   position: relative;
-  //   z-index: 1;
-  // }
-  // &-screen {
-  //   position: absolute;
-  //   z-index: 0;
-  //   top: 24px;
-  //   left:50%;
-  //   transform: translateX(-50%);
-  // }
-  &__back,
-  &__group {
-    position: absolute;
-    top: 0;
+  width: 280px;
+  height: 545px;
+  @include breakpoint(lg) {
+    width: 380px;
+    height: 645px;
   }
-
   &__back {
+    position: absolute;
+    height: auto;
+    width: 100%;
     z-index: 0;
-    left: -40px;
-    @include breakpoint(sm) {
-      left: -100px;
-    }
+    left: -65px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &__group {
+    position: relative;
     width: 100%;
     height: 100%;
-    left: -55px;
-    @include breakpoint(sm) {
-      left: 0;
-    }
 
-    &-shadow,
     &-front {
       position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -65px;
+      width: 100%;
+      height: auto;
     }
     &-shadow {
-      z-index: 1;
-      left: 44px;
-      top: -60px;
-      transform: scale(0.8);
-      opacity: 0.75;
-      @include breakpoint(sm) {
-        left: 0;
-        top: -110px;
-      }
-    }
-    &-front {
-      top: 0;
-      left: 98px;
-      z-index: 2;
+      position: absolute;
+      width: auto;
+      height: 100%;
+      opacity: 0.45;
     }
   }
 }
@@ -119,7 +89,7 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 868px;
+  max-width: $max-screen-size;
   height: 480px;
   transform: translateY(20%);
   margin-top: $layout--2xl;
@@ -133,10 +103,11 @@
 #pixel5-3,
 #pixel5-4 {
   position: absolute;
-  width: 50%;
-  min-width: 220px;
-  max-width: 280px;
+  width: 240px;
   height: auto;
+  @include breakpoint(lg) {
+    width: 280px;
+  }
 }
 
 #pixel5-2 {
