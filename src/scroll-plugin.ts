@@ -201,6 +201,17 @@ const scrollmg = {
       },
     });
 
+    gsap.to('.js-chat-messages', {
+      y: -120,
+      ease: 'ease',
+      scrollTrigger: {
+        trigger: '#trigger-4',
+        start: 'top center',
+        end: 'bottom center',
+        scrub: true,
+      },
+    });
+
     const recordTL = gsap.timeline({
       defaults: {
         ease: 'none',
