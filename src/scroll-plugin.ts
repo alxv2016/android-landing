@@ -43,6 +43,8 @@ const scrollmg = {
       },
     });
 
+    // note consider converting to timeline
+    // Hero animation
     gsap.to('.js-spotlight', {
       scrollTrigger: {
         // markers: true,
@@ -56,6 +58,16 @@ const scrollmg = {
       ease: 'none',
     });
 
+    const heroTl = gsap.timeline({
+      defaults: {
+        ease: 'none',
+      },
+      scrollTrigger: {
+        trigger: '.js-products',
+        scrub: true,
+      },
+    });
+
     gsap.to('.js-product', {
       yPercent: 80,
       ease: 'none',
@@ -65,26 +77,26 @@ const scrollmg = {
       },
     });
 
-    gsap.to('#pixel-front', {
+    gsap.to('.js-pixel-front', {
       yPercent: 30,
       xPercent: 30,
       rotate: 15,
       scale: 0.75,
       ease: 'none',
       scrollTrigger: {
-        trigger: '#products',
+        trigger: '.js-products',
         scrub: true,
       },
     });
 
-    gsap.to('#pixel-back', {
+    gsap.to('.js-pixel-back', {
       yPercent: -40,
       xPercent: -40,
       rotate: 15,
       scale: 0.75,
       ease: 'none',
       scrollTrigger: {
-        trigger: '#products',
+        trigger: '.js-products',
         scrub: true,
       },
     });
