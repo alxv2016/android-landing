@@ -17,7 +17,7 @@ const scrollmg = {
         const scrollPos = self.scroller.pageYOffset;
         let scrollingDown = false;
         scrollDirection === 1 ? (scrollingDown = true) : (scrollingDown = false);
-        const headerNav = document.querySelector('#js-header');
+        const headerNav = document.querySelector('.js-header');
         const headerHeight = headerNav?.getBoundingClientRect().height;
 
         if (headerHeight && scrollPos >= headerHeight) {
@@ -43,10 +43,10 @@ const scrollmg = {
       },
     });
 
-    gsap.to('#product-spotlight', {
+    gsap.to('.js-spotlight', {
       scrollTrigger: {
         // markers: true,
-        trigger: '#product-spotlight',
+        trigger: '.js-spotlight',
         scrub: 0.6,
         start: 'top center',
         end: '300px center',
@@ -56,22 +56,12 @@ const scrollmg = {
       ease: 'none',
     });
 
-    gsap.to('#pixel5', {
+    gsap.to('.js-product', {
       yPercent: 80,
       ease: 'none',
       scrollTrigger: {
-        trigger: '#products',
+        trigger: '.js-products',
         scrub: true,
-      },
-    });
-
-    gsap.to('#products', {
-      ease: 'none',
-      yPercent: -30,
-      scrollTrigger: {
-        trigger: '#pixel5',
-        scrub: true,
-        start: '900px bottom',
       },
     });
 
