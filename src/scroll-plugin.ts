@@ -79,6 +79,7 @@ const scrollmg = {
       yPercent: 30,
       xPercent: 30,
       rotate: 15,
+      scale: 0.75,
       ease: 'none',
       scrollTrigger: {
         trigger: '#products',
@@ -90,6 +91,7 @@ const scrollmg = {
       yPercent: -40,
       xPercent: -40,
       rotate: 15,
+      scale: 0.75,
       ease: 'none',
       scrollTrigger: {
         trigger: '#products',
@@ -244,7 +246,6 @@ const scrollmg = {
     panels.forEach((screen: any) => {
       ScrollTrigger.create({
         trigger: screen,
-        markers: true,
         start: 'top top',
         end: 'bottom top',
         pin: true,
