@@ -97,15 +97,13 @@
   @include breakpoint(sm) {
     height: 667px;
   }
+
+  .feature-screen {
+    position: absolute;
+  }
 }
 
-#pixel5-2,
-#pixel5-3,
-#pixel5-4 {
-  position: absolute;
-}
-
-#pixel5-2 {
+.js-feature-1 {
   top: 0;
   left: -120px;
   @include breakpoint(md) {
@@ -113,7 +111,7 @@
   }
 }
 
-#pixel5-3 {
+.js-feature-2 {
   top: 0;
   right: -120px;
   @include breakpoint(md) {
@@ -121,7 +119,7 @@
   }
 }
 
-#pixel5-4 {
+.js-feature-3 {
   top: 5%;
   left: 50%;
   transform: translateX(-50%);

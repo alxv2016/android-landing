@@ -68,114 +68,94 @@ const scrollmg = {
       },
     });
 
-    gsap.to('.js-product', {
-      yPercent: 80,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.js-products',
-        scrub: true,
-      },
-    });
+    heroTl
+      .to('.js-product-hero', {
+        yPercent: 40,
+        ease: 'none',
+      })
+      .to(
+        '.js-pixel-front',
+        {
+          yPercent: 20,
+          xPercent: 20,
+          rotate: 8,
+          scale: 0.95,
+        },
+        0
+      )
+      .to(
+        '.js-pixel-back',
+        {
+          yPercent: -20,
+          xPercent: -20,
+          rotate: 8,
+          scale: 0.95,
+        },
+        0
+      )
+      .to(
+        '.js-feature-1',
+        {
+          yPercent: -25,
+        },
+        0
+      )
+      .to(
+        '.js-feature-2',
+        {
+          yPercent: -45,
+        },
+        0
+      )
+      .to(
+        '.js-feature-3',
+        {
+          yPercent: 45,
+        },
+        0.2
+      );
 
-    gsap.to('.js-pixel-front', {
-      yPercent: 30,
-      xPercent: 30,
-      rotate: 15,
-      scale: 0.75,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.js-products',
-        scrub: true,
-      },
-    });
-
-    gsap.to('.js-pixel-back', {
-      yPercent: -40,
-      xPercent: -40,
-      rotate: 15,
-      scale: 0.75,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.js-products',
-        scrub: true,
-      },
-    });
-
-    gsap.to('#pixel5-2', {
-      yPercent: -25,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '#products',
-        scrub: 0.4,
-      },
-    });
-
-    gsap.to('#pixel5-3', {
-      yPercent: -45,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '#products',
-        scrub: 0.4,
-      },
-    });
-
-    gsap.to('#pixel5-4', {
-      yPercent: 45,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '#products',
-        scrub: 0.2,
-      },
-    });
-
-    const newTl = gsap.timeline({
+    const convoTl = gsap.timeline({
       defaults: {
         ease: 'none',
       },
       scrollTrigger: {
-        trigger: '#trigger-3',
-        toggleActions: 'play pause resume reverse',
+        trigger: '.js-convo-trigger',
         start: 'top center',
         end: 'bottom center',
         scrub: true,
       },
     });
 
-    newTl
-      .to('#bubble-1', {
+    convoTl
+      .to('.js-bubble-1', {
         yPercent: -115,
         scale: 1,
       })
       .to(
-        '#bubble-3',
+        '.js-bubble-2',
         {
           yPercent: 115,
           scale: 1,
         },
         0
       )
-      .to('#bubble-2', {
+      .to('.js-bubble-3', {
         scale: 1,
+      })
+      .to('.js-notification', {
+        scale: 1,
+        opacity: 1,
+        ease: 'ease',
+        duration: 0.3,
       });
 
-    gsap.to('#notification', {
-      scale: 1,
-      opacity: 1,
-      ease: 'ease',
-      duration: 0.3,
-      scrollTrigger: {
-        trigger: '#trigger-3',
-        toggleActions: 'play pause resume reverse',
-        start: 'top center',
-        end: 'bottom center',
+    const bubblesTl = gsap.timeline({
+      defaults: {
+        ease: 'none',
       },
-    });
-
-    gsap.to('#all-bubbles', {
-      x: 0,
-      ease: 'none',
       scrollTrigger: {
-        trigger: '#trigger-4',
+        trigger: '.js-bubbles-trigger',
         //toggleActions: 'play pause resume reverse',
         start: 'top center',
         end: 'bottom center',
@@ -183,38 +163,32 @@ const scrollmg = {
       },
     });
 
-    gsap.to('.chat-bubble', {
-      y: 0,
-      ease: 'ease',
-      scrollTrigger: {
-        trigger: '#trigger-4',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: true,
-      },
-    });
-
-    gsap.from('.chat-bubble--2', {
-      yPercent: -20,
-      ease: 'ease',
-      scrollTrigger: {
-        trigger: '#trigger-4',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: true,
-      },
-    });
-
-    gsap.to('.js-chat-messages', {
-      y: -120,
-      ease: 'ease',
-      scrollTrigger: {
-        trigger: '#trigger-4',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: true,
-      },
-    });
+    bubblesTl
+      .to('.js-bg-bubbles', {
+        x: 0,
+      })
+      .to(
+        '.js-chat-messages',
+        {
+          y: -120,
+          ease: 'ease',
+        },
+        0.2
+      )
+      .to(
+        '.js-chat-bubble-1',
+        {
+          yPercent: 60,
+        },
+        0
+      )
+      .to(
+        '.js-chat-bubble-2',
+        {
+          yPercent: -60,
+        },
+        0
+      );
 
     const recordTL = gsap.timeline({
       defaults: {
