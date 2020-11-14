@@ -218,29 +218,119 @@ const scrollmg = {
         ease: 'ease',
       });
 
-    const panels = gsap.utils.toArray('.feature-panel');
-    panels.forEach((screen: any) => {
-      ScrollTrigger.create({
-        trigger: screen,
-        start: 'top top',
-        end: 'bottom top',
-        pin: true,
-        scrub: true,
-        pinSpacing: false,
-      });
-    });
-
     gsap.to('.reply-bubbles', {
+      opacity: 1,
       x: 0,
-      ease: 'none',
+      ease: 'ease',
       scrollTrigger: {
-        trigger: '.feature-panel',
-        //toggleActions: 'play pause resume reverse',
-        start: 'top center',
-        end: 'bottom center',
+        trigger: '.js-panel-1',
+        start: 'top top',
+        end: 'center top',
         scrub: true,
       },
     });
+
+    const smartReplyTl = gsap.timeline({
+      defaults: {
+        ease: 'none',
+      },
+      scrollTrigger: {
+        markers: true,
+        trigger: '.js-panel-1',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true,
+      },
+    });
+
+    smartReplyTl
+      .to(
+        '.js-fs-1',
+        {
+          yPercent: 60,
+          scale: 0.95,
+        },
+        0
+      )
+      .to(
+        '.js-fc-1',
+        {
+          yPercent: 40,
+        },
+        0
+      );
+
+    const smartSugTl = gsap.timeline({
+      defaults: {
+        ease: 'none',
+      },
+      scrollTrigger: {
+        trigger: '.js-panel-2',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true,
+      },
+    });
+
+    smartSugTl
+      .to('.js-fs-2', {
+        yPercent: 60,
+        scale: 0.95,
+      })
+      .to(
+        '.js-fc-2',
+        {
+          yPercent: 40,
+        },
+        0
+      );
+
+    gsap.from('.app-bubbles__bubble', {
+      opacity: 0,
+      scale: 0.46,
+      stagger: 0.125,
+      ease: 'ease',
+      scrollTrigger: {
+        trigger: '.js-panel-2',
+        start: 'top top',
+        end: 'center top',
+        scrub: true,
+      },
+    });
+    // .from('.app-bubbles__bubble', {
+    //   //yPercent: 20,
+    //   scale: 0.46,
+    //   stagger: 0.25,
+    // }, 0);
+
+    const smartFolTl = gsap.timeline({
+      defaults: {
+        ease: 'none',
+      },
+      scrollTrigger: {
+        trigger: '.js-panel-3',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true,
+      },
+    });
+
+    smartFolTl
+      .to(
+        '.js-fs-3',
+        {
+          yPercent: 60,
+          scale: 0.95,
+        },
+        0
+      )
+      .to(
+        '.js-fc-3',
+        {
+          yPercent: 40,
+        },
+        0
+      );
   },
 };
 
