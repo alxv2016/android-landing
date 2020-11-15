@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background-color: color('light');
+  background-color: rgba(color('section-2'), 0.25);
 }
 
 .feature-content {
@@ -36,7 +36,7 @@
     flex-shrink: 0;
     border-radius: 300px;
     margin: $spacing--lg;
-    background-color: color('section-2');
+    background-color: color('section-1');
 
     &--red {
       background-color: color('tertiary');
@@ -62,7 +62,7 @@
     width: 300px;
     flex-shrink: 0;
     border-radius: 300px;
-    background-color: rgba(color('section-2'), 0.45);
+    background-color: rgba(color('section-1'), 0.45);
 
     &:before {
       content: '';
@@ -73,7 +73,7 @@
       width: 80%;
       height: 80%;
       border-radius: inherit;
-      background-color: color('section-2');
+      background-color: color('section-1');
     }
 
     &--red {
@@ -82,5 +82,30 @@
         background-color: color('tertiary');
       }
     }
+  }
+}
+
+.folder-bubbles {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) scale(1.2);
+  z-index: -1;
+  width: 600px;
+  height: 300px;
+  border-radius: 300px;
+  border: 16px solid color('tertiary');
+
+  &__bubble {
+    position: relative;
+    margin: $spacing--xl;
+    height: 230px;
+    width: 230px;
+    flex-shrink: 0;
+    border-radius: inherit;
+    background-color: rgba(color('section-1'), 1);
   }
 }

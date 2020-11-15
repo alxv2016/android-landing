@@ -47,7 +47,6 @@ const scrollmg = {
     // Hero animation
     gsap.to('.js-spotlight', {
       scrollTrigger: {
-        // markers: true,
         trigger: '.js-spotlight',
         scrub: 0.6,
         start: 'top center',
@@ -156,7 +155,6 @@ const scrollmg = {
       },
       scrollTrigger: {
         trigger: '.js-bubbles-trigger',
-        //toggleActions: 'play pause resume reverse',
         start: 'top center',
         end: 'bottom center',
         scrub: true,
@@ -224,7 +222,7 @@ const scrollmg = {
       ease: 'ease',
       scrollTrigger: {
         trigger: '.js-panel-1',
-        start: 'top top',
+        start: '-=300 top',
         end: 'center top',
         scrub: true,
       },
@@ -235,7 +233,6 @@ const scrollmg = {
         ease: 'none',
       },
       scrollTrigger: {
-        markers: true,
         trigger: '.js-panel-1',
         start: 'top top',
         end: 'bottom top',
@@ -289,19 +286,39 @@ const scrollmg = {
       opacity: 0,
       scale: 0.46,
       stagger: 0.125,
-      ease: 'ease',
+      ease: 'bounce',
       scrollTrigger: {
         trigger: '.js-panel-2',
-        start: 'top top',
+        start: '-=300 top',
         end: 'center top',
         scrub: true,
       },
     });
-    // .from('.app-bubbles__bubble', {
-    //   //yPercent: 20,
-    //   scale: 0.46,
-    //   stagger: 0.25,
-    // }, 0);
+
+    const folderBubTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.js-panel-3',
+        start: '-=300 top',
+        end: 'center top',
+        scrub: true,
+      },
+    });
+
+    folderBubTl
+      .from('.folder-bubbles', {
+        opacity: 0,
+        xPercent: 60,
+      })
+      .from(
+        '.folder-bubbles__bubble',
+        {
+          opacity: 0,
+          scale: 0.46,
+          stagger: 0.125,
+          ease: 'bounce',
+        },
+        0.125
+      );
 
     const smartFolTl = gsap.timeline({
       defaults: {
