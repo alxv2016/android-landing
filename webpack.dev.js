@@ -1,7 +1,7 @@
 const path = require('path');
 
 const {merge} = require('webpack-merge');
-const common = require('./webpack.common.js');
+const common = require('./config/webpack.common.js');
 // Merge webpack dev config with common configs
 module.exports = merge(common, {
   // https://webpack.js.org/configuration/mode/#usage

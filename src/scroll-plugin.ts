@@ -348,6 +348,19 @@ const scrollmg = {
         },
         0
       );
+
+    //
+    gsap.to('.feature-image', {
+      scale: 0.76,
+      ease: 'none',
+      scrollTrigger: {
+        markers: true,
+        trigger: '.js-tester',
+        start: '-=300 top',
+        end: 'top top',
+        scrub: true,
+      },
+    });
   },
 };
 

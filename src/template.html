@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello world!</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <header class="js-header header">
       <div class="header__container">
-        <div class="header__brand"><img class="brand-logo" src="./assets/android-icon.svg" /></div>
+        <div class="header__brand"><img class="brand-logo" src="assets/android-icon.svg" /></div>
         <nav class="header__nav">
           <ul class="header__menu">
             <li class="header__menu-item">
@@ -282,7 +282,19 @@
         </div>
       </div>
     </section>
-
+    <section class="section js-tester section--overflow">
+      <div class="voice-feature container--sm">
+        <div class="f-content">
+          <h2 class="section-title">Control your phone with your voice.</h2>
+          <p class="section-body">
+            With Android 11, Voice Access is faster and easier to use. Intuitive labels on apps help you control and
+            navigate your phone, all by speaking out loud. Even use Voice Access offline, for more support whenever you
+            need it.
+          </p>
+        </div>
+      </div>
+      <div class="feature-image"></div>
+    </section>
     <section id="test" style="height: 6000px"></section>
   </body>
 </html>

@@ -1,5 +1,5 @@
 const {merge} = require('webpack-merge');
-const common = require('./webpack.common.js');
+const common = require('./config/webpack.common.js');
 
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');

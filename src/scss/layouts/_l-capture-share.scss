@@ -48,7 +48,7 @@
   max-width: 1024px !important;
   margin: auto;
   margin-bottom: $layout--lg;
-  @include breakpoint(mg) {
+  @include breakpoint(md) {
     margin-bottom: $layout--xl;
   }
   .splide__arrows {
