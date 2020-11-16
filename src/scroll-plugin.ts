@@ -351,15 +351,46 @@ const scrollmg = {
 
     //
     gsap.to('.feature-image', {
-      scale: 0.76,
+      scale: 0.85,
+      yPercent: 15,
       ease: 'none',
       scrollTrigger: {
-        markers: true,
         trigger: '.js-tester',
         start: '-=300 top',
         end: 'top top',
         scrub: true,
       },
+    });
+
+    gsap.from('.voice-lines', {
+      yPercent: 25,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.js-tester',
+        start: '-=300 top',
+        end: 'top top',
+        scrub: true,
+      },
+    });
+
+    const audioLines = gsap.utils.toArray('.voice-lines__line');
+    audioLines.forEach((line: any) => {
+      gsap.to(line, {
+        scaleY: gsap.utils.random(1, 8, 4),
+        repeat: -1,
+        ease: 'bounce',
+        duration: 0.3,
+        yoyo: true,
+        onRepeat: () => {
+          gsap.to(line, {
+            scaleY: gsap.utils.random(1, 8, 3),
+            repeat: -1,
+            ease: 'bounce',
+            duration: 0.25,
+            yoyo: true,
+          });
+        },
+      });
     });
   },
 };

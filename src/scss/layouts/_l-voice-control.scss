@@ -4,10 +4,13 @@
   height: 900px;
   display: flex;
   align-items: flex-end;
+  @include breakpoint(md) {
+    align-items: center;
+  }
 }
 
 .js-tester {
-  border: 1px solid red;
+  background-color: color('primary');
 }
 
 .f-content {
@@ -18,6 +21,9 @@
   padding: $spacing--xl;
   border-radius: 1rem;
   @include frosted-glass(color('light'), 0.45);
+  @include breakpoint(md) {
+    width: 50%;
+  }
 }
 
 .feature-image {
@@ -28,8 +34,28 @@
   width: 100%;
   height: 900px;
   overflow: hidden;
-  background: url('../assets/android-1.png');
+  background: url('../assets/voice-control.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 60% 50%;
+}
+
+.voice-lines {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__line {
+    width: 18px;
+    height: 24px;
+    background-color: color('light');
+    margin: 8px;
+    border-radius: 0;
+  }
 }
