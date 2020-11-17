@@ -1,4 +1,4 @@
-.voice-feature {
+.voice-control {
   position: relative;
   width: 100%;
   height: 900px;
@@ -9,11 +9,7 @@
   }
 }
 
-.js-tester {
-  background-color: color('primary');
-}
-
-.f-content {
+.voice-control__content {
   position: relative;
   z-index: 3;
   width: 100%;
@@ -26,7 +22,7 @@
   }
 }
 
-.feature-image {
+.vc-feature-image {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -40,22 +36,29 @@
   background-position: 60% 50%;
 }
 
-.voice-lines {
+.vc-soundwaves {
   position: absolute;
   top: 48px;
   left: 0;
   width: 100%;
   height: 200px;
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.075) 0%, rgba(0, 0, 0, 0) 100%);
+  }
 
-  &__line {
+  &__wave {
     width: 18px;
-    height: 24px;
+    height: 14px;
     background-color: color('light');
     margin: 8px;
-    border-radius: 0;
   }
 }

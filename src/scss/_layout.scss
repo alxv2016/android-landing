@@ -46,6 +46,10 @@
     background-color: color('light');
   }
 
+  &--primary {
+    background-color: color('primary');
+  }
+
   &-title {
     font-size: $title--1;
     font-weight: font-weight('bold');

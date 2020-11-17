@@ -245,7 +245,7 @@ const scrollmg = {
         '.js-fs-1',
         {
           yPercent: 60,
-          scale: 0.95,
+          //scale: 0.95,
         },
         0
       )
@@ -272,7 +272,7 @@ const scrollmg = {
     smartSugTl
       .to('.js-fs-2', {
         yPercent: 60,
-        scale: 0.95,
+        //scale: 0.95,
       })
       .to(
         '.js-fc-2',
@@ -337,7 +337,7 @@ const scrollmg = {
         '.js-fs-3',
         {
           yPercent: 60,
-          scale: 0.95,
+          //scale: 0.95,
         },
         0
       )
@@ -350,42 +350,39 @@ const scrollmg = {
       );
 
     //
-    gsap.to('.feature-image', {
-      scale: 0.85,
-      yPercent: 15,
-      ease: 'none',
+    const vcTl = gsap.timeline({
       scrollTrigger: {
-        trigger: '.js-tester',
+        trigger: '.js-voice-section',
         start: '-=300 top',
         end: 'top top',
         scrub: true,
       },
     });
 
-    gsap.from('.voice-lines', {
-      yPercent: 25,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.js-tester',
-        start: '-=300 top',
-        end: 'top top',
-        scrub: true,
-      },
-    });
+    vcTl
+      .to('.vc-feature-image', {
+        scale: 0.85,
+        yPercent: 15,
+        ease: 'none',
+      })
+      .from('.vc-soundwaves', {
+        yPercent: 25,
+        ease: 'ease',
+      });
 
-    const audioLines = gsap.utils.toArray('.voice-lines__line');
+    const audioLines = gsap.utils.toArray('.vc-soundwaves__wave');
     audioLines.forEach((line: any) => {
       gsap.to(line, {
         scaleY: gsap.utils.random(1, 8, 4),
         repeat: -1,
-        ease: 'bounce',
+        ease: 'ease',
         duration: 0.3,
         yoyo: true,
         onRepeat: () => {
           gsap.to(line, {
             scaleY: gsap.utils.random(1, 8, 3),
             repeat: -1,
-            ease: 'bounce',
+            ease: 'ease',
             duration: 0.25,
             yoyo: true,
           });
