@@ -224,14 +224,13 @@ const scrollmg = {
         trigger: '.js-panel-1',
         start: '-=300 top',
         end: 'center top',
-        scrub: true,
+        toggleActions: 'play pause resume reverse',
       },
     });
 
-    const smartReplyTl = gsap.timeline({
-      defaults: {
-        ease: 'none',
-      },
+    gsap.to('.js-fs-1', {
+      yPercent: 20,
+      ease: 'none',
       scrollTrigger: {
         trigger: '.js-panel-1',
         start: 'top top',
@@ -240,27 +239,9 @@ const scrollmg = {
       },
     });
 
-    smartReplyTl
-      .to(
-        '.js-fs-1',
-        {
-          yPercent: 60,
-          //scale: 0.95,
-        },
-        0
-      )
-      .to(
-        '.js-fc-1',
-        {
-          yPercent: 40,
-        },
-        0
-      );
-
-    const smartSugTl = gsap.timeline({
-      defaults: {
-        ease: 'none',
-      },
+    gsap.to('.js-fs-2', {
+      yPercent: 20,
+      ease: 'none',
       scrollTrigger: {
         trigger: '.js-panel-2',
         start: 'top top',
@@ -268,19 +249,6 @@ const scrollmg = {
         scrub: true,
       },
     });
-
-    smartSugTl
-      .to('.js-fs-2', {
-        yPercent: 60,
-        //scale: 0.95,
-      })
-      .to(
-        '.js-fc-2',
-        {
-          yPercent: 40,
-        },
-        0
-      );
 
     gsap.from('.app-bubbles__bubble', {
       opacity: 0,
@@ -291,7 +259,7 @@ const scrollmg = {
         trigger: '.js-panel-2',
         start: '-=300 top',
         end: 'center top',
-        scrub: true,
+        toggleActions: 'play pause resume reverse',
       },
     });
 
@@ -300,14 +268,14 @@ const scrollmg = {
         trigger: '.js-panel-3',
         start: '-=300 top',
         end: 'center top',
-        scrub: true,
+        toggleActions: 'play pause resume reverse',
       },
     });
 
     folderBubTl
       .from('.folder-bubbles', {
         opacity: 0,
-        xPercent: 60,
+        xPercent: 40,
       })
       .from(
         '.folder-bubbles__bubble',
@@ -320,10 +288,9 @@ const scrollmg = {
         0.125
       );
 
-    const smartFolTl = gsap.timeline({
-      defaults: {
-        ease: 'none',
-      },
+    gsap.to('.js-fs-3', {
+      yPercent: 20,
+      ease: 'none',
       scrollTrigger: {
         trigger: '.js-panel-3',
         start: 'top top',
@@ -331,30 +298,12 @@ const scrollmg = {
         scrub: true,
       },
     });
-
-    smartFolTl
-      .to(
-        '.js-fs-3',
-        {
-          yPercent: 60,
-          //scale: 0.95,
-        },
-        0
-      )
-      .to(
-        '.js-fc-3',
-        {
-          yPercent: 40,
-        },
-        0
-      );
-
     //
     const vcTl = gsap.timeline({
       scrollTrigger: {
         trigger: '.js-voice-section',
-        start: '-=300 top',
-        end: 'top top',
+        start: '-=400 top',
+        end: 'center top',
         scrub: true,
       },
     });
@@ -366,8 +315,8 @@ const scrollmg = {
         ease: 'none',
       })
       .from('.vc-soundwaves', {
-        yPercent: 25,
-        ease: 'ease',
+        y: 28,
+        ease: 'none',
       });
 
     const audioLines = gsap.utils.toArray('.vc-soundwaves__wave');
@@ -389,6 +338,30 @@ const scrollmg = {
         },
       });
     });
+
+    const controlsTl = gsap.timeline({
+      defaults: {
+        ease: 'none',
+      },
+      scrollTrigger: {
+        trigger: '.js-control-trigger',
+        start: '-=400 top',
+        end: 'top top',
+        scrub: true,
+      },
+    });
+
+    controlsTl
+      .from('.js-fs-house', {
+        y: 88,
+      })
+      .to(
+        '.fs-houselight-on',
+        {
+          opacity: 1,
+        },
+        0.125
+      );
   },
 };
 

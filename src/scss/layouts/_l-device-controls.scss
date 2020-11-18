@@ -1,0 +1,19 @@
+.fs-houselights {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 720px;
+  height: auto;
+  @include breakpoint(lg) {
+    left: 105%;
+  }
+}
+
+.fs-houselight-on {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
