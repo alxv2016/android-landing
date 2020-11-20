@@ -390,6 +390,33 @@ const scrollmg = {
         },
         0.25
       );
+
+    const autoTl = gsap.timeline({
+      defaults: {
+        ease: 'none',
+      },
+      scrollTrigger: {
+        markers: true,
+        trigger: '.js-aa',
+        start: '-=300 top',
+        end: 'top top',
+        scrub: true,
+      },
+    });
+
+    autoTl
+      .to('.js-android', {
+        yPercent: 200,
+        scale: 0.75,
+      })
+      .from(
+        '.js-auto',
+        {
+          y: 88,
+          scale: 0.95,
+        },
+        0
+      );
   },
 };
 
