@@ -362,6 +362,34 @@ const scrollmg = {
         },
         0.125
       );
+
+    const soundWave = gsap.timeline({
+      defaults: {
+        ease: 'power1',
+        stagger: 0.3,
+        duration: 1,
+        repeat: -1,
+      },
+      scrollTrigger: {
+        trigger: '.js-media-section',
+        start: '-=300 top',
+        end: 'center top',
+        toggleActions: 'play pause resume pause',
+      },
+    });
+
+    soundWave
+      .to('.speaker__wave', {
+        opacity: 0.75,
+        scale: 6,
+      })
+      .to(
+        '.speaker__wave',
+        {
+          opacity: 0,
+        },
+        0.25
+      );
   },
 };
 
