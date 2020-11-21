@@ -444,6 +444,53 @@ const scrollmg = {
         opacity: 1,
         ease: 'ease',
       });
+
+    const radioWaves = gsap.timeline({
+      defaults: {
+        ease: 'power1',
+        stagger: 1.25,
+        duration: 3,
+        repeat: -1,
+      },
+      scrollTrigger: {
+        trigger: '.l-security',
+        start: '-=300 top',
+        end: 'center top',
+        toggleActions: 'play pause resume pause',
+      },
+    });
+
+    radioWaves
+      .to('.radio-waves__wave', {
+        opacity: 1,
+        scale: 4,
+      })
+      .to(
+        '.radio-waves__wave',
+        {
+          opacity: 0.75,
+          scale: 9,
+        },
+        0.125
+      )
+      .to(
+        '.radio-waves__wave',
+        {
+          opacity: 0,
+        },
+        0.25
+      );
+
+    gsap.from('.fs-security-updates', {
+      yPercent: 20,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.l-security',
+        start: '-=400 top',
+        end: 'top top',
+        scrub: true,
+      },
+    });
   },
 };
 

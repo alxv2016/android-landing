@@ -1,0 +1,41 @@
+.l-security {
+  position: relative;
+  width: 100%;
+  height: 720px;
+  .section-title,
+  .section-body {
+    color: color('light');
+  }
+}
+
+.fs-security-updates {
+  position: relative;
+  bottom: -18px;
+  width: 298px;
+  @include breakpoint(md) {
+    width: 340px;
+  }
+}
+
+.radio-waves {
+  position: absolute;
+  z-index: 2;
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 160px;
+  width: 160px;
+  border-radius: 300px;
+
+  &__wave {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    opacity: 0;
+    border: 0.75px solid #3ddc84;
+  }
+}

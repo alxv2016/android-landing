@@ -50,6 +50,10 @@
     background-color: color('primary');
   }
 
+  &--security {
+    background-color: color('section-3');
+  }
+
   &-title {
     font-size: $title--1;
     font-weight: font-weight('bold');
