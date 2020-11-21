@@ -489,6 +489,17 @@ const scrollmg = {
         scrub: true,
       },
     });
+
+    gsap.from('.outro-container', {
+      yPercent: 40,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.l-security',
+        start: '-=180 top',
+        end: 'top top',
+        scrub: true,
+      },
+    });
   },
 };
 
