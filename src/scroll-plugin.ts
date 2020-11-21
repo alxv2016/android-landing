@@ -366,9 +366,10 @@ const scrollmg = {
     const soundWave = gsap.timeline({
       defaults: {
         ease: 'power1',
-        stagger: 0.3,
-        duration: 1,
+        stagger: 0.45,
+        duration: 0.85,
         repeat: -1,
+        yoyo: true,
       },
       scrollTrigger: {
         trigger: '.js-media-section',
@@ -380,16 +381,13 @@ const scrollmg = {
 
     soundWave
       .to('.speaker__wave', {
-        opacity: 0.75,
+        opacity: 0.25,
         scale: 6,
       })
-      .to(
-        '.speaker__wave',
-        {
-          opacity: 0,
-        },
-        0.25
-      );
+      .to('.speaker__wave', {
+        opacity: 1,
+        scale: 0.425,
+      });
 
     const autoTl = gsap.timeline({
       defaults: {
@@ -462,13 +460,13 @@ const scrollmg = {
 
     radioWaves
       .to('.radio-waves__wave', {
-        opacity: 1,
+        opacity: 0.75,
         scale: 4,
       })
       .to(
         '.radio-waves__wave',
         {
-          opacity: 0.75,
+          opacity: 0.45,
           scale: 9,
         },
         0.125
