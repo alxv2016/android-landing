@@ -1,8 +1,7 @@
 import feather from 'feather-icons';
-import {MDCRipple} from '@material/ripple';
 
 // Instantiation
-const material = {
+const icons = {
   // inlineLineSVG: () => {
   //   const images = document.querySelectorAll('img');
   //   if (images !== undefined) {
@@ -29,19 +28,9 @@ const material = {
   //     });
   //   }
   // },
-  applyRipples: () => {
-    const matButtons = document.querySelectorAll('.mdc-button');
-    Array.from(matButtons).map((node) => {
-      return new MDCRipple(node);
-    });
-    const rippleComp = document.querySelector('.splide__arrow');
-    if (rippleComp) {
-      MDCRipple.attachTo(rippleComp);
-    }
-  },
   featherIcons: () => {
     feather.replace();
   },
 };
 
-export default material;
+export default icons;

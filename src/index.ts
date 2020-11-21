@@ -1,10 +1,9 @@
 import './scss/app.scss';
 import axios from 'axios';
-import material from './component';
-import scrollmg from './scroll-plugin';
+import icons from './component';
+import scrollmg from './scroll-triggers';
 import slider from './slider-plugin';
-material.applyRipples();
-material.featherIcons();
+icons.featherIcons();
 scrollmg.initScrollMagic();
 slider.initSlider();
 slider.initSlider2();

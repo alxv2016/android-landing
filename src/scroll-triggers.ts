@@ -5,13 +5,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const scrollmg = {
   initScrollMagic: () => {
-    console.log('hi!');
-    //let initial = {skew: 0};
-    //const skewSetter = gsap.quickSetter('.highlight-card', 'skewY', 'deg');
-    //const speed = gsap.utils.pipe(gsap.utils.clamp(-20, 20), gsap.utils.snap(1));
-
+    // Header on scroll animation
     ScrollTrigger.create({
-      markers: false,
       onUpdate: (self: any) => {
         const scrollDirection = self.direction;
         const scrollPos = self.scroller.pageYOffset;
@@ -25,26 +20,9 @@ const scrollmg = {
             ? headerNav?.classList.add('js-header--hidden')
             : headerNav?.classList.remove('js-header--hidden');
         }
-
-        //const skew = speed(self.getVelocity() / 200);
-
-        // if (Math.abs(skew) > initial.skew) {
-        //   initial.skew = skew;
-        //   gsap.to(initial, {
-        //     duration: 0.8,
-        //     skew: 0,
-        //     ease: 'power3',
-        //     overwrite: true,
-        //     onUpdate: () => {
-        //       skewSetter(initial.skew);
-        //     },
-        //   });
-        // }
       },
     });
-
-    // note consider converting to timeline
-    // Hero animation
+    // Hero animations
     gsap.to('.js-spotlight', {
       scrollTrigger: {
         trigger: '.js-spotlight',
@@ -57,23 +35,23 @@ const scrollmg = {
       ease: 'none',
     });
 
-    const heroTl = gsap.timeline({
+    const heroProducts = gsap.timeline({
       defaults: {
         ease: 'none',
       },
       scrollTrigger: {
-        trigger: '.js-products',
+        trigger: '.js-product-features',
         scrub: true,
       },
     });
 
-    heroTl
-      .to('.js-product-hero', {
+    heroProducts
+      .to('.js-hero-product', {
         yPercent: 40,
         ease: 'none',
       })
       .to(
-        '.js-pixel-front',
+        '.js-product-front',
         {
           yPercent: 20,
           xPercent: 20,
@@ -83,7 +61,7 @@ const scrollmg = {
         0
       )
       .to(
-        '.js-pixel-back',
+        '.js-product-back',
         {
           yPercent: -20,
           xPercent: -20,

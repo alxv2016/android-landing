@@ -50,8 +50,6 @@
     "webpack-merge": "^5.2.0"
   },
   "dependencies": {
-    "@material/button": "^7.0.0",
-    "@material/ripple": "^7.0.0",
     "@splidejs/splide": "^2.4.14",
     "axios": "^0.21.0",
     "feather-icons": "^4.28.0",
