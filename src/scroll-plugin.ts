@@ -310,12 +310,12 @@ const scrollmg = {
 
     vcTl
       .to('.vc-feature-image', {
-        scale: 0.85,
-        yPercent: 15,
+        // scale: 0.85,
+        y: 200,
         ease: 'none',
       })
       .from('.vc-soundwaves', {
-        y: 28,
+        y: -18,
         ease: 'none',
       });
 
