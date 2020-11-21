@@ -1,46 +1,33 @@
-.container {
-  position: relative;
-  width: 100%;
-  max-width: $max-screen-size;
-  margin: auto;
-  @include container-padding;
-}
-
-.container--sm {
-  position: relative;
-  width: 100%;
-  max-width: 1024px;
-  margin: auto;
-  @include container-padding;
-  padding-top: $spacing--4xl;
-  padding-bottom: $spacing--4xl;
-  @include breakpoint(md) {
-    padding-top: $layout--lg;
-    padding-bottom: $layout--lg;
-  }
-}
-
-.content-container {
-  position: relative;
-  width: 100%;
-  max-width: $max-content-size;
-  padding-top: $spacing--4xl;
-  padding-bottom: $spacing--4xl;
-  @include breakpoint(md) {
-    padding-top: $layout--lg;
-    padding-bottom: $layout--lg;
-  }
-}
-
 .section {
   position: relative;
   width: 100%;
+
+  &__content {
+    position: relative;
+    width: 100%;
+    max-width: $max-content-size;
+    margin: auto;
+  }
+
+  &__container {
+    position: relative;
+    max-width: $max-screen-size;
+    margin: auto;
+    @include container-padding;
+    padding-top: $layout--xl;
+    padding-bottom: $layout--xl;
+    @include breakpoint(md) {
+      padding-top: $layout--2xl;
+      padding-bottom: $layout--2xl;
+    }
+  }
+
   &--overflow {
     overflow: hidden;
   }
 
-  &--2 {
-    background-color: color('section-2');
+  &-primary {
+    background-color: color('yellow-tint');
   }
   &--3 {
     background-color: color('light');
@@ -51,7 +38,7 @@
   }
 
   &--security {
-    background-color: color('section-3');
+    background-color: color('blue-shade');
   }
 
   &-title {
@@ -133,7 +120,7 @@
   }
 
   &__col--margin-top {
-    margin-top: $layout--lg;
+    margin-top: $layout--xl;
     @include breakpoint(lg) {
       margin-top: 0;
     }

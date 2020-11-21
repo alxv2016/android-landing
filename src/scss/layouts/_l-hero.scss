@@ -19,29 +19,19 @@
   }
 }
 
-.hero-content {
-  position: relative;
-  margin-top: $layout--xl;
-  @include breakpoint(md) {
-    margin-top: $layout--2xl;
-  }
-  &__container {
-    position: relative;
-    max-width: $max-content-size;
-    margin: auto;
-    margin-bottom: $layout--lg;
-    @include breakpoint(md) {
-      margin-bottom: $layout--xl;
-    }
-  }
-}
-
 .hero-product {
   position: relative;
+  margin-top: $layout--lg;
   width: 100%;
   z-index: 2;
   display: flex;
   justify-content: center;
+  @include breakpoint(md) {
+    margin-top: $layout--xl;
+  }
+  @include breakpoint(lg) {
+    margin-top: $layout--2xl;
+  }
 
   &__container {
     position: relative;

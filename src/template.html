@@ -14,8 +14,8 @@
     </header>
     <!-- Hero section -->
     <section class="section section--overflow">
-      <div class="hero-content container--sm">
-        <div class="hero-content__container">
+      <div class="section__container">
+        <div class="section__content">
           <span class="section-overline">Android 11</span>
           <h1 class="section-title section-title--hero">The OS that gets to what’s important.</h1>
           <p class="section-body">
@@ -34,7 +34,7 @@
           </div>
           <div class="js-spotlight spotlight"></div>
         </div>
-        <div class="js-product-features product-features container">
+        <div class="js-product-features product-features">
           <img class="js-feature-1 feature-screen fs-1" src="./assets/android-2.png" />
           <img class="js-feature-2 feature-screen fs-2" src="./assets/android-3.png" />
           <img class="js-feature-3 feature-screen fs-3" src="./assets/android-4.png" />
@@ -42,79 +42,84 @@
       </div>
     </section>
     <!-- Android highlights -->
-    <section class="section section--2 section--overflow">
-      <div class="container--sm content-container">
-        <h2 class="section-title">Android 11 Hightlights</h2>
-        <div class="highlights-cards">
-          <div class="highlight-card">
-            <div class="highlight-card__header">
-              <h3 class="highlight-card-title">Conversations</h3>
+    <section class="section section-primary section--overflow">
+      <div class="section__container">
+        <div class="section__content">
+          <h2 class="section-title">Android 11 Hightlights</h2>
+          <div class="highlights-cards">
+            <div class="highlight-card">
+              <div class="highlight-card__header">
+                <h3 class="highlight-card-title">Conversations</h3>
+              </div>
+              <div class="highlight-card__footer">
+                <img class="highlight-card__icon" src="./assets/conversations.svg" />
+              </div>
             </div>
-            <div class="highlight-card__footer">
-              <img class="highlight-card__icon" src="./assets/conversations.svg" />
+            <div class="highlight-card">
+              <div class="highlight-card__header">
+                <h3 class="highlight-card-title">Content Capture</h3>
+              </div>
+              <div class="highlight-card__footer">
+                <img class="highlight-card__icon" src="./assets/content-capture.svg" />
+              </div>
             </div>
-          </div>
-          <div class="highlight-card">
-            <div class="highlight-card__header">
-              <h3 class="highlight-card-title">Content Capture</h3>
+            <div class="highlight-card">
+              <div class="highlight-card__header">
+                <h3 class="highlight-card-title">Predictive Tools</h3>
+              </div>
+              <div class="highlight-card__footer">
+                <img class="highlight-card__icon" src="./assets/predictive-tools.svg" />
+              </div>
             </div>
-            <div class="highlight-card__footer">
-              <img class="highlight-card__icon" src="./assets/content-capture.svg" />
+            <div class="highlight-card">
+              <div class="highlight-card__header">
+                <h3 class="highlight-card-title">Accessibility</h3>
+              </div>
+              <div class="highlight-card__footer">
+                <img class="highlight-card__icon" src="./assets/accessibility.svg" />
+              </div>
             </div>
-          </div>
-          <div class="highlight-card">
-            <div class="highlight-card__header">
-              <h3 class="highlight-card-title">Predictive Tools</h3>
+            <div class="highlight-card">
+              <div class="highlight-card__header">
+                <h3 class="highlight-card-title">Device Controls</h3>
+              </div>
+              <div class="highlight-card__footer">
+                <img class="highlight-card__icon" src="./assets/device-controls.svg" />
+              </div>
             </div>
-            <div class="highlight-card__footer">
-              <img class="highlight-card__icon" src="./assets/predictive-tools.svg" />
-            </div>
-          </div>
-          <div class="highlight-card">
-            <div class="highlight-card__header">
-              <h3 class="highlight-card-title">Accessibility</h3>
-            </div>
-            <div class="highlight-card__footer">
-              <img class="highlight-card__icon" src="./assets/accessibility.svg" />
-            </div>
-          </div>
-          <div class="highlight-card">
-            <div class="highlight-card__header">
-              <h3 class="highlight-card-title">Device Controls</h3>
-            </div>
-            <div class="highlight-card__footer">
-              <img class="highlight-card__icon" src="./assets/device-controls.svg" />
-            </div>
-          </div>
-          <div class="highlight-card">
-            <div class="highlight-card__header">
-              <h3 class="highlight-card-title">Privacy & Security</h3>
-            </div>
-            <div class="highlight-card__footer">
-              <img class="highlight-card__icon" src="./assets/privacy-security.svg" />
+            <div class="highlight-card">
+              <div class="highlight-card__header">
+                <h3 class="highlight-card-title">Privacy & Security</h3>
+              </div>
+              <div class="highlight-card__footer">
+                <img class="highlight-card__icon" src="./assets/privacy-security.svg" />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section section--3 section--overflow">
-      <div class="grid-2cols container--sm">
-        <div class="grid-2cols__col">
-          <h2 class="section-title">Manage your conversations</h2>
-          <p class="section-body"><strong>Get all your messages in one place.</strong></p>
-          <p class="section-body">
-            See, respond to and control your conversations across multiple messaging apps. All in the same spot. Then
-            select people you always chat with. These priority conversations show up on your lock screen. So you never
-            miss anything important.
-          </p>
-        </div>
-        <div class="js-convo-trigger grid-2cols__col">
-          <img id="notification" class="js-notification conversations-notification" src="assets/convo-bubble.png" />
-          <img class="feature-screen" src="assets/android-2.png" />
-          <div class="conversations-bubbles">
-            <div class="js-bubble-1 conversations-bubble"></div>
-            <div class="js-bubble-2 conversations-bubble conversations-bubble--outline"></div>
-            <div class="js-bubble-3 conversations-bubble conversations-bubble--outline"></div>
+    <!-- Manage conversations -->
+    <section class="section section--overflow">
+      <div class="section__container">
+        <div class="grid-2cols">
+          <div class="grid-2cols__col">
+            <h2 class="section-title">Manage your conversations</h2>
+            <p class="section-body"><strong>Get all your messages in one place.</strong></p>
+            <p class="section-body">
+              See, respond to and control your conversations across multiple messaging apps. All in the same spot. Then
+              select people you always chat with. These priority conversations show up on your lock screen. So you never
+              miss anything important.
+            </p>
+          </div>
+          <div class="js-convo-trigger grid-2cols__col grid-2cols__col--margin-top">
+            <img id="notification" class="js-notification conversations-notification" src="assets/convo-bubble.png" />
+            <img class="feature-screen" src="assets/android-2.png" />
+            <div class="conversations-bubbles">
+              <div class="js-bubble-1 conversations-bubble"></div>
+              <div class="js-bubble-2 conversations-bubble conversations-bubble--outline"></div>
+              <div class="js-bubble-3 conversations-bubble conversations-bubble--outline"></div>
+            </div>
           </div>
         </div>
       </div>

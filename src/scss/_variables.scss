@@ -4,7 +4,7 @@ $base-font-family: 'Roboto', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 
 $base-font-size: 1rem !default;
 $heading-line-height: 1.25 !default;
 $body-line-height: 1.65 !default;
-$max-screen-size: 1280px !default;
+$max-screen-size: 1024px !default;
 $max-content-size: 768px !default;
 $font-families: (
   roboto: 'Roboto',
@@ -35,9 +35,9 @@ $breakpoints: (
 ) !default;
 // Colors
 $colors: (
-  section-1: #d0ebfe,
-  section-2: #f0f7cf,
-  section-3: #073042,
+  blue-tint: #d0ebfe,
+  yellow-tint: #f0f7cf,
+  blue-shade: #073042,
   primary: #38d972,
   secondary: #4285f4,
   tertiary: #f86735,

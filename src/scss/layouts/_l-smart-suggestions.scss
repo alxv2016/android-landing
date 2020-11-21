@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background-color: rgba(color('section-2'), 0.25);
+  background-color: rgba(color('yellow-tint'), 0.25);
 }
 
 .feature-content {
@@ -36,7 +36,7 @@
     flex-shrink: 0;
     border-radius: 300px;
     margin: $spacing--lg;
-    background-color: color('section-1');
+    background-color: color('blue-tint');
 
     &--red {
       background-color: color('tertiary');
@@ -62,7 +62,7 @@
     width: 300px;
     flex-shrink: 0;
     border-radius: 300px;
-    background-color: rgba(color('section-1'), 0.45);
+    background-color: rgba(color('blue-tint'), 0.45);
 
     &:before {
       content: '';
@@ -73,7 +73,7 @@
       width: 80%;
       height: 80%;
       border-radius: inherit;
-      background-color: color('section-1');
+      background-color: color('blue-tint');
     }
 
     &--red {
@@ -106,6 +106,6 @@
     width: 230px;
     flex-shrink: 0;
     border-radius: inherit;
-    background-color: rgba(color('section-1'), 1);
+    background-color: rgba(color('blue-tint'), 1);
   }
 }
