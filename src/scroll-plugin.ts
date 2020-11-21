@@ -396,8 +396,7 @@ const scrollmg = {
         ease: 'none',
       },
       scrollTrigger: {
-        markers: true,
-        trigger: '.js-aa',
+        trigger: '.l-android-auto',
         start: '-=300 top',
         end: 'top top',
         scrub: true,
@@ -405,18 +404,46 @@ const scrollmg = {
     });
 
     autoTl
-      .to('.js-android', {
-        yPercent: 200,
-        scale: 0.75,
+      .from('.js-auto', {
+        y: 88,
+        scale: 0.95,
       })
-      .from(
-        '.js-auto',
+      .to(
+        '.js-android',
         {
-          y: 88,
+          y: 280,
           scale: 0.95,
         },
-        0
+        0.125
       );
+
+    const permissionsTl = gsap.timeline({
+      defaults: {
+        ease: 'none',
+      },
+      scrollTrigger: {
+        trigger: '.l-permissions',
+        toggleActions: 'play pause resume reverse',
+        start: 'top center',
+        end: 'center center',
+        scrub: true,
+      },
+    });
+
+    permissionsTl
+      .to('.permissions-feature', {
+        y: 88,
+      })
+      .to('.permissions-modal', {
+        y: 0,
+        opacity: 1,
+        ease: 'ease',
+      })
+      .to('.permissions-modal', {
+        y: 0,
+        opacity: 1,
+        ease: 'ease',
+      });
   },
 };
 

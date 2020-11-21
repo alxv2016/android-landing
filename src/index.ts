@@ -7,6 +7,7 @@ material.applyRipples();
 material.featherIcons();
 scrollmg.initScrollMagic();
 slider.initSlider();
+slider.initSlider2();
 
 // async function getData() {
 //   const masterRef = await axios.get(`${process.env.API_URL}`).then((resp) => {
