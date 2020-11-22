@@ -7,18 +7,18 @@
   @include breakpoint(md) {
     align-items: center;
   }
-}
 
-.voice-control__content {
-  position: relative;
-  z-index: 3;
-  width: 100%;
-  bottom: 0;
-  padding: $spacing--xl;
-  border-radius: 1rem;
-  @include frosted-glass(color('light'), 0.45);
-  @include breakpoint(md) {
-    width: 50%;
+  &__content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    bottom: 0;
+    padding: $spacing--xl;
+    border-radius: 1rem;
+    @include frosted-glass(color('light'), 0.45);
+    @include breakpoint(md) {
+      width: 50%;
+    }
   }
 }
 
@@ -36,9 +36,9 @@
   background-position: 60% 50%;
 }
 
-.vc-soundwaves {
+.voice-audio {
   position: absolute;
-  top: 48px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 200px;
@@ -48,17 +48,18 @@
   &:before {
     content: '';
     position: absolute;
+    z-index: 0;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.075) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.075) 100%);
   }
 
   &__wave {
-    width: 18px;
+    width: 14px;
     height: 14px;
     background-color: color('light');
-    margin: 8px;
+    margin: $spacing--sm;
   }
 }

@@ -319,46 +319,37 @@ const scrollmg = {
       );
 
     // Voice control
-    const vcTl = gsap.timeline({
+    gsap.to('.js-feature-image', {
+      yPercent: 20,
       scrollTrigger: {
-        trigger: '.js-voice-section',
+        trigger: '.js-voice-control',
         start: '-=400 top',
         end: 'center top',
         scrub: true,
       },
     });
 
-    vcTl
-      .to('.vc-feature-image', {
-        // scale: 0.85,
-        y: 200,
-        ease: 'none',
-      })
-      .from('.vc-soundwaves', {
-        y: -18,
-        ease: 'none',
-      });
-
-    const audioLines = gsap.utils.toArray('.vc-soundwaves__wave');
-    audioLines.forEach((line: any) => {
-      gsap.to(line, {
+    const voiceAudio = gsap.utils.toArray('.js-audio');
+    voiceAudio.forEach((audio: any) => {
+      gsap.to(audio, {
         scaleY: gsap.utils.random(1, 8, 4),
         repeat: -1,
         ease: 'ease',
-        duration: 0.3,
+        duration: 0.25,
         yoyo: true,
         onRepeat: () => {
-          gsap.to(line, {
+          gsap.to(audio, {
             scaleY: gsap.utils.random(1, 8, 3),
             repeat: -1,
             ease: 'ease',
-            duration: 0.25,
+            duration: 0.175,
             yoyo: true,
           });
         },
       });
     });
 
+    // Media controls
     const controlsTl = gsap.timeline({
       defaults: {
         ease: 'none',
