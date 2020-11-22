@@ -1,4 +1,4 @@
-.conversations-notification {
+.notification {
   position: absolute;
   z-index: 2;
   opacity: 0;
@@ -12,7 +12,7 @@
   }
 }
 
-.conversations-bubbles {
+.priority {
   position: absolute;
   z-index: 0;
   display: flex;
@@ -23,26 +23,23 @@
   left: 0;
   width: 100%;
   height: 100%;
-}
 
-.conversations-bubble {
-  position: absolute;
-  flex-shrink: 0;
-  width: 340px;
-  height: 120px;
-  border-radius: 100px;
-  background-color: color('section-1');
-  transform: scale(0.85);
-  @include breakpoint(md) {
-    width: 420px;
-    height: 140px;
-  }
-
-  &--outline {
-    border: 14px solid color('section-1');
-    background-color: transparent;
+  &__bubble {
+    position: absolute;
+    flex-shrink: 0;
+    width: 340px;
+    height: 120px;
+    border-radius: 100px;
+    background-color: color('blue-tint');
+    transform: scale(0.85);
     @include breakpoint(md) {
-      border: 16px solid color('section-1');
+      width: 420px;
+      height: 140px;
+    }
+
+    &--outline {
+      border: 14px solid color('blue-tint');
+      background-color: transparent;
     }
   }
 }

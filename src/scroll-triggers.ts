@@ -91,33 +91,33 @@ const scrollmg = {
         },
         0.2
       );
-
-    const convoTl = gsap.timeline({
+    // Manage conversations
+    const conversations = gsap.timeline({
       defaults: {
         ease: 'none',
       },
       scrollTrigger: {
-        trigger: '.js-convo-trigger',
-        start: 'top center',
-        end: 'bottom center',
+        trigger: '.js-conversations',
+        start: '-=100 center',
+        end: 'center center',
         scrub: true,
       },
     });
 
-    convoTl
-      .to('.js-bubble-1', {
+    conversations
+      .to('.js-priority-1', {
         yPercent: -115,
         scale: 1,
       })
       .to(
-        '.js-bubble-2',
+        '.js-priority-2',
         {
           yPercent: 115,
           scale: 1,
         },
         0
       )
-      .to('.js-bubble-3', {
+      .to('.js-priority-3', {
         scale: 1,
       })
       .to('.js-notification', {
