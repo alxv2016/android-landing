@@ -484,60 +484,54 @@ const scrollmg = {
         }
       );
 
-    const radioWaves = gsap.timeline({
+    // Security updates
+    const securityUpdate = gsap.timeline({
       defaults: {
-        ease: 'power1',
-        stagger: 1.25,
+        ease: 'ease',
+        stagger: 1.75,
         duration: 3,
         repeat: -1,
       },
       scrollTrigger: {
-        trigger: '.l-security',
+        trigger: '.js-security-updates',
         start: '-=300 top',
         end: 'center top',
         toggleActions: 'play pause resume pause',
       },
     });
 
-    radioWaves
-      .to('.radio-waves__wave', {
-        opacity: 0.75,
+    securityUpdate
+      .to('.js-wireless', {
+        opacity: 1,
         scale: 4,
       })
       .to(
-        '.radio-waves__wave',
-        {
-          opacity: 0.45,
-          scale: 9,
-        },
-        0.125
-      )
-      .to(
-        '.radio-waves__wave',
+        '.js-wireless',
         {
           opacity: 0,
+          scale: 8,
         },
-        0.25
+        0.175
       );
 
-    gsap.from('.fs-security-updates', {
-      yPercent: 20,
+    gsap.from('.js-security-feature', {
+      yPercent: 40,
       ease: 'none',
       scrollTrigger: {
-        trigger: '.l-security',
+        trigger: '.js-security-updates',
         start: '-=400 top',
         end: 'top top',
         scrub: true,
       },
     });
-
-    gsap.from('.outro-container', {
-      yPercent: 40,
+    // Outro content
+    gsap.to('.js-outro-content', {
+      yPercent: -60,
       ease: 'none',
       scrollTrigger: {
-        trigger: '.l-security',
-        start: '-=180 top',
-        end: 'top top',
+        trigger: '.js-security-updates',
+        start: '+=100 top',
+        end: 'center top',
         scrub: true,
       },
     });

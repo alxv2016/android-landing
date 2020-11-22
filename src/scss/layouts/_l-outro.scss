@@ -1,10 +1,12 @@
-.outro-container {
+.outro-content {
   position: relative;
   z-index: 3;
-  top: -88px;
   background-color: color('secondary');
   border-radius: 2rem;
-  padding: $layout--xl;
+  padding: $layout--md;
   color: color('light');
   @include elevate-3(color('secondary'), 0.175);
+  @include breakpoint(md) {
+    padding: $layout--xl;
+  }
 }
