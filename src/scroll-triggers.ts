@@ -348,32 +348,39 @@ const scrollmg = {
         },
       });
     });
-
-    // Media controls
-    const controlsTl = gsap.timeline({
+    // Device controls
+    const deviceControls = gsap.timeline({
       defaults: {
         ease: 'none',
       },
       scrollTrigger: {
-        trigger: '.js-control-trigger',
+        trigger: '.js-device-controls',
         start: '-=400 top',
-        end: 'top top',
+        end: 'center top',
         scrub: true,
       },
     });
 
-    controlsTl
-      .from('.js-fs-house', {
-        y: 88,
+    deviceControls
+      .from('.js-house-lights', {
+        y: 100,
       })
       .to(
-        '.fs-houselight-on',
+        '.js-controls',
+        {
+          yPercent: 10,
+        },
+        0
+      )
+      .to(
+        '.js-lights',
         {
           opacity: 1,
         },
         0.125
       );
 
+    // Media controls
     const soundWave = gsap.timeline({
       defaults: {
         ease: 'power1',
