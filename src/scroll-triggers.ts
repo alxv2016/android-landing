@@ -196,21 +196,22 @@ const scrollmg = {
       });
 
     // Smart features
-    gsap.to('.reply-bubbles', {
+    gsap.to('.smart-reply', {
       opacity: 1,
       x: 0,
       ease: 'ease',
       scrollTrigger: {
         trigger: '.js-panel-1',
         start: '-=300 top',
-        end: 'center top',
+        end: 'end top',
         toggleActions: 'play pause resume reverse',
       },
     });
 
-    gsap.to('.js-fs-1', {
-      yPercent: 20,
-      ease: 'none',
+    const smartReply = gsap.timeline({
+      defaults: {
+        ease: 'none',
+      },
       scrollTrigger: {
         trigger: '.js-panel-1',
         start: 'top top',
@@ -219,18 +220,43 @@ const scrollmg = {
       },
     });
 
-    gsap.to('.js-fs-2', {
-      yPercent: 20,
-      ease: 'none',
+    smartReply
+      .to('.js-smart-reply', {
+        yPercent: 60,
+      })
+      .to(
+        '.js-replies',
+        {
+          yPercent: -20,
+        },
+        0
+      );
+
+    const appSuggestion = gsap.timeline({
+      defaults: {
+        ease: 'none',
+      },
       scrollTrigger: {
         trigger: '.js-panel-2',
-        start: 'top top',
+        start: '-=100 top',
         end: 'bottom top',
         scrub: true,
       },
     });
 
-    gsap.from('.app-bubbles__bubble', {
+    appSuggestion
+      .to('.js-app-suggestion', {
+        yPercent: 60,
+      })
+      .to(
+        '.js-apps',
+        {
+          yPercent: -20,
+        },
+        0
+      );
+
+    gsap.from('.js-app', {
       opacity: 0,
       scale: 0.46,
       stagger: 0.125,
@@ -243,22 +269,22 @@ const scrollmg = {
       },
     });
 
-    const folderBubTl = gsap.timeline({
+    const smartFolders = gsap.timeline({
       scrollTrigger: {
         trigger: '.js-panel-3',
-        start: '-=300 top',
-        end: 'center top',
+        start: '-=100 top',
+        end: 'bottom top',
         toggleActions: 'play pause resume reverse',
       },
     });
 
-    folderBubTl
-      .from('.folder-bubbles', {
+    smartFolders
+      .from('.js-folder', {
         opacity: 0,
         xPercent: 40,
       })
       .from(
-        '.folder-bubbles__bubble',
+        '.js-folder-app',
         {
           opacity: 0,
           scale: 0.46,
@@ -268,17 +294,31 @@ const scrollmg = {
         0.125
       );
 
-    gsap.to('.js-fs-3', {
-      yPercent: 20,
-      ease: 'none',
+    const smartFolderPanel = gsap.timeline({
+      defaults: {
+        ease: 'none',
+      },
       scrollTrigger: {
         trigger: '.js-panel-3',
-        start: 'top top',
+        start: '-=100 top',
         end: 'bottom top',
         scrub: true,
       },
     });
-    //
+
+    smartFolderPanel
+      .to('.js-smart-folders', {
+        yPercent: 60,
+      })
+      .to(
+        '.js-folder',
+        {
+          yPercent: -90,
+        },
+        0
+      );
+
+    // Voice control
     const vcTl = gsap.timeline({
       scrollTrigger: {
         trigger: '.js-voice-section',
