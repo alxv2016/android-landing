@@ -22,18 +22,37 @@
     }
   }
 
+  &__container-no-constraints {
+    position: relative;
+    padding-top: $layout--xl;
+    padding-bottom: $layout--xl;
+    @include breakpoint(md) {
+      padding-top: $layout--2xl;
+      padding-bottom: $layout--2xl;
+    }
+  }
+
+  &__container-fullwidth {
+    position: relative;
+    max-width: $max-screen-size;
+    margin: auto;
+    padding-top: $layout--xl;
+    padding-bottom: $layout--xl;
+    @include breakpoint(md) {
+      padding-top: $layout--2xl;
+      padding-bottom: $layout--2xl;
+    }
+  }
+
   &--overflow {
     overflow: hidden;
   }
 
-  &-primary {
+  &--primary {
     background-color: color('yellow-tint');
   }
-  &--3 {
-    background-color: color('light');
-  }
 
-  &--primary {
+  &--green {
     background-color: color('primary');
   }
 
@@ -137,4 +156,12 @@
   }
   margin: auto;
   z-index: 1;
+}
+
+.content-padding {
+  position: relative;
+  max-width: $max-screen-size;
+  margin-left: auto;
+  margin-right: auto;
+  @include container-padding;
 }

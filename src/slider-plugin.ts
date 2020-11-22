@@ -32,12 +32,12 @@ const sliderOptions: SplideOptions = {
 
 const slider = {
   initSlider: () => {
-    const sliding = new Splide('#splider', sliderOptions);
+    const sliding = new Splide('#capture-slider', sliderOptions);
     sliding.on('mounted', () => {
       console.log('Iam mounted!!');
     });
     sliding.mount();
-    sliding.root.classList.add('capture-slide');
+    sliding.root.classList.add('feature-slide');
     sliding.on('moved', () => {
       console.log('I moved!!');
     });

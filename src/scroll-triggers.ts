@@ -127,24 +127,25 @@ const scrollmg = {
         duration: 0.3,
       });
 
-    const bubblesTl = gsap.timeline({
+    // Chat bubbles
+    const bubbles = gsap.timeline({
       defaults: {
         ease: 'none',
       },
       scrollTrigger: {
-        trigger: '.js-bubbles-trigger',
-        start: 'top center',
-        end: 'bottom center',
+        trigger: '.js-chat',
+        start: '-=100 center',
+        end: 'center center',
         scrub: true,
       },
     });
 
-    bubblesTl
-      .to('.js-bg-bubbles', {
+    bubbles
+      .to('.js-bubbles', {
         x: 0,
       })
       .to(
-        '.js-chat-messages',
+        '.js-messages',
         {
           y: -120,
           ease: 'ease',
@@ -154,34 +155,34 @@ const scrollmg = {
       .to(
         '.js-chat-bubble-1',
         {
-          yPercent: 60,
+          yPercent: 160,
         },
         0
       )
       .to(
         '.js-chat-bubble-2',
         {
-          yPercent: -60,
+          yPercent: 60,
         },
         0
       );
-
-    const recordTL = gsap.timeline({
+    // Screen share & capture
+    const captureShare = gsap.timeline({
       defaults: {
         ease: 'none',
       },
       scrollTrigger: {
-        trigger: '#trigger-5',
+        trigger: '.js-capture-share',
         toggleActions: 'play pause resume reverse',
-        start: 'top center',
+        start: '-=100 center',
         end: 'center center',
         scrub: true,
       },
     });
 
-    recordTL
+    captureShare
       .to('.capture-share-feature', {
-        y: 88,
+        y: 44,
       })
       .to('.record-modal', {
         y: 0,
@@ -194,6 +195,7 @@ const scrollmg = {
         ease: 'ease',
       });
 
+    // Smart features
     gsap.to('.reply-bubbles', {
       opacity: 1,
       x: 0,

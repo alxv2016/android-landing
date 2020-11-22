@@ -124,94 +124,99 @@
         </div>
       </div>
     </section>
-    <section class="section section--4 section--overflow">
-      <div class="grid-2cols container--sm">
-        <div class="js-bubbles-trigger grid-2cols__col">
-          <div class="feature-screen">
-            <img class="js-chat-bubble-1 chat-bubble" src="assets/bubble-2.png" />
-            <img class="js-chat-bubble-2 chat-bubble chat-bubble--2" src="assets/bubble-1.png" />
-            <div class="chat-window">
-              <div class="chat-window__container">
-                <img class="chat-window__header" src="assets/chat-header.png" />
-                <img class="js-chat-messages chat-window__messages" src="assets/chat-messages.png" />
-                <img class="chat-window__footer" src="assets/chat-footer.png" />
+    <!-- Chat bubbles -->
+    <section class="js-chat section section--overflow">
+      <div class="section__container">
+        <div class="grid-2cols">
+          <div class="grid-2cols__col grid-2cols__col--margin-top">
+            <div class="feature-screen">
+              <img class="js-chat-bubble-1 chat-bubble" src="assets/bubble-1.png" />
+              <img class="js-chat-bubble-2 chat-bubble" src="assets/bubble-2.png" />
+              <div class="chat-window">
+                <div class="chat-window__container">
+                  <img class="chat-window__header" src="assets/chat-header.png" />
+                  <img class="js-messages chat-window__messages" src="assets/chat-messages.png" />
+                  <img class="chat-window__footer" src="assets/chat-footer.png" />
+                </div>
               </div>
+              <img src="assets/bubble-chat.png" />
             </div>
-            <img src="assets/bubble-chat.png" />
+            <div class="js-bubbles bubbles">
+              <div class="bubbles__bubble"></div>
+              <div class="bubbles__bubble"></div>
+              <div class="bubbles__bubble bubbles__bubble--outline"></div>
+            </div>
           </div>
-          <div class="js-bg-bubbles background-bubbles">
-            <div class="background-bubbles__bubble"></div>
-            <div class="background-bubbles__bubble"></div>
-            <div class="background-bubbles__bubble background-bubbles__bubble--outline"></div>
+          <div class="grid-2cols__col grid-2cols__col--order-1">
+            <h2 class="section-title">Bubbles</h2>
+            <p class="section-body"><strong>Chat while multitasking.</strong></p>
+            <p class="section-body">
+              With Android 11, you can pin conversations so they always appear on top of other apps and screens. Bubbles
+              keep the conversation going—while you stay focused on whatever else you’re doing. Access the chat anytime
+              or anywhere. Then carry on doing you.
+            </p>
           </div>
-        </div>
-        <div class="grid-2cols__col grid-2cols__col--order-1">
-          <h2 class="section-title">Bubbles</h2>
-          <p class="section-body"><strong>Chat while multitasking.</strong></p>
-          <p class="section-body">
-            With Android 11, you can pin conversations so they always appear on top of other apps and screens. Bubbles
-            keep the conversation going—while you stay focused on whatever else you’re doing. Access the chat anytime or
-            anywhere. Then carry on doing you.
-          </p>
         </div>
       </div>
     </section>
-    <section id="trigger-5" class="section section--5 section--overflow">
-      <div class="container--sm">
-        <h2 class="section-title">Capture and share content</h2>
-      </div>
-      <div id="splider" class="splide">
-        <div class="splide__track">
-          <ul class="splide__list">
-            <li class="splide__slide">
-              <div class="capture-card">
-                <div class="capture-card__hero">
-                  <div class="feature-screen capture-share-feature">
-                    <img class="record-modal" src="assets/record-modal.png" />
-                    <img src="assets/record-screen.png" />
+    <!-- Capture and Share -->
+    <section class="js-capture-share section section--overflow">
+      <div class="section__container-fullwidth">
+        <h2 class="section-title content-padding">Capture and share content</h2>
+        <div id="capture-slider" class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="feature-card">
+                  <div class="feature-card__hero">
+                    <div class="feature-screen capture-share-feature">
+                      <img class="record-modal" src="assets/record-modal.png" />
+                      <img src="assets/record-screen.png" />
+                    </div>
+                  </div>
+                  <div class="feature-card__content">
+                    <h3 class="section-subtitle">Built-in screen recording. Finally.</h3>
+                    <p class="section-body">
+                      Screen recording lets you capture what’s happening on your phone. And it’s built right into
+                      Android 11, so you don’t need an extra app. Record with sound from your mic, your device or both.
+                    </p>
                   </div>
                 </div>
-                <div class="capture-card__content">
-                  <h3 class="section-subtitle">Built-in screen recording. Finally.</h3>
-                  <p class="section-body">
-                    Screen recording lets you capture what’s happening on your phone. And it’s built right into Android
-                    11, so you don’t need an extra app. Record with sound from your mic, your device or both.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div class="capture-card">
-                <div class="capture-card__hero">
-                  <div class="feature-screen capture-share-feature">
-                    <img class="share-modal" src="assets/share-modal.png" />
-                    <img src="assets/share-screen.png" />
+              </li>
+              <li class="splide__slide">
+                <div class="feature-card">
+                  <div class="feature-card__hero">
+                    <div class="feature-screen capture-share-feature">
+                      <img class="share-modal" src="assets/share-modal.png" />
+                      <img src="assets/share-screen.png" />
+                    </div>
+                  </div>
+                  <div class="feature-card__content">
+                    <h3 class="section-subtitle">Select and share just got easier.</h3>
+                    <p class="section-body">
+                      Select text from your apps. Grab images too. On Pixel devices1, you can easily copy, save and
+                      share info between many apps. Like your browser, your delivery app or from the news.
+                    </p>
                   </div>
                 </div>
-                <div class="capture-card__content">
-                  <h3 class="section-subtitle">Select and share just got easier.</h3>
-                  <p class="section-body">
-                    Select text from your apps. Grab images too. On Pixel devices1, you can easily copy, save and share
-                    info between many apps. Like your browser, your delivery app or from the news.
-                  </p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="splide__arrows">
-          <button class="splide__arrow splide__arrow--prev">
-            <i data-feather="arrow-left"></i>
-          </button>
-          <button class="splide__arrow splide__arrow--next">
-            <i class="splide__arrow-icon" data-feather="arrow-right"></i>
-          </button>
+              </li>
+            </ul>
+          </div>
+          <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+              <i data-feather="arrow-left"></i>
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+              <i class="splide__arrow-icon" data-feather="arrow-right"></i>
+            </button>
+          </div>
         </div>
       </div>
     </section>
-    <section class="section test-trigger">
-      <div class="js-panel-1 feature-panel">
-        <div class="grid-2cols container--sm">
+    <!-- Smart features -->
+    <section class="section section--green">
+      <div class="js-panel-1 feature-panel section__container-no-constraints">
+        <div class="grid-2cols content-padding">
           <div class="grid-2cols__col">
             <div class="js-fs-1 feature-screen">
               <img src="assets/smart-reply.png" />
@@ -233,8 +238,8 @@
           </div>
         </div>
       </div>
-      <div class="js-panel-2 feature-panel">
-        <div class="grid-2cols container--sm">
+      <div class="js-panel-2 feature-panel section__container-no-constraints">
+        <div class="grid-2cols content-padding">
           <div class="grid-2cols__col">
             <div class="js-fs-2 feature-screen">
               <img src="assets/app-suggestions.png" />
@@ -258,8 +263,8 @@
           </div>
         </div>
       </div>
-      <div class="js-panel-3 feature-panel">
-        <div class="grid-2cols container--sm">
+      <div class="js-panel-3 feature-panel section__container-no-constraints">
+        <div class="grid-2cols content-padding">
           <div class="grid-2cols__col">
             <div class="js-fs-3 feature-screen">
               <img src="assets/smart-folders.png" />
@@ -280,7 +285,7 @@
         </div>
       </div>
     </section>
-    <section class="js-voice-section section section--primary section--overflow">
+    <section class="js-voice-section section section--green section--overflow">
       <div class="voice-control container--sm">
         <div class="voice-control__content">
           <h2 class="section-title">Control your phone with your voice.</h2>
