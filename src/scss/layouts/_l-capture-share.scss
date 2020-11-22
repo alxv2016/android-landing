@@ -1,18 +1,4 @@
-.capture-share-feature {
-  position: relative;
-  transform: translateY(168px);
-}
-
-.record-modal {
+.cs-modal {
   position: absolute;
-  top: 38px;
-  transform: translateY(128px);
-  opacity: 0;
-}
-
-.share-modal {
-  position: absolute;
-  top: 108px;
-  transform: translateY(128px);
-  opacity: 0;
+  top: 100px;
 }

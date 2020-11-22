@@ -1,11 +1,9 @@
-.permissions-feature {
+.permissions-content {
   position: relative;
-  transform: translateY(168px);
+  margin-bottom: $spacing--3xl;
 }
 
 .permissions-modal {
   position: absolute;
   top: 68px;
-  transform: translateY(128px);
-  opacity: 0;
 }

@@ -173,7 +173,6 @@ const scrollmg = {
       },
       scrollTrigger: {
         trigger: '.js-capture-share',
-        toggleActions: 'play pause resume reverse',
         start: '-=100 center',
         end: 'center center',
         scrub: true,
@@ -181,19 +180,28 @@ const scrollmg = {
     });
 
     captureShare
-      .to('.capture-share-feature', {
-        y: 44,
-      })
-      .to('.record-modal', {
-        y: 0,
-        opacity: 1,
-        ease: 'ease',
-      })
-      .to('.share-modal', {
-        y: 0,
-        opacity: 1,
-        ease: 'ease',
-      });
+      .fromTo(
+        '.js-cs-feature',
+        {
+          yPercent: 40,
+        },
+        {
+          yPercent: 10,
+        }
+      )
+      .fromTo(
+        '.cs-modal',
+        {
+          y: 188,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.25,
+          ease: 'ease',
+        }
+      );
 
     // Smart features
     gsap.to('.smart-reply', {
@@ -414,59 +422,67 @@ const scrollmg = {
     });
 
     // Android auto
-    const autoTl = gsap.timeline({
+    const androidAuto = gsap.timeline({
       defaults: {
         ease: 'none',
       },
       scrollTrigger: {
-        trigger: '.l-android-auto',
-        start: '-=300 top',
+        trigger: '.js-android-auto',
+        start: '-=400 top',
         end: 'top top',
         scrub: true,
       },
     });
 
-    autoTl
-      .from('.js-auto', {
-        y: 88,
-        scale: 0.95,
+    androidAuto
+      .from('.js-android-dash', {
+        yPercent: 20,
       })
       .to(
-        '.js-android',
+        '.js-android-device',
         {
-          y: 280,
+          yPercent: 64,
           scale: 0.95,
         },
         0.125
       );
 
-    const permissionsTl = gsap.timeline({
+    // Security permissions
+    const appPermissions = gsap.timeline({
       defaults: {
         ease: 'none',
       },
       scrollTrigger: {
-        trigger: '.l-permissions',
-        toggleActions: 'play pause resume reverse',
-        start: 'top center',
+        trigger: '.js-app-permissions',
+        start: '-=200 center',
         end: 'center center',
         scrub: true,
       },
     });
 
-    permissionsTl
-      .to('.permissions-feature', {
-        y: 88,
-      })
-      .to('.permissions-modal', {
-        y: 0,
-        opacity: 1,
-        ease: 'ease',
-      })
-      .to('.permissions-modal', {
-        y: 0,
-        opacity: 1,
-        ease: 'ease',
-      });
+    appPermissions
+      .fromTo(
+        '.js-permissions-feature',
+        {
+          yPercent: 40,
+        },
+        {
+          yPercent: 10,
+        }
+      )
+      .fromTo(
+        '.permissions-modal',
+        {
+          y: 188,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.25,
+          ease: 'ease',
+        }
+      );
 
     const radioWaves = gsap.timeline({
       defaults: {

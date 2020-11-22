@@ -43,12 +43,12 @@ const slider = {
     });
   },
   initSlider2: () => {
-    const sliding = new Splide('#splider-2', sliderOptions);
+    const sliding = new Splide('#permissions-slider', sliderOptions);
     sliding.on('mounted', () => {
       console.log('Iam mounted!!');
     });
     sliding.mount();
-    sliding.root.classList.add('capture-slide');
+    sliding.root.classList.add('feature-slide');
     sliding.on('moved', () => {
       console.log('I moved!!');
     });
