@@ -381,32 +381,39 @@ const scrollmg = {
       );
 
     // Media controls
-    const soundWave = gsap.timeline({
+    gsap.to('.js-music-controls', {
+      yPercent: 20,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.js-media-controls',
+        start: '-=300 top',
+        end: 'center top',
+        scrub: true,
+      },
+    });
+
+    const music = gsap.timeline({
       defaults: {
-        ease: 'power1',
-        stagger: 0.45,
-        duration: 0.85,
+        ease: 'bounce',
+        stagger: 0.35,
+        duration: 0.95,
         repeat: -1,
         yoyo: true,
       },
       scrollTrigger: {
-        trigger: '.js-media-section',
+        trigger: '.js-media-controls',
         start: '-=300 top',
         end: 'center top',
         toggleActions: 'play pause resume pause',
       },
     });
 
-    soundWave
-      .to('.speaker__wave', {
-        opacity: 0.25,
-        scale: 6,
-      })
-      .to('.speaker__wave', {
-        opacity: 1,
-        scale: 0.425,
-      });
+    music.to('.js-music', {
+      opacity: 0.25,
+      scale: 30,
+    });
 
+    // Android auto
     const autoTl = gsap.timeline({
       defaults: {
         ease: 'none',
