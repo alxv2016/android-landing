@@ -26,11 +26,12 @@
 
   &__bubble {
     position: absolute;
+    z-index: 1;
     flex-shrink: 0;
     width: 340px;
     height: 120px;
-    border-radius: 100px;
-    background-color: color('blue-tint');
+    border-radius: 2rem;
+    background-color: color('google-yellow');
     transform: scale(0.85);
     @include breakpoint(md) {
       width: 420px;
@@ -38,7 +39,8 @@
     }
 
     &--outline {
-      border: 14px solid color('blue-tint');
+      z-index: 0;
+      border: 8px solid color('google-yellow');
       background-color: transparent;
     }
   }

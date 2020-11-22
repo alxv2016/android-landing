@@ -13,7 +13,7 @@
   }
 }
 
-@function color($key: 'primary') {
+@function color($key: 'dark') {
   @return map-get($colors, $key);
 }
 

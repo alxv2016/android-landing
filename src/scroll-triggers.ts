@@ -27,10 +27,10 @@ const scrollmg = {
       scrollTrigger: {
         trigger: '.js-spotlight',
         scrub: 0.6,
-        start: 'top center',
-        end: '300px center',
+        start: '+=200 center',
+        end: '900px center',
       },
-      scale: 2.5,
+      scale: 9,
       y: 300,
       ease: 'none',
     });
@@ -141,9 +141,6 @@ const scrollmg = {
     });
 
     bubbles
-      .to('.js-bubbles', {
-        x: 0,
-      })
       .to(
         '.js-messages',
         {
@@ -165,7 +162,12 @@ const scrollmg = {
           yPercent: 60,
         },
         0
-      );
+      )
+      .from('.js-bubble', {
+        scale: 0.45,
+        ease: 'ease',
+        stagger: 0.25,
+      });
     // Screen share & capture
     const captureShare = gsap.timeline({
       defaults: {
@@ -211,7 +213,7 @@ const scrollmg = {
       scrollTrigger: {
         trigger: '.js-panel-1',
         start: '-=300 top',
-        end: 'end top',
+        end: 'bottom top',
         toggleActions: 'play pause resume reverse',
       },
     });
@@ -238,6 +240,13 @@ const scrollmg = {
           yPercent: -20,
         },
         0
+      )
+      .to(
+        '.js-panel-overlay-1',
+        {
+          opacity: 1,
+        },
+        0.125
       );
 
     const appSuggestion = gsap.timeline({
@@ -262,6 +271,13 @@ const scrollmg = {
           yPercent: -20,
         },
         0
+      )
+      .to(
+        '.js-panel-overlay-2',
+        {
+          opacity: 1,
+        },
+        0.125
       );
 
     gsap.from('.js-app', {
@@ -289,7 +305,8 @@ const scrollmg = {
     smartFolders
       .from('.js-folder', {
         opacity: 0,
-        xPercent: 40,
+        xPercent: -20,
+        ease: 'ease',
       })
       .from(
         '.js-folder-app',
@@ -324,6 +341,13 @@ const scrollmg = {
           yPercent: -90,
         },
         0
+      )
+      .to(
+        '.js-panel-overlay-3',
+        {
+          opacity: 1,
+        },
+        0.125
       );
 
     // Voice control
@@ -418,7 +442,8 @@ const scrollmg = {
 
     music.to('.js-music', {
       opacity: 0.25,
-      scale: 30,
+      backgroundColor: '#ea4335',
+      scale: 22,
     });
 
     // Android auto

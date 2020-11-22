@@ -35,14 +35,17 @@ $breakpoints: (
 ) !default;
 // Colors
 $colors: (
-  blue-tint: #d0ebfe,
-  yellow-tint: #f0f7cf,
-  blue-shade: #073042,
-  primary: #38d972,
-  secondary: #4285f4,
-  tertiary: #f86735,
+  google-green: #38d972,
+  google-blue: #1a67d2,
+  google-yellow: #f7c455,
+  google-red: #ea4335,
+  blue-accent: #3b87f1,
+  red-accent: #f4c0b4,
   light: #ffffff,
-  dark: #3c393a,
+  offwhite: #f8f9fa,
+  dark: #433f3f,
+  slate: #767d84,
+  night: #1e294a,
 ) !default;
 // Border radius
 $border-radius: 1.25rem !default;

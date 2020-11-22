@@ -48,16 +48,16 @@
     overflow: hidden;
   }
 
-  &--primary {
-    background-color: color('yellow-tint');
+  &--offwhite {
+    background-color: color('offwhite');
+  }
+
+  &--night {
+    background-color: color('night');
   }
 
   &--green {
-    background-color: color('primary');
-  }
-
-  &--security {
-    background-color: color('blue-shade');
+    background-color: color('google-green');
   }
 
   &-title {
@@ -68,6 +68,11 @@
     @include breakpoint(md) {
       font-size: $large--title;
       margin-bottom: $layout--sm;
+    }
+
+    strong {
+      color: color('slate');
+      font-weight: font-weight('bold');
     }
 
     &--hero {
@@ -96,6 +101,10 @@
     @include breakpoint(lg) {
       font-size: $subtitle;
     }
+
+    &--blue {
+      color: color('google-blue');
+    }
   }
 
   &-body {
@@ -103,6 +112,9 @@
     margin: 0;
     @include breakpoint(md) {
       font-size: $subtitle;
+    }
+    strong {
+      color: color('google-blue');
     }
   }
 

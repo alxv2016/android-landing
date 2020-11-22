@@ -1,11 +1,11 @@
 .outro-content {
   position: relative;
   z-index: 3;
-  background-color: color('secondary');
+  background-color: color('google-blue');
   border-radius: 2rem;
   padding: $layout--md;
   color: color('light');
-  @include elevate-3(color('secondary'), 0.175);
+  @include elevate-3(color('google-blue'), 0.175);
   @include breakpoint(md) {
     padding: $layout--xl;
   }
