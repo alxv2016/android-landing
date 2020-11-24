@@ -1,0 +1,47 @@
+.notification {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  top: 46%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-46%) scale(0.75);
+  width: 280px;
+  height: auto;
+  @include breakpoint(lg) {
+    width: 320px;
+  }
+}
+
+.priority {
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &__bubble {
+    position: absolute;
+    z-index: 1;
+    flex-shrink: 0;
+    width: 340px;
+    height: 120px;
+    border-radius: 2rem;
+    background-color: color('google-yellow');
+    transform: scale(0.85);
+    @include breakpoint(md) {
+      width: 420px;
+      height: 140px;
+    }
+
+    &--outline {
+      z-index: 0;
+      border: 8px solid color('google-yellow');
+      background-color: transparent;
+    }
+  }
+}

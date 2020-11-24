@@ -22,7 +22,7 @@ module.exports = merge(common, {
     compress: true,
     liveReload: true,
     watchContentBase: true,
-    open: true,
+    open: false,
     port: 8080,
   },
 });

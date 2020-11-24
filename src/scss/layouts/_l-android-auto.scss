@@ -1,0 +1,16 @@
+.android-auto-content {
+  color: color('light');
+}
+
+.android-auto-dash {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 720px;
+  height: auto;
+  @include breakpoint(lg) {
+    left: 105%;
+  }
+}

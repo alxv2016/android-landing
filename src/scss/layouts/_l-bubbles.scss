@@ -1,0 +1,79 @@
+.chat-bubble {
+  position: absolute;
+  z-index: 2;
+  top: 88px;
+  left: -28px;
+  width: 64px;
+  height: 64px;
+}
+
+.chat-window {
+  position: absolute;
+  overflow: hidden;
+  top: 78px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 280px;
+  background-color: color('light');
+  border-radius: 8px;
+  @include elevate-3(color('dark'), 0.075);
+
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+
+  &__header {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__footer {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__messages {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(40%);
+    width: 230px;
+  }
+}
+
+.bubbles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 420px;
+  height: 420px;
+  border-radius: 100%;
+
+  &__bubble {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background-color: color('red-accent');
+
+    &--outline {
+      border: 8px solid color('google-red');
+      background-color: transparent;
+    }
+  }
+}

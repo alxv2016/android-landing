@@ -1,0 +1,42 @@
+.security-updates {
+  height: 720px;
+  @include breakpoint(md) {
+    height: 820px;
+  }
+}
+
+.security-content {
+  position: relative;
+  color: color('light');
+  margin-bottom: $layout--lg;
+}
+
+.security-feature {
+  position: relative;
+  z-index: 3;
+  width: 298px;
+  @include breakpoint(md) {
+    width: 340px;
+  }
+}
+
+.wireless {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 300px;
+
+  &__wave {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 160px;
+    width: 160px;
+    border-radius: inherit;
+    opacity: 0;
+    background-color: color('google-blue');
+  }
+}

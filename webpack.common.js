@@ -3,7 +3,7 @@ const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const Dotenv = require('dotenv-webpack');
+// const Dotenv = require('dotenv-webpack');
 // Common webpack config
 module.exports = {
   // 1 base directory
@@ -16,14 +16,14 @@ module.exports = {
       import: path.resolve(__dirname, './src/index.ts'),
       dependOn: 'vendors',
     },
-    vendors: ['axios', 'feather-icons', 'lodash'],
+    vendors: ['@splidejs/splide', 'gsap'],
   },
   // 3 the output file(s) Where webpack outputs the assets and bundles
   // https://webpack.js.org/configuration/output/#outputpath
   // https://webpack.js.org/configuration/output/#outputpublicpath
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/',
+    publicPath: './',
     filename: 'js/[name].[contenthash].bundle.js',
     assetModuleFilename: 'assets/[hash][ext][query]',
   },
@@ -37,18 +37,18 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
+      favicon: './favicon.ico',
       inject: true,
+      template: path.resolve(__dirname, './src/template.html'),
       filename: 'index.html',
-      // favicon: '',
-      template: path.resolve(__dirname, './src/index.html'),
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash].css',
       chunkFilename: 'css/[id].[contenthash].css',
     }),
-    new Dotenv({
-      path: './.env',
-    }),
+    // new Dotenv({
+    //   path: './.env',
+    // }),
   ],
   // 6 Modules (Loaders)
   // https://webpack.js.org/configuration/module/#ruleloaders
@@ -62,12 +62,13 @@ module.exports = {
       },
       // Scss loader
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.(scss|css)$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
               reloadAll: true,
+              publicPath: '../',
             },
           },
           {
@@ -76,14 +77,7 @@ module.exports = {
               importLoaders: 1,
             },
           },
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [['autoprefixer']],
-              },
-            },
-          },
+          'postcss-loader',
           'sass-loader',
         ],
       },
@@ -94,7 +88,7 @@ module.exports = {
       },
       // Webpack5 assets loader
       {
-        test: /\.(ico|jpeg|png|svg|gif)$/,
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
       // Fonts and SVGs: Inline files

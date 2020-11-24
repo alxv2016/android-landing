@@ -1,0 +1,75 @@
+.highlights-cards {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.highlight-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: color('light');
+  padding: $spacing--lg;
+  border-radius: $border-radius;
+  flex-shrink: 0;
+  width: calc(50% - #{$spacing--sm});
+  height: calc(100vw / 2.5);
+  max-height: calc(998px / 4);
+  margin: $spacing--sm 0;
+
+  @include breakpoint(md) {
+    padding: $spacing--xl;
+    margin: $spacing--md 0;
+    width: calc(33.33% - #{$spacing--md});
+    height: calc(100vw / 3.5);
+  }
+  @include elevate-3(color('dark'), 0.035);
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    @include elevate-5(color('dark'), 0.065);
+  }
+
+  &:hover,
+  &:focus {
+    &:before {
+      opacity: 1;
+    }
+  }
+  &-title {
+    font-weight: font-weight('medium');
+    margin: 0;
+    font-size: $body--1;
+    @include breakpoint(sm) {
+      font-size: $subtitle--2;
+    }
+  }
+  &__header {
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  &__footer {
+    position: relative;
+    width: 100%;
+  }
+  &__icon {
+    height: icon-size('md');
+    width: icon-size('md');
+    @include breakpoint(sm) {
+      height: icon-size('lg');
+      width: icon-size('lg');
+    }
+  }
+}
