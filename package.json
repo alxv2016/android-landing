@@ -51,7 +51,6 @@
   },
   "dependencies": {
     "@splidejs/splide": "^2.4.14",
-    "feather-icons": "^4.28.0",
     "gsap": "^3.5.1"
   },
   "husky": {
