@@ -43,7 +43,7 @@ class Accordion {
 }
 
 // Instantiation
-const icons = {
+const components = {
   // inlineLineSVG: () => {
   //   const images = document.querySelectorAll('img');
   //   if (images !== undefined) {
@@ -78,4 +78,4 @@ const icons = {
   },
 };
 
-export default icons;
+export default components;
