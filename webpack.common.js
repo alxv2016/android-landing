@@ -3,7 +3,7 @@ const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const Dotenv = require('dotenv-webpack');
+// const Dotenv = require('dotenv-webpack');
 // Common webpack config
 module.exports = {
   // 1 base directory
@@ -46,9 +46,9 @@ module.exports = {
       filename: 'css/[name].[contenthash].css',
       chunkFilename: 'css/[id].[contenthash].css',
     }),
-    new Dotenv({
-      path: './.env',
-    }),
+    // new Dotenv({
+    //   path: './.env',
+    // }),
   ],
   // 6 Modules (Loaders)
   // https://webpack.js.org/configuration/module/#ruleloaders
