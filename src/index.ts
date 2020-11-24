@@ -4,6 +4,7 @@ import icons from './component';
 import scrollmg from './scroll-triggers';
 import slider from './slider-plugin';
 icons.featherIcons();
+icons.initAccordion();
 scrollmg.initScrollMagic();
 slider.initSlider();
 slider.initSlider2();

@@ -549,17 +549,6 @@ const scrollmg = {
         scrub: true,
       },
     });
-    // Outro content
-    gsap.to('.js-outro-content', {
-      yPercent: -60,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.js-security-updates',
-        start: '+=100 top',
-        end: 'center top',
-        scrub: true,
-      },
-    });
   },
 };
 
