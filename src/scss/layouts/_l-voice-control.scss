@@ -14,10 +14,12 @@
     width: 100%;
     bottom: 0;
     padding: $spacing--xl;
+    margin-bottom: $layout--sm;
     border-radius: 1rem;
     @include frosted-glass(color('light'), 0.45);
     @include breakpoint(md) {
       width: 50%;
+      margin-bottom: 0;
     }
   }
 }

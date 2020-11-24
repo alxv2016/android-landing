@@ -6,15 +6,17 @@
     position: relative;
     width: 100%;
     margin: 0;
-    font-size: $subtitle--2;
+    font-size: $subtitle;
     font-weight: font-weight('bold');
-
+    @include breakpoint(lg) {
+      font-size: $subtitle--2;
+    }
     button {
       all: inherit;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: $spacing--xl;
+      padding: $spacing--lg;
       white-space: nowrap;
       transition: all 0.3s ease;
       cursor: pointer;
@@ -22,6 +24,9 @@
       border-bottom: 1px solid rgba(0, 0, 0, 0.25);
       &:focus {
         outline: -webkit-focus-ring-color auto 5px;
+      }
+      @include breakpoint(lg) {
+        padding: $spacing--xl;
       }
     }
 
