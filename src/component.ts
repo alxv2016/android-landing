@@ -1,5 +1,3 @@
-import feather from 'feather-icons';
-
 class Accordion {
   accordionHeaders: NodeListOf<Element>;
   accordionPanels: NodeListOf<Element>;
@@ -72,9 +70,6 @@ const components = {
   // },
   initAccordion: () => {
     return new Accordion();
-  },
-  featherIcons: () => {
-    feather.replace();
   },
 };
 
