@@ -1,8 +1,9 @@
 import './scss/app.scss';
-import components from './component';
+import accordion from './accordion';
 import scrollmg from './scroll-triggers';
-import slider from './slider-plugin';
-components.initAccordion();
+import slider from './slider';
+
+accordion.initAccordion();
 scrollmg.initScrollMagic();
 slider.initSlider();
 slider.initSlider2();

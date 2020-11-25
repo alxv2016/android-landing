@@ -23,23 +23,37 @@ const scrollmg = {
       },
     });
     // Hero animations
-    gsap.to('.js-spotlight', {
-      scrollTrigger: {
-        trigger: '.js-spotlight',
-        scrub: 0.6,
-        start: '+=200 center',
-        end: '900px center',
+    const spotlight = gsap.timeline({
+      defaults: {
+        ease: 'none',
+        duration: 3,
       },
-      scale: 9,
-      y: 300,
-      ease: 'none',
+      scrollTrigger: {
+        markers: false,
+        trigger: '.js-spotlight',
+        scrub: true,
+        start: 'top center',
+        end: '568px center',
+      },
     });
+    spotlight
+      .to('.js-spotlight', {
+        yPercent: 30,
+      })
+      .to(
+        '.js-spotlight',
+        {
+          scale: 9,
+        },
+        1.25
+      );
 
     const heroProducts = gsap.timeline({
       defaults: {
         ease: 'none',
       },
       scrollTrigger: {
+        markers: false,
         trigger: '.js-product-features',
         scrub: true,
       },
@@ -97,6 +111,7 @@ const scrollmg = {
         ease: 'none',
       },
       scrollTrigger: {
+        markers: false,
         trigger: '.js-conversations',
         start: '-=100 center',
         end: 'center center',
@@ -133,6 +148,7 @@ const scrollmg = {
         ease: 'none',
       },
       scrollTrigger: {
+        markers: false,
         trigger: '.js-chat',
         start: '-=100 center',
         end: 'center center',
@@ -174,6 +190,7 @@ const scrollmg = {
         ease: 'none',
       },
       scrollTrigger: {
+        markers: false,
         trigger: '.js-capture-share',
         start: '-=100 center',
         end: 'center center',
@@ -211,8 +228,9 @@ const scrollmg = {
       x: 0,
       ease: 'ease',
       scrollTrigger: {
+        markers: false,
         trigger: '.js-panel-1',
-        start: '-=300 top',
+        start: '-=50 top',
         end: 'bottom top',
         toggleActions: 'play pause resume reverse',
       },
@@ -254,8 +272,9 @@ const scrollmg = {
         ease: 'none',
       },
       scrollTrigger: {
+        markers: false,
         trigger: '.js-panel-2',
-        start: '-=100 top',
+        start: '-=50 top',
         end: 'bottom top',
         scrub: true,
       },
@@ -286,8 +305,9 @@ const scrollmg = {
       stagger: 0.125,
       ease: 'bounce',
       scrollTrigger: {
+        markers: false,
         trigger: '.js-panel-2',
-        start: '-=300 top',
+        start: '-=50 top',
         end: 'center top',
         toggleActions: 'play pause resume reverse',
       },
@@ -295,8 +315,9 @@ const scrollmg = {
 
     const smartFolders = gsap.timeline({
       scrollTrigger: {
+        markers: false,
         trigger: '.js-panel-3',
-        start: '-=100 top',
+        start: '-=50 top',
         end: 'bottom top',
         toggleActions: 'play pause resume reverse',
       },
@@ -324,8 +345,9 @@ const scrollmg = {
         ease: 'none',
       },
       scrollTrigger: {
+        markers: false,
         trigger: '.js-panel-3',
-        start: '-=100 top',
+        start: '-=50 top',
         end: 'bottom top',
         scrub: true,
       },
@@ -354,8 +376,9 @@ const scrollmg = {
     gsap.to('.js-feature-image', {
       yPercent: 20,
       scrollTrigger: {
+        markers: false,
         trigger: '.js-voice-control',
-        start: '-=400 top',
+        start: '-=300 top',
         end: 'center top',
         scrub: true,
       },
@@ -384,18 +407,20 @@ const scrollmg = {
     const deviceControls = gsap.timeline({
       defaults: {
         ease: 'none',
+        duration: 0.125,
       },
       scrollTrigger: {
+        markers: false,
         trigger: '.js-device-controls',
-        start: '-=400 top',
-        end: 'center top',
+        start: '-=100 top',
+        end: '100px top',
         scrub: true,
       },
     });
 
     deviceControls
       .from('.js-house-lights', {
-        y: 100,
+        y: 40,
       })
       .to(
         '.js-controls',
@@ -409,17 +434,18 @@ const scrollmg = {
         {
           opacity: 1,
         },
-        0.125
+        0
       );
 
     // Media controls
     gsap.to('.js-music-controls', {
-      yPercent: 20,
+      yPercent: -30,
       ease: 'none',
       scrollTrigger: {
+        markers: false,
         trigger: '.js-media-controls',
-        start: '-=300 top',
-        end: 'center top',
+        start: 'top top',
+        end: 'bottom top',
         scrub: true,
       },
     });
@@ -433,8 +459,9 @@ const scrollmg = {
         yoyo: true,
       },
       scrollTrigger: {
+        markers: false,
         trigger: '.js-media-controls',
-        start: '-=300 top',
+        start: '-=150 top',
         end: 'center top',
         toggleActions: 'play pause resume pause',
       },
@@ -442,7 +469,7 @@ const scrollmg = {
 
     music.to('.js-music', {
       opacity: 0.25,
-      backgroundColor: '#ea4335',
+      fill: '#ea4335',
       scale: 22,
     });
 
@@ -452,24 +479,25 @@ const scrollmg = {
         ease: 'none',
       },
       scrollTrigger: {
+        markers: false,
         trigger: '.js-android-auto',
-        start: '-=400 top',
-        end: 'top top',
+        start: '-=200 top',
+        end: 'bottom top',
         scrub: true,
       },
     });
 
     androidAuto
-      .from('.js-android-dash', {
-        yPercent: 20,
+      .to('.js-android-dash', {
+        y: -98,
       })
       .to(
         '.js-android-device',
         {
-          yPercent: 64,
+          yPercent: 60,
           scale: 0.95,
         },
-        0.125
+        0
       );
 
     // Security permissions
@@ -478,8 +506,9 @@ const scrollmg = {
         ease: 'none',
       },
       scrollTrigger: {
+        markers: false,
         trigger: '.js-app-permissions',
-        start: '-=200 center',
+        start: '-=50 center',
         end: 'center center',
         scrub: true,
       },
@@ -518,9 +547,10 @@ const scrollmg = {
         repeat: -1,
       },
       scrollTrigger: {
+        markers: false,
         trigger: '.js-security-updates',
-        start: '-=300 top',
-        end: 'center top',
+        start: '-=100 top',
+        end: 'bottom top',
         toggleActions: 'play pause resume pause',
       },
     });
@@ -543,9 +573,10 @@ const scrollmg = {
       yPercent: 40,
       ease: 'none',
       scrollTrigger: {
+        markers: false,
         trigger: '.js-security-updates',
-        start: '-=400 top',
-        end: 'top top',
+        start: '-=50 top',
+        end: '200px top',
         scrub: true,
       },
     });
