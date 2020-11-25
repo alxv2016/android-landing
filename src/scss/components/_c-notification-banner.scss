@@ -1,0 +1,71 @@
+.notification-banner {
+  position: fixed;
+  display: flex;
+  z-index: 4;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 0.75px solid rgba(white, 0.25);
+  width: calc(100vw - 24px);
+  max-width: $max-content-size;
+  min-height: 68px;
+  transition: transform 0.3s ease;
+  visibility: visible;
+  @include frosted-glass(color('light'));
+  border-radius: 0.75rem;
+  margin-bottom: 16px;
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: $spacing--lg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+
+    p {
+      margin: 0;
+      font-size: $body--2;
+      font-weight: font-weight('medium');
+    }
+
+    p ~ button {
+      margin-top: $spacing--lg;
+      margin-left: 0;
+    }
+
+    @include breakpoint(md) {
+      flex-direction: row;
+      p ~ button {
+        margin-top: 0;
+        margin-left: $spacing--lg;
+      }
+    }
+  }
+}
+
+.primary-btn {
+  flex-shrink: 0;
+  align-self: flex-end;
+  @include button-reset;
+  background-color: color('google-blue');
+  padding: $spacing--sm $spacing--lg;
+  color: color('light');
+  font-weight: font-weight('medium');
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  @include elevate-1(color('google-blue'), 0.125);
+  @include breakpoint(md) {
+    align-self: center;
+  }
+
+  &:hover {
+    background-color: color('blue-accent');
+  }
+  &:active {
+    background-color: color('google-blue');
+  }
+}
