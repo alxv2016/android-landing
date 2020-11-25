@@ -26,12 +26,11 @@ const scrollmg = {
     const spotlight = gsap.timeline({
       defaults: {
         ease: 'none',
-        duration: 3,
       },
       scrollTrigger: {
         markers: false,
         trigger: '.js-spotlight',
-        scrub: true,
+        scrub: 1.45,
         start: 'top center',
         end: '568px center',
       },
@@ -45,7 +44,7 @@ const scrollmg = {
         {
           scale: 9,
         },
-        1.25
+        0.175
       );
 
     const heroProducts = gsap.timeline({
@@ -55,7 +54,7 @@ const scrollmg = {
       scrollTrigger: {
         markers: false,
         trigger: '.js-product-features',
-        scrub: true,
+        scrub: 0.45,
       },
     });
 
@@ -115,7 +114,7 @@ const scrollmg = {
         trigger: '.js-conversations',
         start: '-=100 center',
         end: 'center center',
-        scrub: true,
+        scrub: 0.25,
       },
     });
 
@@ -152,7 +151,7 @@ const scrollmg = {
         trigger: '.js-chat',
         start: '-=100 center',
         end: 'center center',
-        scrub: true,
+        scrub: 0.75,
       },
     });
 
@@ -194,7 +193,7 @@ const scrollmg = {
         trigger: '.js-capture-share',
         start: '-=100 center',
         end: 'center center',
-        scrub: true,
+        scrub: 0.45,
       },
     });
 
@@ -244,7 +243,7 @@ const scrollmg = {
         trigger: '.js-panel-1',
         start: 'top top',
         end: 'bottom top',
-        scrub: true,
+        scrub: 0.45,
       },
     });
 
@@ -276,7 +275,7 @@ const scrollmg = {
         trigger: '.js-panel-2',
         start: '-=50 top',
         end: 'bottom top',
-        scrub: true,
+        scrub: 0.45,
       },
     });
 
@@ -349,7 +348,7 @@ const scrollmg = {
         trigger: '.js-panel-3',
         start: '-=50 top',
         end: 'bottom top',
-        scrub: true,
+        scrub: 0.45,
       },
     });
 
@@ -380,7 +379,7 @@ const scrollmg = {
         trigger: '.js-voice-control',
         start: '-=300 top',
         end: 'center top',
-        scrub: true,
+        scrub: 0.25,
       },
     });
 
@@ -414,7 +413,7 @@ const scrollmg = {
         trigger: '.js-device-controls',
         start: '-=100 top',
         end: '100px top',
-        scrub: true,
+        scrub: 0.175,
       },
     });
 
@@ -446,15 +445,15 @@ const scrollmg = {
         trigger: '.js-media-controls',
         start: 'top top',
         end: 'bottom top',
-        scrub: true,
+        scrub: 0.45,
       },
     });
 
     const music = gsap.timeline({
       defaults: {
-        ease: 'bounce',
+        ease: 'back',
         stagger: 0.35,
-        duration: 0.95,
+        duration: 0.65,
         repeat: -1,
         yoyo: true,
       },
@@ -483,7 +482,7 @@ const scrollmg = {
         trigger: '.js-android-auto',
         start: '-=200 top',
         end: 'bottom top',
-        scrub: true,
+        scrub: 0.45,
       },
     });
 
@@ -510,7 +509,7 @@ const scrollmg = {
         trigger: '.js-app-permissions',
         start: '-=50 center',
         end: 'center center',
-        scrub: true,
+        scrub: 0.45,
       },
     });
 
@@ -543,7 +542,7 @@ const scrollmg = {
       defaults: {
         ease: 'ease',
         stagger: 1.75,
-        duration: 3,
+        duration: 2.75,
         repeat: -1,
       },
       scrollTrigger: {
@@ -575,9 +574,9 @@ const scrollmg = {
       scrollTrigger: {
         markers: false,
         trigger: '.js-security-updates',
-        start: '-=50 top',
-        end: '200px top',
-        scrub: true,
+        start: '-=150 top',
+        end: '100px top',
+        scrub: 0.45,
       },
     });
   },
