@@ -24,7 +24,7 @@ const confirmed = checkConfirmation();
 if (confirmed) {
   banner?.setAttribute('style', 'transform: translate(-50%, 300%); visibility: hidden;');
 } else {
-  banner?.setAttribute('style', 'visibility: visible;');
+  banner?.removeAttribute('style');
 }
 
 confirmBtn?.addEventListener('click', (ev) => {

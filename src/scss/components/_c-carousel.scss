@@ -49,7 +49,27 @@
     & ~ .splide__arrow {
       margin-left: $spacing--sm;
     }
+
+    &-icon {
+      height: inherit;
+      width: inherit;
+      stroke: color('dark');
+    }
+
+    &--prev {
+      transform: rotate(180deg);
+    }
   }
+
+  .splide__arrow[disabled] {
+    opacity: 0.45;
+    cursor: default;
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
   @include breakpoint(md) {
     @include container-padding;
     .splide__list {

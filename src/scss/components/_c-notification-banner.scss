@@ -3,8 +3,9 @@
   display: flex;
   z-index: 4;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
   border: 0.75px solid rgba(white, 0.25);
   width: calc(100vw - 24px);
   max-width: $max-content-size;
@@ -46,26 +47,29 @@
   }
 }
 
-.primary-btn {
+.outline-btn {
   flex-shrink: 0;
   align-self: flex-end;
   @include button-reset;
-  background-color: color('google-blue');
-  padding: $spacing--sm $spacing--lg;
+  background-color: transparent;
+  padding: $spacing--xs $spacing--md;
   color: color('light');
   font-weight: font-weight('medium');
   border-radius: 0.25rem;
   transition: all 0.3s ease;
+  border: 2px solid color('dark');
+  color: color('google-blue');
   cursor: pointer;
-  @include elevate-1(color('google-blue'), 0.125);
+  @include elevate-1(color('dark'), 0.125);
   @include breakpoint(md) {
     align-self: center;
   }
 
-  &:hover {
-    background-color: color('blue-accent');
+  &:hover,
+  &:focus {
+    background-color: color('offwhite');
   }
   &:active {
-    background-color: color('google-blue');
+    background-color: color('offwhite');
   }
 }
