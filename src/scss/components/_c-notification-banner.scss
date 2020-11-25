@@ -59,6 +59,7 @@
   transition: all 0.3s ease;
   border: 2px solid color('dark');
   color: color('google-blue');
+  white-space: nowrap;
   cursor: pointer;
   @include elevate-1(color('dark'), 0.125);
   @include breakpoint(md) {
