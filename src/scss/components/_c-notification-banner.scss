@@ -10,7 +10,8 @@
   width: calc(100vw - 24px);
   max-width: $max-content-size;
   min-height: 68px;
-  transition: transform 0.3s ease;
+  transition: transform 275ms ease;
+  transform: translateY(0);
   visibility: visible;
   @include frosted-glass(color('light'));
   border-radius: 0.75rem;

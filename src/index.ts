@@ -22,12 +22,12 @@ const confirmBtn = document.querySelector('.js-confirm');
 const confirmed = checkConfirmation();
 
 if (confirmed) {
-  banner?.setAttribute('style', 'transform: translate(-50%, 300%); visibility: hidden;');
+  banner?.setAttribute('style', 'transform: translateY(100%); visibility: hidden;');
 } else {
   banner?.removeAttribute('style');
 }
 
 confirmBtn?.addEventListener('click', (ev) => {
-  banner?.setAttribute('style', 'transform: translate(-50%, 300%); visibility: hidden;');
+  banner?.setAttribute('style', 'transform: translateY(100%); visibility: hidden;');
   localStorage.setItem('confirmed', 'true');
 });
