@@ -1,28 +1,17 @@
 .spotlight {
   position: absolute;
-  top: 98px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 48px;
   margin: auto;
   z-index: -1;
   width: 420px;
   height: 420px;
   border-radius: 100%;
   background-color: color('google-green');
-
-  @include breakpoint(sm) {
-    width: 480px;
-    height: 480px;
-  }
   @include breakpoint(md) {
+    top: 78px;
     width: 568px;
     height: 568px;
   }
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
 }
 
 .hero-product {
@@ -31,6 +20,7 @@
   width: 100%;
   z-index: 0;
   display: flex;
+  align-items: center;
   justify-content: center;
   @include breakpoint(md) {
     margin-top: $layout--xl;
@@ -41,78 +31,69 @@
 
   &__container {
     position: relative;
-    width: 280px;
-    height: 545px;
+    width: 320px;
+    height: 420px;
+    @include breakpoint(md) {
+      width: 460px;
+      height: 592px;
+    }
+    @include breakpoint(lg) {
+      width: 560px;
+      height: 703px;
+    }
+  }
+
+  &-back,
+  &-front {
+    position: absolute;
+    width: 227px;
+    height: 420px;
+    @include breakpoint(md) {
+      width: 320px;
+      height: 592px;
+    }
     @include breakpoint(lg) {
       width: 380px;
-      height: 645px;
+      height: 703px;
     }
   }
-
-  &-back {
-    position: absolute;
-    height: auto;
-    width: 100%;
-    z-index: 0;
-    left: -65px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  &-group {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    &__front {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: -65px;
-      width: 100%;
-      height: auto;
-    }
-    &__shadow {
-      position: absolute;
-      width: auto;
-      height: 100%;
-      opacity: 0.45;
-    }
-  }
-}
-
-.product-features {
-  position: relative;
-  z-index: 3;
-  max-width: $max-screen-size;
-  height: 480px;
-  transform: translateY(20%);
-  margin-top: $layout--2xl;
-  margin-bottom: $layout--lg;
-  @include breakpoint(sm) {
-    height: 667px;
-  }
-
-  .feature-screen {
-    position: absolute;
-    top: 0;
-  }
-}
-
-.fs-1 {
-  left: -120px;
-  @include breakpoint(md) {
-    left: 0;
-  }
-}
-
-.fs-2 {
-  right: -120px;
-  @include breakpoint(md) {
+  &-front {
     right: 0;
   }
 }
 
-.fs-3 {
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
+.android-features {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-bottom: $spacing--2xl;
+  &__container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+.android-feature {
+  position: relative;
+  flex-shrink: 0;
+  width: 180px;
+  height: 391px;
+  margin: 0 $spacing--sm;
+  @include breakpoint(md) {
+    width: 240px;
+    height: 520px;
+  }
+  @include breakpoint(lg) {
+    width: 280px;
+    height: 607px;
+  }
+}
+
+.feature-2 {
+  z-index: 2;
+}
+
+.feature-1,
+.feature-3 {
+  z-index: 1;
 }

@@ -2,9 +2,12 @@ import './scss/app.scss';
 import accordion from './accordion';
 import scrollmg from './scroll-triggers';
 import slider from './slider';
+import hero from './hero';
 
 accordion.initAccordion();
 scrollmg.initScrollMagic();
+hero.renderAnimation();
+
 slider.initSlider();
 slider.initSlider2();
 

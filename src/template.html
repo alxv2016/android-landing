@@ -7,7 +7,7 @@
   </head>
   <body>
     <!-- Notification banner -->
-    <div class="js-notification-banner notification-banner">
+    <!-- <div class="js-notification-banner notification-banner">
       <div class="notification-banner__container">
         <p>
           This is an unofficial redesign of Google's Android 11 landing page. This project was built for education
@@ -15,9 +15,9 @@
         </p>
         <button class="js-confirm outline-btn">👌 Got it</button>
       </div>
-    </div>
+    </div> -->
     <!-- Header -->
-    <header class="js-header header">
+    <header class="header" data-target="header">
       <div class="header__container">
         <div class="header__brand"><img class="brand-logo" src="assets/android-icon.svg" /></div>
       </div>
@@ -25,8 +25,8 @@
     <main>
       <!-- Hero section -->
       <section class="section section--offwhite section--overflow">
-        <div class="section__container">
-          <div class="section__content hero-content">
+        <div class="section__container" data-trigger="android-features">
+          <div class="section__content">
             <span class="section-overline section-overline--slate">Android 11</span>
             <h1 class="section-title section-title--hero">The OS that gets to what’s important.</h1>
             <p class="section-body">
@@ -35,20 +35,31 @@
               more.
             </p>
           </div>
-          <div class="js-hero-product hero-product">
+          <div class="hero-product" data-trigger="hero-product">
             <div class="hero-product__container">
-              <img class="js-product-back hero-product-back" src="assets/img_2.png" />
-              <div class="js-product-front hero-product-group">
-                <img class="hero-product-group__shadow" src="assets/img_1.png" />
-                <img class="hero-product-group__front" src="assets/img_0.png" />
-              </div>
+              <img class="hero-product-back" data-target="hero-back" src="assets/optimized/pixel_back.png" />
+              <img class="hero-product-front" data-target="hero-front" src="assets/optimized/pixel_front.png" />
             </div>
-            <div class="js-spotlight spotlight"></div>
+            <div class="spotlight" data-target="hero-spotlight"></div>
           </div>
-          <div class="js-product-features product-features">
-            <img class="js-feature-1 feature-screen fs-1" src="./assets/android-2.png" />
-            <img class="js-feature-2 feature-screen fs-2" src="./assets/android-3.png" />
-            <img class="js-feature-3 feature-screen fs-3" src="./assets/android-4.png" />
+          <div class="android-features">
+            <div class="android-features__container">
+              <img
+                class="android-feature feature-1"
+                data-target="android-feature-1"
+                src="./assets/optimized/pixel_ss_1.png"
+              />
+              <img
+                class="android-feature feature-2"
+                data-target="android-feature-2"
+                src="./assets/optimized/pixel_ss_2.png"
+              />
+              <img
+                class="android-feature feature-3"
+                data-target="android-feature-3"
+                src="./assets/optimized/pixel_ss_3.png"
+              />
+            </div>
           </div>
         </div>
       </section>

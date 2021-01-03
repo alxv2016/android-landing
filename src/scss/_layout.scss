@@ -14,12 +14,6 @@
     max-width: $max-screen-size;
     margin: auto;
     @include container-padding;
-    padding-top: $layout--xl;
-    padding-bottom: $layout--xl;
-    @include breakpoint(md) {
-      padding-top: $layout--2xl;
-      padding-bottom: $layout--2xl;
-    }
   }
 
   &__container-no-constraints {

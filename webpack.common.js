@@ -3,7 +3,6 @@ const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const Dotenv = require('dotenv-webpack');
 // Common webpack config
 module.exports = {
   // 1 base directory
@@ -38,7 +37,6 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       favicon: './favicon.ico',
-      inject: true,
       template: path.resolve(__dirname, './src/template.html'),
       filename: 'index.html',
     }),
@@ -46,9 +44,6 @@ module.exports = {
       filename: 'css/[name].[contenthash].css',
       chunkFilename: 'css/[id].[contenthash].css',
     }),
-    // new Dotenv({
-    //   path: './.env',
-    // }),
   ],
   // 6 Modules (Loaders)
   // https://webpack.js.org/configuration/module/#ruleloaders
@@ -67,7 +62,6 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              reloadAll: true,
               publicPath: '../',
             },
           },

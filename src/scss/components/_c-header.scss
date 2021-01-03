@@ -28,7 +28,7 @@
   }
 }
 
-.js-header--hidden {
+[data-state='hidden'] {
   transform: translateY(-80px);
 }
 
