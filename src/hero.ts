@@ -64,13 +64,14 @@ const hero = {
     const androidFeatures = gsap.timeline({
       defaults: {
         ease: 'none',
-        duration: 6,
+        duration: 8,
+        delay: 0.75,
       },
       scrollTrigger: {
         markers: true,
         trigger: '[data-trigger="android-features"]',
-        scrub: 0.45,
-        start: '+=200 top',
+        scrub: 0.65,
+        start: 'top top',
         end: 'bottom top',
       },
     });
@@ -91,7 +92,7 @@ const hero = {
           yPercent: 60,
         },
         {
-          yPercent: -60,
+          yPercent: -30,
         },
         0.45
       )

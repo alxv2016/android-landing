@@ -1,3 +1,7 @@
+.android-hero {
+  padding-top: $layout--2xl;
+}
+
 .spotlight {
   position: absolute;
   top: 48px;
@@ -79,6 +83,8 @@
   width: 180px;
   height: 391px;
   margin: 0 $spacing--sm;
+  border-radius: 24px;
+  overflow: hidden;
   @include breakpoint(md) {
     width: 240px;
     height: 520px;
@@ -87,6 +93,7 @@
     width: 280px;
     height: 607px;
   }
+  @include elevate-3(color('dark'), 0.125);
 }
 
 .feature-2 {
@@ -95,5 +102,6 @@
 
 .feature-1,
 .feature-3 {
+  top: 48px;
   z-index: 1;
 }
