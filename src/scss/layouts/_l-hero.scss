@@ -18,7 +18,7 @@
   }
 }
 
-.hero-product {
+.hero-device {
   position: relative;
   margin-top: $layout--lg;
   width: 100%;
@@ -96,12 +96,12 @@
   @include elevate-3(color('dark'), 0.125);
 }
 
-.feature-2 {
+.android-feature--2 {
   z-index: 2;
 }
 
-.feature-1,
-.feature-3 {
+.android-feature--1,
+.android-feature--3 {
   top: 48px;
   z-index: 1;
 }

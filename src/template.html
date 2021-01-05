@@ -25,37 +25,37 @@
     <main>
       <!-- Hero section -->
       <section class="section section--offwhite section--overflow">
-        <div class="section__container android-hero" data-trigger="android-features">
-          <div class="section__content">
-            <span class="section-overline section-overline--slate">Android 11</span>
-            <h1 class="section-title section-title--hero">The OS that gets to what’s important.</h1>
-            <p class="section-body">
+        <div class="section-container android-hero" data-trigger="android-features">
+          <div class="section-content">
+            <span class="title--overline title--muted">Android 11</span>
+            <h1 class="title--display">The OS that gets to what’s important.</h1>
+            <p class="body--large">
               Go straight to the stuff that matters most. Because Android 11 is optimized for how you use your phone.
               Giving you powerful device controls. And easier ways to manage conversations, privacy settings and so much
               more.
             </p>
           </div>
-          <div class="hero-product" data-trigger="hero-product">
-            <div class="hero-product__container">
-              <img class="hero-product-back" data-target="hero-back" src="assets/optimized/pixel_back.png" />
-              <img class="hero-product-front" data-target="hero-front" src="assets/optimized/pixel_front.png" />
+          <div class="hero-device" data-trigger="hero-device">
+            <div class="hero-device__container">
+              <img class="hero-device-back" data-target="hero-device-back" src="assets/optimized/pixel_back.png" />
+              <img class="hero-device-front" data-target="hero-device-front" src="assets/optimized/pixel_front.png" />
             </div>
             <div class="spotlight" data-target="hero-spotlight"></div>
           </div>
           <div class="android-features">
             <div class="android-features__container">
               <img
-                class="android-feature feature-1"
+                class="android-feature android-feature--1"
                 data-target="android-feature-1"
                 src="./assets/optimized/pixel_ss_1.png"
               />
               <img
-                class="android-feature feature-2"
+                class="android-feature android-feature--2"
                 data-target="android-feature-2"
                 src="./assets/optimized/pixel_ss_2.png"
               />
               <img
-                class="android-feature feature-3"
+                class="android-feature android-feature--3"
                 data-target="android-feature-3"
                 src="./assets/optimized/pixel_ss_3.png"
               />
@@ -65,9 +65,9 @@
       </section>
       <!-- Android highlights -->
       <section class="section section--offwhite section--overflow">
-        <div class="section__container">
-          <div class="section__content">
-            <h2 class="section-title">Android 11 Hightlights</h2>
+        <div class="section-container">
+          <div class="section-content highlights-content">
+            <h2 class="title--large">Android 11 Hightlights</h2>
             <div class="highlights-cards">
               <div class="highlight-card">
                 <div class="highlight-card__header">
@@ -123,24 +123,28 @@
       </section>
       <!-- Manage conversations -->
       <section class="section section--overflow">
-        <div class="section__container">
-          <div class="grid-2cols">
+        <div class="section-container">
+          <div class="grid-2cols conversations-content" data-trigger="conversations">
             <div class="grid-2cols__col">
-              <h2 class="section-title">Manage your conversations</h2>
-              <p class="section-body"><strong>Get all your messages in one place.</strong></p>
-              <p class="section-body">
+              <h2 class="title--large">Manage your conversations</h2>
+              <p class="body--large"><strong>Get all your messages in one place.</strong></p>
+              <p class="body--large">
                 See, respond to and control your conversations across multiple messaging apps. All in the same spot.
                 Then select people you always chat with. These priority conversations show up on your lock screen. So
                 you never miss anything important.
               </p>
             </div>
-            <div class="js-conversations grid-2cols__col grid-2cols__col--margin-top">
-              <img class="js-notification notification" src="assets/convo-bubble.png" />
-              <img class="feature-screen" src="assets/android-2.png" />
-              <div class="priority">
-                <div class="js-priority-1 priority__bubble"></div>
-                <div class="js-priority-2 priority__bubble priority__bubble--outline"></div>
-                <div class="js-priority-3 priority__bubble priority__bubble--outline"></div>
+            <div class="grid-2cols__col grid-2cols__col--margin-top">
+              <img
+                class="conversations-ui"
+                data-target="conversations-ui"
+                src="assets/optimized/conversations_ui.png"
+              />
+              <img class="feature-screen" src="assets/optimized/pixel_ss_1.png" />
+              <div class="conversation">
+                <div class="conversation__setting conversation__setting--priority" data-target="priority"></div>
+                <div class="conversation__setting" data-target="default"></div>
+                <div class="conversation__setting" data-target="silent"></div>
               </div>
             </div>
           </div>
@@ -148,30 +152,34 @@
       </section>
       <!-- Chat bubbles -->
       <section class="section section--overflow">
-        <div class="section__container">
-          <div class="grid-2cols">
+        <div class="section-container">
+          <div class="grid-2cols chat-bubbles-content" data-trigger="chat-bubbles">
             <div class="js-chat grid-2cols__col grid-2cols__col--margin-top">
               <div class="feature-screen">
-                <img class="js-chat-bubble-1 chat-bubble" src="assets/bubble-1.png" />
-                <img class="js-chat-bubble-2 chat-bubble" src="assets/bubble-2.png" />
                 <div class="chat-window">
                   <div class="chat-window__container">
-                    <img class="chat-window__header" src="assets/chat-header.png" />
-                    <img class="js-messages chat-window__messages" src="assets/chat-messages.png" />
-                    <img class="chat-window__footer" src="assets/chat-footer.png" />
+                    <img class="chat-window__header" src="assets/optimized/chat_ui_header.png" />
+                    <img
+                      class="chat-window__messages"
+                      data-target="chat-messages"
+                      src="assets/optimized/chat_ui_bubbles.png"
+                    />
+                    <img class="chat-window__footer" src="assets/optimized/chat_ui_footer.png" />
                   </div>
                 </div>
-                <img src="assets/bubble-chat.png" />
+                <img src="assets/optimized/pixel_ss_3_blank.png" />
                 <div class="bubbles">
-                  <div class="js-bubble bubbles__bubble bubbles__bubble--outline"></div>
-                  <div class="js-bubble bubbles__bubble"></div>
+                  <div class="bubbles__container">
+                    <div class="bubbles__bubble bubbles__bubble--outline" data-target="bubble"></div>
+                    <div class="bubbles__bubble" data-target="bubble"></div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="grid-2cols__col grid-2cols__col--order-1">
-              <h2 class="section-title">Bubbles</h2>
-              <p class="section-body"><strong>Chat while multitasking.</strong></p>
-              <p class="section-body">
+              <h2 class="title--large">Bubbles</h2>
+              <p class="body--large"><strong>Chat while multitasking.</strong></p>
+              <p class="body--large">
                 With Android 11, you can pin conversations so they always appear on top of other apps and screens.
                 Bubbles keep the conversation going—while you stay focused on whatever else you’re doing. Access the
                 chat anytime or anywhere. Then carry on doing you.

@@ -3,10 +3,14 @@ import accordion from './accordion';
 import scrollmg from './scroll-triggers';
 import slider from './slider';
 import hero from './hero';
+import conversations from './conversations';
+import bubbles from './bubbles';
 
 accordion.initAccordion();
 scrollmg.initScrollMagic();
 hero.renderAnimation();
+conversations.renderAnimation();
+bubbles.renderAnimation();
 
 slider.initSlider();
 slider.initSlider2();

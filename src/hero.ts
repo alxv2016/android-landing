@@ -21,34 +21,34 @@ const hero = {
   },
   renderAnimation() {
     this.initHeader();
-    const hero = gsap.timeline({
+    const heroDevice = gsap.timeline({
       defaults: {
         ease: 'none',
         duration: 6,
       },
       scrollTrigger: {
         markers: false,
-        trigger: '[data-trigger="hero-product"]',
+        trigger: '[data-trigger="hero-device"]',
         scrub: 0.45,
         start: '-=100 top',
         end: 'bottom top',
       },
     });
 
-    hero
-      .to('[data-target="hero-front"]', {
-        yPercent: 20,
+    heroDevice
+      .to('[data-target="hero-device-front"]', {
+        yPercent: 35,
         xPercent: 4,
         rotate: 6,
-        scale: 0.94,
+        scale: 0.92,
       })
       .to(
-        '[data-target="hero-back"]',
+        '[data-target="hero-device-back"]',
         {
-          yPercent: 15,
+          yPercent: 20,
           xPercent: -4,
           rotate: 5,
-          scale: 0.94,
+          scale: 0.92,
         },
         0
       )
@@ -68,7 +68,7 @@ const hero = {
         delay: 0.75,
       },
       scrollTrigger: {
-        markers: true,
+        markers: false,
         trigger: '[data-trigger="android-features"]',
         scrub: 0.65,
         start: 'top top',

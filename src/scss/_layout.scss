@@ -2,46 +2,9 @@
   position: relative;
   width: 100%;
 
-  &__content {
-    position: relative;
-    width: 100%;
-    max-width: $max-content-size;
-    margin: auto;
-  }
-
-  &__container {
-    position: relative;
-    max-width: $max-screen-size;
-    margin: auto;
-    @include container-padding;
-  }
-
-  &__container-no-constraints {
-    position: relative;
-    padding-top: $layout--xl;
-    padding-bottom: $layout--xl;
-    @include breakpoint(md) {
-      padding-top: $layout--2xl;
-      padding-bottom: $layout--2xl;
-    }
-  }
-
-  &__container-fullwidth {
-    position: relative;
-    max-width: $max-screen-size;
-    margin: auto;
-    padding-top: $layout--xl;
-    padding-bottom: $layout--xl;
-    @include breakpoint(md) {
-      padding-top: $layout--2xl;
-      padding-bottom: $layout--2xl;
-    }
-  }
-
   &--overflow {
     overflow: hidden;
   }
-
   &--offwhite {
     background-color: color('offwhite');
   }
@@ -53,71 +16,21 @@
   &--green {
     background-color: color('google-green');
   }
+}
 
-  &-title {
-    font-size: $title--1;
-    font-weight: font-weight('bold');
-    margin: 0;
-    margin-bottom: $layout--xs;
-    @include breakpoint(md) {
-      font-size: $large--title;
-      margin-bottom: $layout--sm;
-    }
+.section-container {
+  position: relative;
+  width: 100%;
+  max-width: $max-screen-size;
+  @include container-padding;
+  margin: auto;
+}
 
-    strong {
-      color: color('slate');
-      font-weight: font-weight('bold');
-    }
-
-    &--hero {
-      @include breakpoint(lg) {
-        font-size: $huge--title;
-      }
-    }
-  }
-
-  &-subtitle {
-    font-size: $title--3;
-    font-weight: font-weight('bold');
-    margin: 0;
-    margin-bottom: $spacing--lg;
-    @include breakpoint(md) {
-      font-size: $title--2;
-    }
-  }
-
-  &-overline {
-    font-size: $body--2;
-    font-weight: font-weight('medium');
-    @include breakpoint(md) {
-      font-size: $body--1;
-    }
-    @include breakpoint(lg) {
-      font-size: $subtitle;
-    }
-
-    &--blue {
-      color: color('google-blue');
-    }
-    &--slate {
-      color: color('slate');
-    }
-  }
-
-  &-body {
-    font-size: $body--1;
-    margin: 0;
-    @include breakpoint(md) {
-      font-size: $subtitle;
-    }
-    strong {
-      color: color('google-blue');
-    }
-  }
-
-  &-body ~ &-body {
-    margin-top: $spacing--md;
-  }
+.section-content {
+  position: relative;
+  width: 100%;
+  max-width: $max-content-size;
+  margin: auto;
 }
 
 .grid-2cols {
@@ -132,9 +45,11 @@
   }
   &__col {
     position: relative;
-    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    // margin-bottom: $layout--xl;
+    height: 100%;
     @include breakpoint(lg) {
       width: calc(50% - #{$spacing--md});
     }
@@ -157,14 +72,17 @@
 
 .feature-screen {
   position: relative;
-  display: block;
-  width: 240px;
-  height: auto;
-  @include breakpoint(lg) {
-    width: 280px;
-  }
-  margin: auto;
+  align-self: center;
+  flex-shrink: 0;
   z-index: 1;
+  width: 240px;
+  height: 520px;
+  border-radius: 22px;
+  @include elevate-4(color('dark'), 0.125);
+  @include breakpoint(md) {
+    width: 280px;
+    height: 607px;
+  }
 }
 
 .content-padding {

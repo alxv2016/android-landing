@@ -18,17 +18,73 @@ form legend {
   margin: $spacing--xl 0 $spacing--sm;
 }
 
-.huge--title {
-  font-size: $large--title;
+// Android typography
+.title--large {
+  font-weight: font-weight('bold');
+  font-size: $title--3;
+  line-height: 1.25;
   @include breakpoint(md) {
-    font-size: $huge--title;
+    font-size: $title--2;
+  }
+  @include breakpoint(lg) {
+    font-size: $title--1;
+  }
+  & ~ p {
+    margin-top: $spacing--lg;
+    @include breakpoint(md) {
+      margin-top: $spacing--xl;
+    }
   }
 }
 
-.large-title {
+.title--display {
+  font-weight: font-weight('bold');
   font-size: $title--1;
+  line-height: 1.25;
   @include breakpoint(md) {
     font-size: $large--title;
+  }
+  @include breakpoint(lg) {
+    font-size: $huge--title;
+  }
+  & ~ p {
+    margin-top: $spacing--xl;
+    @include breakpoint(md) {
+      margin-top: $spacing--2xl;
+    }
+  }
+}
+
+.title--overline {
+  font-weight: font-weight('medium');
+  font-size: $body--1;
+  line-height: 1.25;
+  white-space: nowrap;
+  @include breakpoint(md) {
+    font-size: $subtitle;
+  }
+  & ~ h1,
+  h2 {
+    margin-top: $spacing--2xs;
+  }
+}
+
+.title--muted {
+  color: color('slate');
+}
+
+.body--large {
+  font-size: $body--1;
+  margin-bottom: 0;
+  @include breakpoint(md) {
+    font-size: $subtitle;
+  }
+  & ~ p {
+    margin-top: $spacing--sm;
+    margin-bottom: 0;
+    @include breakpoint(md) {
+      margin-top: $spacing--md;
+    }
   }
 }
 

@@ -1,43 +1,49 @@
-.chat-bubble {
-  position: absolute;
-  z-index: 2;
-  top: 88px;
-  left: -28px;
-  width: 64px;
-  height: 64px;
+.chat-bubbles-content {
+  margin: $layout--xl 0;
+  @include breakpoint(md) {
+    margin: $layout--2xl 0;
+  }
 }
 
 .chat-window {
   position: absolute;
-  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 78px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 250px;
-  height: 280px;
-  background-color: color('light');
-  border-radius: 8px;
-  @include elevate-3(color('dark'), 0.075);
 
   &__container {
     position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
+    width: 224px;
+    height: 248px;
+    background-color: color('light');
+    border-radius: 8px;
+    overflow: hidden;
+    @include elevate-2(color('dark'), 0.25);
+    @include breakpoint(md) {
+      width: 264px;
+      height: 308px;
+    }
+  }
+
+  &__header,
+  &__footer {
+    position: absolute;
+    z-index: 1;
+    width: inherit;
+    height: 34px;
+    @include breakpoint(md) {
+      height: 40px;
+    }
   }
 
   &__header {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
     top: 0;
     left: 0;
   }
 
   &__footer {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
     bottom: 0;
     left: 0;
   }
@@ -45,22 +51,31 @@
   &__messages {
     position: absolute;
     z-index: 0;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) translateY(40%);
-    width: 230px;
+    top: 40px;
+    width: inherit;
+    height: 333px;
+    @include breakpoint(md) {
+      height: 393px;
+    }
   }
 }
 
 .bubbles {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  width: 420px;
-  height: 420px;
-  border-radius: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+  &__container {
+    position: absolute;
+    z-index: -1;
+    width: 420px;
+    height: 420px;
+    border-radius: 100%;
+  }
 
   &__bubble {
     position: absolute;
