@@ -6,43 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 const scrollmg = {
   initScrollMagic: () => {
     // Screen share & capture
-    const captureShare = gsap.timeline({
-      defaults: {
-        ease: 'none',
-      },
-      scrollTrigger: {
-        markers: false,
-        trigger: '.js-capture-share',
-        start: '-=100 center',
-        end: 'center center',
-        scrub: 0.45,
-      },
-    });
-
-    captureShare
-      .fromTo(
-        '.js-cs-feature',
-        {
-          yPercent: 40,
-        },
-        {
-          yPercent: 10,
-        }
-      )
-      .fromTo(
-        '.cs-modal',
-        {
-          y: 188,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          stagger: 0.25,
-          ease: 'ease',
-        }
-      );
-
     // Smart features
     gsap.to('.smart-reply', {
       opacity: 1,

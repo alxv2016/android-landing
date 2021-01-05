@@ -1,4 +1,43 @@
+.capture-share-content {
+  margin: $layout--xl 0;
+  @include breakpoint(md) {
+    margin: $layout--2xl 0;
+  }
+
+  .feature-screen {
+    top: 130px;
+  }
+}
+
+.section-container ~ #capture-slider {
+  margin-top: $layout--sm;
+  @include breakpoint(md) {
+    margin-top: $layout--md;
+  }
+}
+
 .cs-modal {
   position: absolute;
   top: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  @include elevate-2(color('dark'), 0.25);
+}
+
+.cs-modal--record {
+  width: 240px;
+  height: 218px;
+  @include breakpoint(md) {
+    width: 280px;
+    height: 254px;
+  }
+}
+
+.cs-modal--share {
+  width: 240px;
+  height: 33px;
+  @include breakpoint(md) {
+    width: 280px;
+    height: 38px;
+  }
 }

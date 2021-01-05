@@ -20,7 +20,7 @@
 .feature-slide {
   position: relative;
   width: 100%;
-  max-width: 1024px !important;
+  max-width: $max-screen-size !important;
   margin: auto;
 
   .splide__arrows {

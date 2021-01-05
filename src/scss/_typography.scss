@@ -73,6 +73,21 @@ form legend {
   color: color('slate');
 }
 
+.title--heading {
+  font-weight: font-weight('bold');
+  font-size: $subtitle--2;
+  line-height: 1.25;
+  @include breakpoint(md) {
+    font-size: $title--3;
+  }
+  & ~ p {
+    margin-top: $spacing--md;
+    @include breakpoint(md) {
+      margin-top: $spacing--lg;
+    }
+  }
+}
+
 .body--large {
   font-size: $body--1;
   margin-bottom: 0;

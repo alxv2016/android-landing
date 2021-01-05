@@ -190,22 +190,28 @@
       </section>
       <!-- Capture and Share -->
       <section class="section section--overflow">
-        <div class="section__container-fullwidth">
-          <h2 class="section-title content-padding">Capture and share content</h2>
-          <div id="capture-slider" class="js-capture-share splide">
+        <div class="capture-share-content" data-trigger="capture-share">
+          <div class="section-container">
+            <h2 class="title--large">Capture and share content</h2>
+          </div>
+          <div id="capture-slider" class="splide">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
                   <div class="feature-card">
                     <div class="feature-card__hero">
-                      <div class="js-cs-feature feature-screen">
-                        <img class="cs-modal" src="assets/record-modal.png" />
-                        <img src="assets/record-screen.png" />
+                      <div class="feature-screen" data-target="share-screen">
+                        <img
+                          class="cs-modal cs-modal--record"
+                          src="assets/optimized/recording_ui.png"
+                          data-target="share-modal"
+                        />
+                        <img src="assets/optimized/pixel_ss_4.png" />
                       </div>
                     </div>
                     <div class="feature-card__content">
-                      <h3 class="section-subtitle">Built-in screen recording. Finally.</h3>
-                      <p class="section-body">
+                      <h3 class="title--heading">Built-in screen recording. Finally.</h3>
+                      <p class="body--large">
                         Screen recording lets you capture what’s happening on your phone. And it’s built right into
                         Android 11, so you don’t need an extra app. Record with sound from your mic, your device or
                         both.
@@ -216,14 +222,18 @@
                 <li class="splide__slide">
                   <div class="feature-card">
                     <div class="feature-card__hero">
-                      <div class="js-cs-feature feature-screen">
-                        <img class="cs-modal" src="assets/share-modal.png" />
-                        <img src="assets/share-screen.png" />
+                      <div class="feature-screen" data-target="share-screen">
+                        <img
+                          class="cs-modal cs-modal--share"
+                          src="assets/optimized/share_ui.png"
+                          data-target="share-modal"
+                        />
+                        <img src="assets/optimized/pixel_ss_5.png" />
                       </div>
                     </div>
                     <div class="feature-card__content">
-                      <h3 class="section-subtitle">Select and share just got easier.</h3>
-                      <p class="section-body">
+                      <h3 class="title--heading">Select and share just got easier.</h3>
+                      <p class="body--large">
                         Select text from your apps. Grab images too. On Pixel devices1, you can easily copy, save and
                         share info between many apps. Like your browser, your delivery app or from the news.
                       </p>

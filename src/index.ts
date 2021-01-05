@@ -5,12 +5,14 @@ import slider from './slider';
 import hero from './hero';
 import conversations from './conversations';
 import bubbles from './bubbles';
+import captureShare from './capture-share';
 
 accordion.initAccordion();
 scrollmg.initScrollMagic();
 hero.renderAnimation();
 conversations.renderAnimation();
 bubbles.renderAnimation();
+captureShare.renderAnimation();
 
 slider.initSlider();
 slider.initSlider2();
