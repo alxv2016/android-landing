@@ -1,19 +1,31 @@
+.media-controls-content {
+  padding: $layout--xl 0;
+  @include breakpoint(md) {
+    padding: $layout--2xl 0;
+  }
+}
+
 .speaker-audio {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 300px;
+  z-index: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &__music {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 20px;
-    width: 20px;
-    border-radius: inherit;
-    opacity: 1;
+    height: 440px;
+    width: 440px;
+    opacity: 0.45;
     fill: color('google-yellow');
+  }
+
+  &__music ~ &__music {
+    height: 340px;
+    width: 340px;
+    opacity: 0.75;
   }
 }

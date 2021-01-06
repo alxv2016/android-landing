@@ -351,45 +351,36 @@
         </div>
       </section>
       <!-- Voice control -->
-      <section class="js-voice-control section section--green section--overflow">
-        <div class="voice-control content-padding">
+      <section class="section section--overflow" data-trigger="voice-control">
+        <div class="voice-control section-container">
           <div class="voice-control__content">
-            <h2 class="section-title">Control your phone with your voice.</h2>
-            <p class="section-body">
+            <h2 class="title--large">Control your phone with your voice.</h2>
+            <p class="body--large">
               With Android 11, Voice Access is faster and easier to use. Intuitive labels on apps help you control and
               navigate your phone, all by speaking out loud. Even use Voice Access offline, for more support whenever
               you need it.
             </p>
           </div>
         </div>
-        <div class="js-feature-image vc-feature-image"></div>
-        <div class="voice-audio">
-          <div class="js-audio voice-audio__wave"></div>
-          <div class="js-audio voice-audio__wave"></div>
-          <div class="js-audio voice-audio__wave"></div>
-          <div class="js-audio voice-audio__wave"></div>
-          <div class="js-audio voice-audio__wave"></div>
-          <div class="js-audio voice-audio__wave"></div>
-        </div>
+        <figure class="vc-feature-image" data-target="voice-control"></figure>
       </section>
+      <!-- Device controls -->
       <section class="section section--overflow">
-        <div class="section__container">
-          <div class="js-device-controls grid-2cols">
+        <div class="section-container">
+          <div class="grid-2cols device-controls-content" data-trigger="device-controls">
             <div class="grid-2cols__col">
-              <h2 class="section-title">Device Controls</h2>
-              <p class="section-body"><strong>Control your connected devices from one place.</strong></p>
-              <p class="section-body">
+              <h2 class="title--large">Device Controls</h2>
+              <p class="body--large"><strong>Control your connected devices from one place.</strong></p>
+              <p class="body--large">
                 Set the temperature to chill, then dim your lights. All from a single spot on your phone.3 Just long
                 press the power button to see and manage your connected devices. Making life at home that much easier.
               </p>
             </div>
             <div class="grid-2cols__col grid-2cols__col--margin-top">
-              <div class="feature-screen">
-                <img class="js-controls" src="assets/android-4.png" />
-                <div class="js-house-lights house-lights">
-                  <img class="js-lights house-lights--on" src="assets/houselight-on.png" />
-                  <img src="assets/houselight-off.png" />
-                </div>
+              <img class="feature-screen" src="assets/optimized/pixel_ss_2.png" />
+              <div class="house-lights">
+                <img class="house-lights--on" src="assets/houselight-on.png" />
+                <img src="assets/houselight-off.png" />
               </div>
             </div>
           </div>
@@ -397,15 +388,13 @@
       </section>
       <!-- Media controls -->
       <section class="section section--offwhite section--overflow">
-        <div class="js-media-controls section__container">
-          <div class="grid-2cols">
-            <div class="grid-2cols__col grid-2cols__col--margin-top">
-              <div class="js-music-controls feature-screen">
-                <img src="assets/media.png" />
-              </div>
+        <div class="section-container">
+          <div class="grid-2cols media-controls-content" data-trigger="media-controls">
+            <div class="grid-2cols__col">
+              <img class="feature-screen" src="assets/optimized/pixel_ss_9.png" />
               <div class="speaker-audio">
                 <svg
-                  class="js-music speaker-audio__music"
+                  class="speaker-audio__music"
                   width="64"
                   height="64"
                   viewBox="0 0 64 64"
@@ -415,7 +404,7 @@
                   <circle cx="32" cy="32" r="32" />
                 </svg>
                 <svg
-                  class="js-music speaker-audio__music"
+                  class="speaker-audio__music"
                   width="64"
                   height="64"
                   viewBox="0 0 64 64"
@@ -426,10 +415,10 @@
                 </svg>
               </div>
             </div>
-            <div class="grid-2cols__col grid-2cols__col--order-1">
-              <h2 class="section-title">Media Controls</h2>
-              <p class="section-body"><strong>Bring your entertainment with you.</strong></p>
-              <p class="section-body">
+            <div class="grid-2cols__col grid-2cols__col--margin-top">
+              <h2 class="title--large">Media Controls</h2>
+              <p class="body--large"><strong>Bring your entertainment with you.</strong></p>
+              <p class="body--large">
                 Switch from your headphones to your speaker without missing a beat. Tap to hear your tunes or watch
                 video on your TV. With Android 11, you can quickly change the device that your media plays on.
               </p>
@@ -439,21 +428,19 @@
       </section>
       <!-- Android auto -->
       <section class="section section--night section--overflow">
-        <div class="js-android-auto section__container">
-          <div class="grid-2cols">
-            <div class="android-auto-content grid-2cols__col">
-              <h2 class="section-title">Connect Android to your car. Skip the cable.</h2>
-              <p class="section-body">
+        <div class="section-container">
+          <div class="grid-2cols android-auto-content" data-trigger="android-auto">
+            <div class="grid-2cols__col">
+              <h2 class="title--large">Connect Android to your car. Skip the cable.</h2>
+              <p class="body--large">
                 Hit the road without plugging in. Android Auto now works wirelessly with devices running Android 11—so
                 you can bring the best of your phone on every drive.
               </p>
             </div>
             <div class="grid-2cols__col grid-2cols__col--margin-top">
-              <div class="feature-screen">
-                <img class="js-android-device" src="assets/android-auto-connect.png" />
-                <div class="js-android-dash android-auto-dash">
-                  <img class="" src="assets/android-auto.png" />
-                </div>
+              <img class="feature-screen" src="assets/optimized/pixel_auto.png" />
+              <div class="android-auto-dash">
+                <img src="assets/optimized/android_auto.jpg" />
               </div>
             </div>
           </div>
@@ -461,28 +448,32 @@
       </section>
       <!-- Device permissions -->
       <section class="section section--overflow">
-        <div class="section__container-fullwidth">
-          <div class="permissions-content content-padding">
-            <h2 class="section-title">You control what apps can access.</h2>
-            <p class="section-body">
+        <div class="capture-share-content" data-trigger="capture-share">
+          <div class="section-container">
+            <h2 class="title--large">You control what apps can access.</h2>
+            <p class="body--large">
               Take charge of your data with Android. You choose whether to give apps you download permission to access
               sensitive data. Or not. So you stay better protected.
             </p>
           </div>
-          <div id="permissions-slider" class="js-app-permissions splide">
+          <div id="permissions-slider" class="splide">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
                   <div class="feature-card">
                     <div class="feature-card__hero">
-                      <div class="js-permissions-feature feature-screen">
-                        <img class="js-permissions-modal permissions-modal" src="assets/one-time-permissions.png" />
-                        <img src="assets/lock-screen.png" />
+                      <div class="feature-screen" data-target="share-screen">
+                        <img
+                          class="cs-modal cs-modal--record"
+                          src="assets/optimized/permissions_ui.png"
+                          data-target="share-modal"
+                        />
+                        <img src="assets/optimized/pixel_ss_10.png" />
                       </div>
                     </div>
                     <div class="feature-card__content">
-                      <h3 class="section-subtitle">One‑time permissions</h3>
-                      <p class="section-body">
+                      <h3 class="title--heading">One‑time permissions</h3>
+                      <p class="body--large">
                         Give one-time permissions to apps that need your mic, camera or location. The next time the app
                         needs access, it must ask for permission again.
                       </p>
@@ -492,14 +483,18 @@
                 <li class="splide__slide">
                   <div class="feature-card">
                     <div class="feature-card__hero">
-                      <div class="js-permissions-feature feature-screen">
-                        <img class="js-permissions-modal permissions-modal" src="assets/permissions-reset.png" />
-                        <img src="assets/lock-screen.png" />
+                      <div class="feature-screen" data-target="share-screen">
+                        <img
+                          class="cs-modal cs-modal--share"
+                          src="assets/optimized/permissions_ui_2.png"
+                          data-target="share-modal"
+                        />
+                        <img src="assets/optimized/pixel_ss_10.png" />
                       </div>
                     </div>
                     <div class="feature-card__content">
-                      <h3 class="section-subtitle">Permissions auto‑reset</h3>
-                      <p class="section-body">
+                      <h3 class="title--heading">Permissions auto‑reset</h3>
+                      <p class="body--large">
                         If you haven't used an app in a while, you may not want it to keep accessing your data. So
                         Android will reset permissions for your unused apps. You can always turn permissions back on.
                       </p>

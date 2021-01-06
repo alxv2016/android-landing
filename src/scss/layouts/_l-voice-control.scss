@@ -30,38 +30,10 @@
   top: 0;
   right: 0;
   width: 100%;
-  height: 900px;
+  height: 1024px;
   overflow: hidden;
   background: url('../assets/voice-control.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 60% 50%;
-}
-
-.voice-audio {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &:before {
-    content: '';
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.075) 100%);
-  }
-
-  &__wave {
-    width: 14px;
-    height: 14px;
-    background-color: color('light');
-    margin: $spacing--sm;
-  }
 }

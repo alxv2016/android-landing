@@ -7,6 +7,7 @@ import conversations from './conversations';
 import bubbles from './bubbles';
 import captureShare from './capture-share';
 import smartFeatures from './smart-features';
+import voiceControl from './voice-control';
 
 accordion.initAccordion();
 //scrollmg.initScrollMagic();
@@ -15,6 +16,7 @@ conversations.renderAnimation();
 bubbles.renderAnimation();
 captureShare.renderAnimation();
 smartFeatures.renderAnimation();
+voiceControl.renderAnimation();
 
 slider.initSlider();
 slider.initSlider2();

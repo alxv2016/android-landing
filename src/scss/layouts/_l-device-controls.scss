@@ -1,19 +1,27 @@
+.device-controls-content {
+  padding: $layout--xl 0;
+  @include breakpoint(md) {
+    padding: $layout--2xl 0;
+  }
+}
+
 .house-lights {
   position: absolute;
+  align-self: center;
   z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 720px;
   height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  @include elevate-2(color('dark'), 0.145);
   @include breakpoint(lg) {
-    left: 105%;
+    align-self: start;
   }
 
   &--on {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
+    opacity: 1;
   }
 }
