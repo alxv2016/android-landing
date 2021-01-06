@@ -6,13 +6,15 @@ import hero from './hero';
 import conversations from './conversations';
 import bubbles from './bubbles';
 import captureShare from './capture-share';
+import smartFeatures from './smart-features';
 
 accordion.initAccordion();
-scrollmg.initScrollMagic();
+//scrollmg.initScrollMagic();
 hero.renderAnimation();
 conversations.renderAnimation();
 bubbles.renderAnimation();
 captureShare.renderAnimation();
+smartFeatures.renderAnimation();
 
 slider.initSlider();
 slider.initSlider2();

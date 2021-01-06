@@ -8,7 +8,7 @@ const captureShare = {
         duration: 8,
       },
       scrollTrigger: {
-        markers: true,
+        markers: false,
         trigger: '[data-trigger="capture-share"]',
         scrub: 0.65,
         start: '-=100 center',
