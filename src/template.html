@@ -40,7 +40,17 @@
               <img class="hero-device-back" data-target="hero-device-back" src="assets/optimized/pixel_back.png" />
               <img class="hero-device-front" data-target="hero-device-front" src="assets/optimized/pixel_front.png" />
             </div>
-            <div class="spotlight" data-target="hero-spotlight"></div>
+            <svg
+              class="spotlight"
+              width="64"
+              height="64"
+              viewBox="0 0 64 64"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              data-target="hero-spotlight"
+            >
+              <circle cx="32" cy="32" r="32" />
+            </svg>
           </div>
           <div class="android-features">
             <div class="android-features__container">
@@ -450,7 +460,7 @@
       </section>
       <!-- Device permissions -->
       <section class="section section--overflow">
-        <div class="permissions-content" data-trigger="capture-share">
+        <div class="permissions-content" data-trigger="permissions">
           <div class="section-container">
             <h2 class="title--large">You control what apps can access.</h2>
             <p class="body--large">
@@ -464,11 +474,11 @@
                 <li class="splide__slide">
                   <div class="feature-card">
                     <div class="feature-card__hero">
-                      <div class="feature-screen" data-target="share-screen">
+                      <div class="feature-screen" data-target="permissions-screen">
                         <img
                           class="permissions-modal permissions--one-time"
                           src="assets/optimized/permissions_ui.png"
-                          data-target="share-modal"
+                          data-target="permissions-modal"
                         />
                         <img src="assets/optimized/pixel_ss_10.png" />
                       </div>
@@ -485,11 +495,11 @@
                 <li class="splide__slide">
                   <div class="feature-card">
                     <div class="feature-card__hero">
-                      <div class="feature-screen" data-target="share-screen">
+                      <div class="feature-screen" data-target="permissions-screen">
                         <img
                           class="permissions-modal permissions--reset"
                           src="assets/optimized/permissions_ui_2.png"
-                          data-target="share-modal"
+                          data-target="permissions-modal"
                         />
                         <img src="assets/optimized/pixel_ss_10.png" />
                       </div>
@@ -539,7 +549,7 @@
         </div>
       </section>
       <!-- Security updates -->
-      <section class="section section--night section--overflow">
+      <section class="section section--night section--overflow" data-trigger="security">
         <div class="section-container">
           <div class="security-content">
             <div class="section-content">
@@ -550,23 +560,52 @@
                 recent defense.
               </p>
             </div>
-            <div class="feature-screen">
+            <div class="feature-screen" data-target="security-screen">
               <img class="" src="assets/optimized/pixel_ss_11.png" />
+              <div class="wifi">
+                <svg
+                  class="wifi__signal"
+                  width="64"
+                  height="64"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-target="signal"
+                >
+                  <circle cx="32" cy="32" r="32" />
+                </svg>
+                <svg
+                  class="wifi__signal"
+                  width="64"
+                  height="64"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-target="signal"
+                >
+                  <circle cx="32" cy="32" r="32" />
+                </svg>
+                <svg
+                  class="wifi__signal"
+                  width="64"
+                  height="64"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-target="signal"
+                >
+                  <circle cx="32" cy="32" r="32" />
+                </svg>
+              </div>
             </div>
           </div>
-          <!-- <div class="wireless">
-            <div class="js-wireless wireless__wave"></div>
-            <div class="js-wireless wireless__wave"></div>
-            <div class="js-wireless wireless__wave"></div>
-            <div class="js-wireless wireless__wave"></div>
-          </div> -->
         </div>
       </section>
       <section class="section">
         <!-- One more thing -->
         <div class="section-container">
-          <div class="outro-content">
-            <div class="section-content more-info-content">
+          <div class="section-content outro-content">
+            <div class="more-info-content">
               <h2 class="title--large">And there’s so much more.</h2>
               <p class="body--large">
                 From security enhancements to easier ways to get work done, Android 11 has something for everyone.

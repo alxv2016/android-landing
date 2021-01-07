@@ -5,12 +5,10 @@
 .spotlight {
   position: absolute;
   top: 48px;
-  margin: auto;
   z-index: -1;
   width: 420px;
   height: 420px;
-  border-radius: 100%;
-  background-color: color('google-green');
+  fill: color('google-green');
   @include breakpoint(md) {
     top: 78px;
     width: 568px;

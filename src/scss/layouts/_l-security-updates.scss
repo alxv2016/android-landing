@@ -12,9 +12,41 @@
   color: color('light');
 
   .section-content ~ .feature-screen {
+    z-index: 1;
     margin-top: $layout--sm;
     @include breakpoint(md) {
       margin-top: $layout--md;
     }
+  }
+}
+
+.wifi {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__signal {
+    position: absolute;
+    height: 440px;
+    width: 440px;
+    opacity: 0.45;
+    fill: color('google-blue');
+  }
+
+  &__signal ~ &__signal {
+    height: 340px;
+    width: 340px;
+    opacity: 0.75;
+  }
+
+  &__signal ~ &__signal ~ &__signal {
+    height: 240px;
+    width: 240px;
+    opacity: 0.75;
   }
 }
