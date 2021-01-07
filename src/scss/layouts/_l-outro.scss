@@ -1,4 +1,11 @@
 .outro-content {
+  padding: $layout--xl 0;
+  @include breakpoint(md) {
+    padding: $layout--2xl 0;
+  }
+}
+
+.more-info-content {
   position: relative;
   z-index: 3;
   background-color: color('google-blue');
@@ -8,7 +15,10 @@
   color: color('light');
   @include elevate-3(color('google-blue'), 0.175);
   @include breakpoint(md) {
-    padding: $layout--xl;
+    padding: $layout--lg;
+  }
+  .title--large {
+    margin-top: 0;
   }
 }
 

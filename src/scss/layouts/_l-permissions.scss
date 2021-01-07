@@ -1,9 +1,42 @@
 .permissions-content {
-  position: relative;
-  margin-bottom: $spacing--3xl;
+  margin: $layout--xl 0;
+  @include breakpoint(md) {
+    margin: $layout--2xl 0;
+  }
+  .feature-screen {
+    top: 130px;
+  }
+}
+
+.section-container ~ #permissions-slider {
+  margin-top: $layout--sm;
+  @include breakpoint(md) {
+    margin-top: $layout--md;
+  }
 }
 
 .permissions-modal {
   position: absolute;
-  top: 68px;
+  top: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  @include elevate-2(color('dark'), 0.25);
+}
+
+.permissions--one-time {
+  width: 240px;
+  height: 172px;
+  @include breakpoint(md) {
+    width: 280px;
+    height: 201px;
+  }
+}
+
+.permissions--reset {
+  width: 240px;
+  height: 66px;
+  @include breakpoint(md) {
+    width: 280px;
+    height: 77px;
+  }
 }

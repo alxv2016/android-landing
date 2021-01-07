@@ -448,7 +448,7 @@
       </section>
       <!-- Device permissions -->
       <section class="section section--overflow">
-        <div class="capture-share-content" data-trigger="capture-share">
+        <div class="permissions-content" data-trigger="capture-share">
           <div class="section-container">
             <h2 class="title--large">You control what apps can access.</h2>
             <p class="body--large">
@@ -464,7 +464,7 @@
                     <div class="feature-card__hero">
                       <div class="feature-screen" data-target="share-screen">
                         <img
-                          class="cs-modal cs-modal--record"
+                          class="permissions-modal permissions--one-time"
                           src="assets/optimized/permissions_ui.png"
                           data-target="share-modal"
                         />
@@ -485,7 +485,7 @@
                     <div class="feature-card__hero">
                       <div class="feature-screen" data-target="share-screen">
                         <img
-                          class="cs-modal cs-modal--share"
+                          class="permissions-modal permissions--reset"
                           src="assets/optimized/permissions_ui_2.png"
                           data-target="share-modal"
                         />
@@ -537,285 +537,292 @@
         </div>
       </section>
       <!-- Security updates -->
-      <section class="js-security-updates security-updates section section--night section--overflow">
-        <div class="section__container">
-          <div class="security-content section__content">
-            <h2 class="section-title">Security updates, right from Google Play.</h2>
-            <p class="section-body">
-              With Android 11, you get even more security and privacy fixes sent to your phone from Google Play. The
-              same way all your other apps update. So you get peace of mind. And your device stays armed with the most
-              recent defense.
-            </p>
+      <section class="section section--night section--overflow">
+        <div class="section-container">
+          <div class="security-content">
+            <div class="section-content">
+              <h2 class="title--large">Security updates, right from Google Play.</h2>
+              <p class="body--large">
+                With Android 11, you get even more security and privacy fixes sent to your phone from Google Play. The
+                same way all your other apps update. So you get peace of mind. And your device stays armed with the most
+                recent defense.
+              </p>
+            </div>
+            <div class="feature-screen">
+              <img class="" src="assets/optimized/pixel_ss_11.png" />
+            </div>
           </div>
-          <div class="wireless">
+          <!-- <div class="wireless">
             <div class="js-wireless wireless__wave"></div>
             <div class="js-wireless wireless__wave"></div>
             <div class="js-wireless wireless__wave"></div>
             <div class="js-wireless wireless__wave"></div>
-          </div>
-          <div class="js-security-feature security-feature feature-screen">
-            <img class="" src="assets/system-update.png" />
-          </div>
+          </div> -->
         </div>
       </section>
       <section class="section">
-        <div class="section__container">
+        <!-- One more thing -->
+        <div class="section-container">
           <div class="outro-content">
-            <h2 class="section-title">And there’s so much more.</h2>
-            <p class="section-body">
-              From security enhancements to easier ways to get work done, Android 11 has something for everyone.
-            </p>
-          </div>
-          <div class="accordion">
-            <h2 class="js-accordion-header accordion__header">
-              <button>Accessibility<span class="accordion-icon"></span></button>
-            </h2>
-            <div class="js-accordion-panel accordion__panel">
-              <div class="accordion__panel-container">
-                <div class="accordion-content">
-                  <p>
-                    <strong>Voice Access</strong>Intuitive labels on apps help you control and navigate your phone, all
-                    by speaking out loud. Even use Voice Access offline, for more support whenever you need it.
-                  </p>
-                  <p>
-                    <strong>Talkback braille keyboard</strong>Type braille using just your Android device. No additional
-                    hardware needed.
-                  </p>
-                  <p>
-                    <strong>Lookout</strong>Lookout now has two new modes. Scan Document and Food Label help people with
-                    low vision or blindness get things done faster and more easily. Opening Lookout also turns on your
-                    flashlight, helping users read in low light. And Lookout is now available on all 2GB+ devices
-                    running Android 6.0 or later.
-                  </p>
+            <div class="section-content more-info-content">
+              <h2 class="title--large">And there’s so much more.</h2>
+              <p class="body--large">
+                From security enhancements to easier ways to get work done, Android 11 has something for everyone.
+              </p>
+            </div>
+            <div class="accordion">
+              <h2 class="js-accordion-header accordion__header">
+                <button>Accessibility<span class="accordion-icon"></span></button>
+              </h2>
+              <div class="js-accordion-panel accordion__panel">
+                <div class="accordion__panel-container">
+                  <div class="accordion-content">
+                    <p>
+                      <strong>Voice Access</strong>Intuitive labels on apps help you control and navigate your phone,
+                      all by speaking out loud. Even use Voice Access offline, for more support whenever you need it.
+                    </p>
+                    <p>
+                      <strong>Talkback braille keyboard</strong>Type braille using just your Android device. No
+                      additional hardware needed.
+                    </p>
+                    <p>
+                      <strong>Lookout</strong>Lookout now has two new modes. Scan Document and Food Label help people
+                      with low vision or blindness get things done faster and more easily. Opening Lookout also turns on
+                      your flashlight, helping users read in low light. And Lookout is now available on all 2GB+ devices
+                      running Android 6.0 or later.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <h2 class="js-accordion-header accordion__header">
-              <button>Camera<span class="accordion-icon"></span></button>
-            </h2>
-            <div class="js-accordion-panel accordion__panel">
-              <div class="accordion__panel-container">
-                <div class="accordion-content">
-                  <p>
-                    <strong>3P performance optimizations</strong>Your camera works even better on photo sharing
-                    platforms like Snapchat.
-                  </p>
-                  <p>
-                    <strong>Mute during camera capture</strong>Developers can use new APIs for apps to mute vibration
-                    from ringtones, alarms or notifications.
-                  </p>
-                  <p>
-                    <strong>Bokeh modes</strong>Developers can now request a bokeh picture via the Android camera2 APIs.
-                  </p>
-                  <p>
-                    <strong>Camera support in Emulator</strong>Now supports a fully functional camera HAL. Making it
-                    easier for developers to test apps using the latest Android camera2 APIs.
-                  </p>
+              <h2 class="js-accordion-header accordion__header">
+                <button>Camera<span class="accordion-icon"></span></button>
+              </h2>
+              <div class="js-accordion-panel accordion__panel">
+                <div class="accordion__panel-container">
+                  <div class="accordion-content">
+                    <p>
+                      <strong>3P performance optimizations</strong>Your camera works even better on photo sharing
+                      platforms like Snapchat.
+                    </p>
+                    <p>
+                      <strong>Mute during camera capture</strong>Developers can use new APIs for apps to mute vibration
+                      from ringtones, alarms or notifications.
+                    </p>
+                    <p>
+                      <strong>Bokeh modes</strong>Developers can now request a bokeh picture via the Android camera2
+                      APIs.
+                    </p>
+                    <p>
+                      <strong>Camera support in Emulator</strong>Now supports a fully functional camera HAL. Making it
+                      easier for developers to test apps using the latest Android camera2 APIs.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <h2 class="js-accordion-header accordion__header">
-              <button>Digital Wellbeing<span class="accordion-icon"></span></button>
-            </h2>
-            <div class="js-accordion-panel accordion__panel">
-              <div class="accordion__panel-container">
-                <div class="accordion-content">
-                  <p>
-                    <strong>Bedtime Mode</strong>Bedtime Mode quiets your phone when it’s time to go to sleep. Schedule
-                    it to run automatically or while your phone charges as you rest. Your screen switches to grayscale
-                    and your notifications go silent with Do Not Disturb.
-                  </p>
-                  <p>
-                    <strong>Clock</strong>The new bedtime feature in Clock helps you set a healthy sleep schedule. Track
-                    screen time at night and fall asleep to calming sounds. Then wake up to your favorite song. Or use
-                    the Sunrise Alarm that slowly brightens your screen to start the day.
-                  </p>
+              <h2 class="js-accordion-header accordion__header">
+                <button>Digital Wellbeing<span class="accordion-icon"></span></button>
+              </h2>
+              <div class="js-accordion-panel accordion__panel">
+                <div class="accordion__panel-container">
+                  <div class="accordion-content">
+                    <p>
+                      <strong>Bedtime Mode</strong>Bedtime Mode quiets your phone when it’s time to go to sleep.
+                      Schedule it to run automatically or while your phone charges as you rest. Your screen switches to
+                      grayscale and your notifications go silent with Do Not Disturb.
+                    </p>
+                    <p>
+                      <strong>Clock</strong>The new bedtime feature in Clock helps you set a healthy sleep schedule.
+                      Track screen time at night and fall asleep to calming sounds. Then wake up to your favorite song.
+                      Or use the Sunrise Alarm that slowly brightens your screen to start the day.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <h2 class="js-accordion-header accordion__header">
-              <button>Enterprise<span class="accordion-icon"></span></button>
-            </h2>
-            <div class="js-accordion-panel accordion__panel">
-              <div class="accordion__panel-container">
-                <div class="accordion-content">
-                  <p>
-                    <strong>Work profile enhancements</strong>Get full privacy from IT on your work profile on
-                    company-owned devices. Plus new asset management features for IT to ensure security without
-                    visibility into personal usage.
-                  </p>
-                  <p>
-                    <strong>Connected work and personal apps</strong>Connect work and personal apps to get a combined
-                    view of your information in places like your calendar or your reminders.
-                  </p>
-                  <p>
-                    <strong>Schedule work profile</strong>Easily disconnect from work. With Android 11, you can now set
-                    a schedule to automatically turn your work profile on and off.
-                  </p>
-                  <p>
-                    <strong>Work tab in more places</strong>Use the work tab in more places to share and take actions
-                    across work and personal profiles. See work tabs when sharing, opening apps and in settings.
-                  </p>
-                  <p>
-                    <strong>Location access notifications</strong>Get a new notification if your IT admin has turned on
-                    location services on your managed device.
-                  </p>
+              <h2 class="js-accordion-header accordion__header">
+                <button>Enterprise<span class="accordion-icon"></span></button>
+              </h2>
+              <div class="js-accordion-panel accordion__panel">
+                <div class="accordion__panel-container">
+                  <div class="accordion-content">
+                    <p>
+                      <strong>Work profile enhancements</strong>Get full privacy from IT on your work profile on
+                      company-owned devices. Plus new asset management features for IT to ensure security without
+                      visibility into personal usage.
+                    </p>
+                    <p>
+                      <strong>Connected work and personal apps</strong>Connect work and personal apps to get a combined
+                      view of your information in places like your calendar or your reminders.
+                    </p>
+                    <p>
+                      <strong>Schedule work profile</strong>Easily disconnect from work. With Android 11, you can now
+                      set a schedule to automatically turn your work profile on and off.
+                    </p>
+                    <p>
+                      <strong>Work tab in more places</strong>Use the work tab in more places to share and take actions
+                      across work and personal profiles. See work tabs when sharing, opening apps and in settings.
+                    </p>
+                    <p>
+                      <strong>Location access notifications</strong>Get a new notification if your IT admin has turned
+                      on location services on your managed device.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <h2 class="js-accordion-header accordion__header">
-              <button>Media<span class="accordion-icon"></span></button>
-            </h2>
-            <div class="js-accordion-panel accordion__panel">
-              <div class="accordion__panel-container">
-                <div class="accordion-content">
-                  <p>
-                    <strong>Device controls</strong
-                    ><span>Easily manage your connected devices all from one spot on your phone.<sup>3</sup></span>
-                  </p>
-                  <p>
-                    <strong>Media controls</strong>With Android 11, you can quickly change the device that your media
-                    plays on.
-                  </p>
-                  <p>
-                    <strong>Android Auto</strong
-                    ><span>Android Auto now works wirelessly<sup>4</sup> with devices running Android 11.</span>
-                  </p>
-                  <p>
-                    <strong>Context-aware Bluetooth airplane mode</strong>If you have headphones or hearing aids
-                    connected to your phone, bluetooth will stay on if you enable Airplane mode.
-                  </p>
+              <h2 class="js-accordion-header accordion__header">
+                <button>Media<span class="accordion-icon"></span></button>
+              </h2>
+              <div class="js-accordion-panel accordion__panel">
+                <div class="accordion__panel-container">
+                  <div class="accordion-content">
+                    <p>
+                      <strong>Device controls</strong
+                      ><span>Easily manage your connected devices all from one spot on your phone.<sup>3</sup></span>
+                    </p>
+                    <p>
+                      <strong>Media controls</strong>With Android 11, you can quickly change the device that your media
+                      plays on.
+                    </p>
+                    <p>
+                      <strong>Android Auto</strong
+                      ><span>Android Auto now works wirelessly<sup>4</sup> with devices running Android 11.</span>
+                    </p>
+                    <p>
+                      <strong>Context-aware Bluetooth airplane mode</strong>If you have headphones or hearing aids
+                      connected to your phone, bluetooth will stay on if you enable Airplane mode.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <h2 class="js-accordion-header accordion__header">
-              <button>Messaging & Sharing<span class="accordion-icon"></span></button>
-            </h2>
-            <div class="js-accordion-panel accordion__panel">
-              <div class="accordion__panel-container">
-                <div class="accordion-content">
-                  <p>
-                    <strong>Conversations</strong>See, respond to and control your conversations across multiple
-                    messaging apps. All in the same spot. Choose priority conversations that will show up on your lock
-                    screen.
-                  </p>
-                  <p>
-                    <strong>Bubbles</strong>Pin conversations so they always appear on top of other apps and screens. So
-                    you can access the chat anytime or anywhere.
-                  </p>
-                  <p>
-                    <strong>Smart reply</strong>On Pixel devices<sup>1</sup>, replies are intelligently suggested based
-                    on what’s been said in the conversation.<sup>2</sup>
-                  </p>
-                  <p>
-                    <strong>Keyboard autofill</strong>GBoard gives you suggestions to help fill in forms with the info
-                    you use most. Like passwords or your home address.
-                  </p>
-                  <p>
-                    <strong>Overview actions</strong> On Pixel devices<sup>1</sup>, you can easily copy, save and share
-                    info between many apps.
-                  </p>
-                  <p>
-                    <strong>Nearby Share</strong>Quickly and securely send files, videos, map locations and more to
-                    devices nearby. Works with Android devices, Chromebooks or devices running Chrome browser.
-                  </p>
+              <h2 class="js-accordion-header accordion__header">
+                <button>Messaging & Sharing<span class="accordion-icon"></span></button>
+              </h2>
+              <div class="js-accordion-panel accordion__panel">
+                <div class="accordion__panel-container">
+                  <div class="accordion-content">
+                    <p>
+                      <strong>Conversations</strong>See, respond to and control your conversations across multiple
+                      messaging apps. All in the same spot. Choose priority conversations that will show up on your lock
+                      screen.
+                    </p>
+                    <p>
+                      <strong>Bubbles</strong>Pin conversations so they always appear on top of other apps and screens.
+                      So you can access the chat anytime or anywhere.
+                    </p>
+                    <p>
+                      <strong>Smart reply</strong>On Pixel devices<sup>1</sup>, replies are intelligently suggested
+                      based on what’s been said in the conversation.<sup>2</sup>
+                    </p>
+                    <p>
+                      <strong>Keyboard autofill</strong>GBoard gives you suggestions to help fill in forms with the info
+                      you use most. Like passwords or your home address.
+                    </p>
+                    <p>
+                      <strong>Overview actions</strong> On Pixel devices<sup>1</sup>, you can easily copy, save and
+                      share info between many apps.
+                    </p>
+                    <p>
+                      <strong>Nearby Share</strong>Quickly and securely send files, videos, map locations and more to
+                      devices nearby. Works with Android devices, Chromebooks or devices running Chrome browser.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <h2 class="js-accordion-header accordion__header">
-              <button>Security & Privacy<span class="accordion-icon"></span></button>
-            </h2>
-            <div class="js-accordion-panel accordion__panel">
-              <div class="accordion__panel-container">
-                <div class="accordion-content">
-                  <p>
-                    <strong>One-time permissions</strong>Give one-time permissions to apps that need your mic, camera or
-                    location. The next time the app needs access, it must ask for permission again.
-                  </p>
-                  <p>
-                    <strong>Permissions auto-reset</strong>If you haven't used an app in a while, you may not want it to
-                    keep accessing your data. So Android will reset permissions for your unused apps. You can always
-                    turn permissions back on.
-                  </p>
-                  <p>
-                    <strong>Google Play system updates</strong>With Android 11, you get even more security and privacy
-                    fixes sent to your phone, right from Google Play. So your device stays armed with the most recent
-                    defense.
-                  </p>
-                  <p>
-                    <strong>Scoped storage</strong>Android limits broad access to shared storage for all apps running
-                    Android 11, so your info stays better protected.
-                  </p>
-                  <p>
-                    <strong>Resume on reboot</strong>Pick up right where you started. Apps run immediately after an
-                    update is installed. So you don’t miss any notifications after your phone has rebooted.
-                  </p>
-                  <p>
-                    <strong>Blocked permissions</strong>If a user denies an app permission multiple times, the app will
-                    be blocked from requesting the permission again.
-                  </p>
-                  <p>
-                    <strong>Soft restart</strong>Get Google Play system updates when your phone is idle, with no full
-                    reboot required.
-                  </p>
-                  <p>
-                    <strong>Background location</strong>Get more control over location sharing with apps that are not in
-                    use. So apps don’t get access to more data than they need.
-                  </p>
+              <h2 class="js-accordion-header accordion__header">
+                <button>Security & Privacy<span class="accordion-icon"></span></button>
+              </h2>
+              <div class="js-accordion-panel accordion__panel">
+                <div class="accordion__panel-container">
+                  <div class="accordion-content">
+                    <p>
+                      <strong>One-time permissions</strong>Give one-time permissions to apps that need your mic, camera
+                      or location. The next time the app needs access, it must ask for permission again.
+                    </p>
+                    <p>
+                      <strong>Permissions auto-reset</strong>If you haven't used an app in a while, you may not want it
+                      to keep accessing your data. So Android will reset permissions for your unused apps. You can
+                      always turn permissions back on.
+                    </p>
+                    <p>
+                      <strong>Google Play system updates</strong>With Android 11, you get even more security and privacy
+                      fixes sent to your phone, right from Google Play. So your device stays armed with the most recent
+                      defense.
+                    </p>
+                    <p>
+                      <strong>Scoped storage</strong>Android limits broad access to shared storage for all apps running
+                      Android 11, so your info stays better protected.
+                    </p>
+                    <p>
+                      <strong>Resume on reboot</strong>Pick up right where you started. Apps run immediately after an
+                      update is installed. So you don’t miss any notifications after your phone has rebooted.
+                    </p>
+                    <p>
+                      <strong>Blocked permissions</strong>If a user denies an app permission multiple times, the app
+                      will be blocked from requesting the permission again.
+                    </p>
+                    <p>
+                      <strong>Soft restart</strong>Get Google Play system updates when your phone is idle, with no full
+                      reboot required.
+                    </p>
+                    <p>
+                      <strong>Background location</strong>Get more control over location sharing with apps that are not
+                      in use. So apps don’t get access to more data than they need.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <h2 class="js-accordion-header accordion__header">
-              <button>Usability Enhancements<span class="accordion-icon"></span></button>
-            </h2>
-            <div class="js-accordion-panel accordion__panel">
-              <div class="accordion__panel-container">
-                <div class="accordion-content">
-                  <p>
-                    <strong>Screen recorder</strong>Screen recording is now built in, so you don’t need an extra app.
-                    Record with sound from your mic, your device or both.
-                  </p>
-                  <p>
-                    <strong>App suggestions</strong
-                    ><span
-                      >Pixel devices<sup>1</sup> now make app suggestions based on your daily routines. These apps show
-                      up on the bottom row of your home screen. So you can get the apps you need when you need
-                      them.</span
-                    >
-                  </p>
-                  <p>
-                    <strong>Smart folders</strong
-                    ><span
-                      >See intelligent suggestions for folder names on your Pixel device<sup>1</sup>. For a home screen
-                      that stays organized.</span
-                    >
-                  </p>
-                  <p><strong>Call screening</strong>New APIs to help screening apps better identify spam calls.</p>
-                  <p>
-                    <strong>Schedule Dark mode</strong>Schedule when you want your phone to turn to Dark mode. And when
-                    you want it to go back to a standard display.
-                  </p>
-                  <p>
-                    <strong>Picture-in-picture</strong>Picture-in-picture windows can be adjusted to fit the size you
-                    need.
-                  </p>
-                  <p>
-                    <strong>5G detection API</strong>With new APIs, apps know if you’re on a 5G connection. So you get
-                    better performance.
-                  </p>
-                  <p>
-                    <strong>Hinge angle sensor support</strong>So apps can better support all kinds of foldable
-                    configurations.
-                  </p>
-                  <p>
-                    <strong>Ethernet tethering</strong>Share a tethered internet connection with a USB ethernet dongle.
-                  </p>
-                  <p>
-                    <strong>Gesture sensitivity</strong>When using gesture nav, you can now fine-tune both Back gestures
-                    on the left and right edge independently of one another.
-                  </p>
-                  <p><strong>Notification history</strong>Your notification history is now available in settings.</p>
-                  <p><strong>Sharesheet</strong>Pin the apps you use most in the Sharesheet.</p>
+              <h2 class="js-accordion-header accordion__header">
+                <button>Usability Enhancements<span class="accordion-icon"></span></button>
+              </h2>
+              <div class="js-accordion-panel accordion__panel">
+                <div class="accordion__panel-container">
+                  <div class="accordion-content">
+                    <p>
+                      <strong>Screen recorder</strong>Screen recording is now built in, so you don’t need an extra app.
+                      Record with sound from your mic, your device or both.
+                    </p>
+                    <p>
+                      <strong>App suggestions</strong
+                      ><span
+                        >Pixel devices<sup>1</sup> now make app suggestions based on your daily routines. These apps
+                        show up on the bottom row of your home screen. So you can get the apps you need when you need
+                        them.</span
+                      >
+                    </p>
+                    <p>
+                      <strong>Smart folders</strong
+                      ><span
+                        >See intelligent suggestions for folder names on your Pixel device<sup>1</sup>. For a home
+                        screen that stays organized.</span
+                      >
+                    </p>
+                    <p><strong>Call screening</strong>New APIs to help screening apps better identify spam calls.</p>
+                    <p>
+                      <strong>Schedule Dark mode</strong>Schedule when you want your phone to turn to Dark mode. And
+                      when you want it to go back to a standard display.
+                    </p>
+                    <p>
+                      <strong>Picture-in-picture</strong>Picture-in-picture windows can be adjusted to fit the size you
+                      need.
+                    </p>
+                    <p>
+                      <strong>5G detection API</strong>With new APIs, apps know if you’re on a 5G connection. So you get
+                      better performance.
+                    </p>
+                    <p>
+                      <strong>Hinge angle sensor support</strong>So apps can better support all kinds of foldable
+                      configurations.
+                    </p>
+                    <p>
+                      <strong>Ethernet tethering</strong>Share a tethered internet connection with a USB ethernet
+                      dongle.
+                    </p>
+                    <p>
+                      <strong>Gesture sensitivity</strong>When using gesture nav, you can now fine-tune both Back
+                      gestures on the left and right edge independently of one another.
+                    </p>
+                    <p><strong>Notification history</strong>Your notification history is now available in settings.</p>
+                    <p><strong>Sharesheet</strong>Pin the apps you use most in the Sharesheet.</p>
+                  </div>
                 </div>
               </div>
             </div>
