@@ -1,16 +1,16 @@
 .highlights-content {
-  margin: $layout--xl 0;
+  padding: $layout--xl 0;
   @include breakpoint(md) {
-    margin: $layout--2xl 0;
+    padding: $layout--2xl 0;
   }
 }
 
 .highlights-cards {
   position: relative;
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 100%;
   margin-top: $layout--sm;
   @include breakpoint(md) {
     margin-top: $layout--md;
