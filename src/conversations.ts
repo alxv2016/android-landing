@@ -8,33 +8,29 @@ const conversations = {
         duration: 4,
       },
       scrollTrigger: {
-        markers: false,
+        markers: true,
         trigger: '[data-trigger="conversations"]',
-        scrub: 0.65,
-        start: '-=200 center',
+        scrub: 0.45,
+        start: 'top center',
         end: 'center center',
       },
     });
 
     conversation
-      .from('[data-target="conversations-ui"]', {
-        scale: 0.75,
-        opacity: 0,
+      .to('[data-target="priority"]', {
+        yPercent: -115,
       })
-      .to(
-        '[data-target="priority"]',
-        {
-          yPercent: -115,
-        },
-        0.75
-      )
       .to(
         '[data-target="silent"]',
         {
           yPercent: 115,
         },
         0.75
-      );
+      )
+      .from('[data-target="conversations-ui"]', {
+        scale: 0.75,
+        opacity: 0,
+      });
   },
 };
 
