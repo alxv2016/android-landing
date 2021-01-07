@@ -21,8 +21,6 @@ const security = {
       scale: 1.25,
     });
 
-    gsap.set('[data-target="signal]', {});
-
     const wifi = gsap.timeline({
       defaults: {
         duration: 2,

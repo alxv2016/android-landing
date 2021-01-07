@@ -1,17 +1,14 @@
 .notification-banner {
   position: fixed;
-  display: flex;
+  display: none;
   z-index: 4;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  border: 0.75px solid rgba(white, 0.25);
   width: calc(100vw - 24px);
   max-width: $max-content-size;
   min-height: 68px;
-  transition: transform 275ms ease;
-  transform: translateY(0);
   visibility: visible;
   @include frosted-glass(color('light'));
   border-radius: 0.75rem;
@@ -58,7 +55,7 @@
   font-weight: font-weight('medium');
   border-radius: 0.25rem;
   transition: all 0.3s ease;
-  border: 2px solid color('dark');
+  border: 1px solid color('dark');
   color: color('google-blue');
   white-space: nowrap;
   cursor: pointer;
