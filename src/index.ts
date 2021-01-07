@@ -8,6 +8,9 @@ import bubbles from './bubbles';
 import captureShare from './capture-share';
 import smartFeatures from './smart-features';
 import voiceControl from './voice-control';
+import deviceControls from './device-controls';
+import mediaControls from './media-controls';
+import androidAuto from './android-auto';
 
 accordion.initAccordion();
 //scrollmg.initScrollMagic();
@@ -17,6 +20,9 @@ bubbles.renderAnimation();
 captureShare.renderAnimation();
 smartFeatures.renderAnimation();
 voiceControl.renderAnimation();
+deviceControls.renderAnimation();
+mediaControls.renderAnimation();
+androidAuto.renderAnimation();
 
 slider.initSlider();
 slider.initSlider2();
