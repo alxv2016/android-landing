@@ -16,20 +16,21 @@ const smartFeatures = {
       },
     });
 
-    features.to('[data-target="feature-screen"]', {
-      yPercent: 10,
+    features.from('[data-target="feature-screen"]', {
+      yPercent: 15,
+      scale: 0.95,
       stagger: 3.75,
     });
 
     const smartReply = gsap.timeline({
       defaults: {
         ease: 'none',
-        duration: 3,
+        duration: 4,
       },
       scrollTrigger: {
         markers: false,
         trigger: '[data-trigger="smart-reply"]',
-        scrub: 0.65,
+        scrub: 0.45,
         start: 'top center',
         end: 'center center',
       },
@@ -39,8 +40,7 @@ const smartFeatures = {
       '[data-target="reply-bubble"]',
       {
         xPercent: 80,
-        scale: 0.75,
-        stagger: 0.25,
+        scale: 0.45,
       },
       0
     );
@@ -48,12 +48,12 @@ const smartFeatures = {
     const appSuggestions = gsap.timeline({
       defaults: {
         ease: 'none',
-        duration: 3,
+        duration: 4,
       },
       scrollTrigger: {
         markers: false,
         trigger: '[data-trigger="app-suggestion"]',
-        scrub: 0.65,
+        scrub: 0.45,
         start: 'top center',
         end: 'center center',
       },
@@ -76,7 +76,7 @@ const smartFeatures = {
       scrollTrigger: {
         markers: false,
         trigger: '[data-trigger="smart-folder"]',
-        scrub: 0.65,
+        scrub: 0.45,
         start: 'top center',
         end: 'center center',
       },
@@ -85,6 +85,7 @@ const smartFeatures = {
     smartFolder
       .from('[data-target="smart-folder"]', {
         xPercent: 100,
+        scale: 0.95,
       })
       .from(
         '[data-target="app-folder"]',

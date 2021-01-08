@@ -8,10 +8,10 @@ const conversations = {
         duration: 4,
       },
       scrollTrigger: {
-        markers: true,
+        markers: false,
         trigger: '[data-trigger="conversations"]',
         scrub: 0.45,
-        start: 'top center',
+        start: '-=120 center',
         end: 'center center',
       },
     });
@@ -30,7 +30,15 @@ const conversations = {
       .from('[data-target="conversations-ui"]', {
         scale: 0.75,
         opacity: 0,
-      });
+      })
+      .from(
+        '[data-target="conversations-device"]',
+        {
+          scale: 0.95,
+          yPercent: 15,
+        },
+        0
+      );
   },
 };
 

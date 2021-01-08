@@ -10,22 +10,24 @@ const androidAuto = {
       scrollTrigger: {
         markers: false,
         trigger: '[data-trigger="android-auto"]',
-        scrub: 0.65,
-        start: '-=200 center',
+        scrub: 0.45,
+        start: '-=120 center',
         end: 'center center',
       },
     });
 
     androidAuto
-      .from('[data-target="android-auto-dash"]', {
-        yPercent: 30,
+      .from('[data-target="android-auto-phone"]', {
+        yPercent: 15,
+        scale: 0.95,
       })
       .from(
-        '[data-target="android-auto-phone"]',
+        '[data-target="android-auto-dash"]',
         {
-          yPercent: 50,
+          yPercent: 20,
+          scale: 0.9,
         },
-        0.45
+        0.25
       );
   },
 };

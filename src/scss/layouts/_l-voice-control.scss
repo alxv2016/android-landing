@@ -1,11 +1,12 @@
 .voice-control {
   position: relative;
   width: 100%;
-  height: 900px;
+  height: 568px;
   display: flex;
   align-items: flex-end;
   @include breakpoint(md) {
     align-items: center;
+    height: 900px;
   }
 
   &__content {
@@ -30,10 +31,13 @@
   top: 0;
   right: 0;
   width: 100%;
-  height: 1024px;
+  height: 768px;
   overflow: hidden;
   background: url('../assets/voice-control.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 60% 50%;
+  @include breakpoint(md) {
+    height: 1024px;
+  }
 }

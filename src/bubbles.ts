@@ -10,8 +10,8 @@ const bubbles = {
       scrollTrigger: {
         markers: false,
         trigger: '[data-trigger="chat-bubbles"]',
-        scrub: 0.65,
-        start: '-=100 center',
+        scrub: 0.45,
+        start: '-=120 center',
         end: 'center center',
       },
     });
@@ -27,6 +27,14 @@ const bubbles = {
           scale: 0.45,
         },
         0.75
+      )
+      .from(
+        '[data-target="chat-device"]',
+        {
+          yPercent: 15,
+          scale: 0.95,
+        },
+        0
       );
   },
 };

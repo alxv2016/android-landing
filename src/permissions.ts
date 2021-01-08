@@ -5,13 +5,13 @@ const permissions = {
     const permissions = gsap.timeline({
       defaults: {
         ease: 'none',
-        duration: 8,
+        duration: 4,
       },
       scrollTrigger: {
         markers: false,
         trigger: '[data-trigger="permissions"]',
-        scrub: 0.65,
-        start: '-=100 center',
+        scrub: 0.45,
+        start: '-=120 center',
         end: 'center center',
       },
     });
@@ -19,6 +19,7 @@ const permissions = {
     permissions
       .from('[data-target="permissions-screen"]', {
         yPercent: 40,
+        scale: 0.95,
       })
       .from('[data-target="permissions-modal"]', {
         y: 90,

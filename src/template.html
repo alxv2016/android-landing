@@ -133,7 +133,7 @@
         </div>
       </section>
       <!-- Manage conversations -->
-      <section class="section section--overflow" data-trigger="conversations">
+      <section class="section section--overflow">
         <div class="section-container">
           <div class="grid-2cols conversations-content">
             <div class="grid-2cols__col">
@@ -145,13 +145,17 @@
                 you never miss anything important.
               </p>
             </div>
-            <div class="grid-2cols__col grid-2cols__col--margin-top">
-              <img class="conversations-ui" data-target="conversations-ui" src="assets/conversations_ui.png" />
-              <img class="feature-screen" src="assets/pixel_ss_1.png" />
-              <div class="conversation">
-                <div class="conversation__setting conversation__setting--priority" data-target="priority"></div>
-                <div class="conversation__setting" data-target="default"></div>
-                <div class="conversation__setting" data-target="silent"></div>
+            <div class="grid-2cols__col grid-2cols__col--margin-top" data-trigger="conversations">
+              <div class="feature-screen" data-target="conversations-device">
+                <div class="priority-modal">
+                  <img class="conversations-ui" data-target="conversations-ui" src="assets/conversations_ui.png" />
+                </div>
+                <img src="assets/pixel_ss_1.png" />
+                <div class="conversation">
+                  <div class="conversation__setting conversation__setting--priority" data-target="priority"></div>
+                  <div class="conversation__setting" data-target="default"></div>
+                  <div class="conversation__setting" data-target="silent"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -160,9 +164,9 @@
       <!-- Chat bubbles -->
       <section class="section section--overflow">
         <div class="section-container">
-          <div class="grid-2cols chat-bubbles-content" data-trigger="chat-bubbles">
-            <div class="grid-2cols__col grid-2cols__col--margin-top">
-              <div class="feature-screen">
+          <div class="grid-2cols chat-bubbles-content">
+            <div class="grid-2cols__col grid-2cols__col--margin-top" data-trigger="chat-bubbles">
+              <div class="feature-screen" data-target="chat-device">
                 <div class="chat-window">
                   <div class="chat-window__container">
                     <img class="chat-window__header" src="assets/chat_ui_header.png" />
@@ -193,11 +197,11 @@
       </section>
       <!-- Capture and Share -->
       <section class="section section--overflow">
-        <div class="capture-share-content" data-trigger="capture-share">
+        <div class="capture-share-content">
           <div class="section-container">
             <h2 class="title--large">Capture and share content</h2>
           </div>
-          <div id="capture-slider" class="splide">
+          <div id="capture-slider" class="splide" data-trigger="capture-share">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -276,9 +280,9 @@
       </section>
       <!-- Smart features -->
       <section class="section section--offwhite" data-trigger="feature-screens">
-        <div class="smart-features-content feature-panel" data-trigger="smart-reply">
+        <div class="smart-features-content feature-panel">
           <div class="grid-2cols section-container">
-            <div class="grid-2cols__col">
+            <div class="grid-2cols__col" data-trigger="smart-reply">
               <div class="feature-screen" data-target="feature-screen">
                 <img src="assets/pixel_ss_6.png" />
                 <div class="smart-reply" data-target="reply-bubbles">
@@ -300,9 +304,9 @@
           </div>
         </div>
 
-        <div class="smart-features-content feature-panel" data-trigger="app-suggestion">
+        <div class="smart-features-content feature-panel">
           <div class="grid-2cols section-container">
-            <div class="grid-2cols__col">
+            <div class="grid-2cols__col" data-trigger="app-suggestion">
               <div class="feature-screen" data-target="feature-screen">
                 <img src="assets/pixel_ss_7.png" />
                 <div class="app-suggestion" data-target="apps">
@@ -324,9 +328,9 @@
           </div>
         </div>
 
-        <div class="smart-features-content feature-panel" data-trigger="smart-folder">
+        <div class="smart-features-content feature-panel">
           <div class="grid-2cols section-container">
-            <div class="grid-2cols__col">
+            <div class="grid-2cols__col" data-trigger="smart-folder">
               <div class="feature-screen" data-target="feature-screen">
                 <img src="assets/pixel_ss_8.png" />
                 <div class="smart-folders" data-target="smart-folder">
@@ -366,7 +370,7 @@
       <!-- Device controls -->
       <section class="section section--overflow">
         <div class="section-container">
-          <div class="grid-2cols device-controls-content" data-trigger="device-controls">
+          <div class="grid-2cols device-controls-content">
             <div class="grid-2cols__col">
               <h2 class="title--large">Device Controls</h2>
               <p class="body--large"><strong>Control your connected devices from one place.</strong></p>
@@ -375,7 +379,7 @@
                 press the power button to see and manage your connected devices. Making life at home that much easier.
               </p>
             </div>
-            <div class="grid-2cols__col grid-2cols__col--margin-top">
+            <div class="grid-2cols__col grid-2cols__col--margin-top" data-trigger="device-controls">
               <img class="feature-screen" src="assets/pixel_ss_2.png" data-target="smart-home-controls" />
               <div class="house-lights" data-target="smart-home">
                 <img class="house-lights--on" src="assets/smart_home_on.jpg" data-target="house-lights" />
@@ -388,9 +392,9 @@
       <!-- Media controls -->
       <section class="section section--offwhite section--overflow">
         <div class="section-container">
-          <div class="grid-2cols media-controls-content" data-trigger="media-controls">
-            <div class="grid-2cols__col">
-              <img class="feature-screen" src="assets/pixel_ss_9.png" />
+          <div class="grid-2cols media-controls-content">
+            <div class="grid-2cols__col" data-trigger="media-controls">
+              <img class="feature-screen" src="assets/pixel_ss_9.png" data-target="media-device" />
               <div class="speaker-audio">
                 <svg
                   class="speaker-audio__music"
@@ -430,7 +434,7 @@
       <!-- Android auto -->
       <section class="section section--night section--overflow">
         <div class="section-container">
-          <div class="grid-2cols android-auto-content" data-trigger="android-auto">
+          <div class="grid-2cols android-auto-content">
             <div class="grid-2cols__col">
               <h2 class="title--large">Connect Android to your car. Skip the cable.</h2>
               <p class="body--large">
@@ -438,7 +442,7 @@
                 you can bring the best of your phone on every drive.
               </p>
             </div>
-            <div class="grid-2cols__col grid-2cols__col--margin-top">
+            <div class="grid-2cols__col grid-2cols__col--margin-top" data-trigger="android-auto">
               <img class="feature-screen" src="assets/pixel_auto.png" data-target="android-auto-phone" />
               <div class="android-auto-dash" data-target="android-auto-dash">
                 <img src="assets/android_auto.jpg" />
@@ -449,7 +453,7 @@
       </section>
       <!-- Device permissions -->
       <section class="section section--overflow">
-        <div class="permissions-content" data-trigger="permissions">
+        <div class="permissions-content">
           <div class="section-container">
             <h2 class="title--large">You control what apps can access.</h2>
             <p class="body--large">
@@ -457,7 +461,7 @@
               sensitive data. Or not. So you stay better protected.
             </p>
           </div>
-          <div id="permissions-slider" class="splide">
+          <div id="permissions-slider" class="splide" data-trigger="permissions">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -538,7 +542,7 @@
         </div>
       </section>
       <!-- Security updates -->
-      <section class="section section--night section--overflow" data-trigger="security">
+      <section class="section section--night section--overflow">
         <div class="section-container">
           <div class="security-content">
             <div class="section-content">
@@ -549,7 +553,7 @@
                 recent defense.
               </p>
             </div>
-            <div class="feature-screen" data-target="security-screen">
+            <div class="feature-screen" data-target="security-screen" data-trigger="security">
               <img class="" src="assets/pixel_ss_11.png" />
               <div class="wifi">
                 <svg

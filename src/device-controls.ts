@@ -10,29 +10,31 @@ const deviceControls = {
       scrollTrigger: {
         markers: false,
         trigger: '[data-trigger="device-controls"]',
-        scrub: 0.65,
-        start: '-=200 center',
+        scrub: 0.45,
+        start: '-=120 center',
         end: 'center center',
       },
     });
 
     deviceControls
-      .from('[data-target="smart-home"]', {
-        yPercent: 30,
+      .from('[data-target="smart-home-controls"]', {
+        yPercent: 15,
+        scale: 0.95,
       })
       .from(
-        '[data-target="smart-home-controls"]',
+        '[data-target="smart-home"]',
         {
-          yPercent: 50,
+          yPercent: 20,
+          scale: 0.9,
         },
-        0.45
+        0.25
       )
       .from(
         '[data-target="house-lights"]',
         {
           opacity: 0,
         },
-        0.75
+        0.45
       );
   },
 };

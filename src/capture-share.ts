@@ -5,13 +5,13 @@ const captureShare = {
     const captureShare = gsap.timeline({
       defaults: {
         ease: 'none',
-        duration: 8,
+        duration: 4,
       },
       scrollTrigger: {
         markers: false,
         trigger: '[data-trigger="capture-share"]',
-        scrub: 0.65,
-        start: '-=100 center',
+        scrub: 0.45,
+        start: '-=120 center',
         end: 'center center',
       },
     });
@@ -19,6 +19,7 @@ const captureShare = {
     captureShare
       .from('[data-target="share-screen"]', {
         yPercent: 40,
+        scale: 0.95,
       })
       .from('[data-target="share-modal"]', {
         y: 90,

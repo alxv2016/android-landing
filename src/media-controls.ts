@@ -22,6 +22,25 @@ const mediaControls = {
     mediaControls.from('[data-target="beat"]', {
       scale: 0.25,
     });
+
+    const mediaDevice = gsap.timeline({
+      defaults: {
+        ease: 'none',
+        duration: 4,
+      },
+      scrollTrigger: {
+        markers: false,
+        trigger: '[data-trigger="media-controls"]',
+        scrub: 0.45,
+        start: '-=120 center',
+        end: 'center center',
+      },
+    });
+
+    mediaDevice.from('[data-target="media-device"]', {
+      yPercent: 15,
+      scale: 0.95,
+    });
   },
 };
 

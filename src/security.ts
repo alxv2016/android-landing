@@ -5,13 +5,13 @@ const security = {
     const security = gsap.timeline({
       defaults: {
         ease: 'none',
-        duration: 8,
+        duration: 4,
       },
       scrollTrigger: {
         markers: false,
         trigger: '[data-trigger="security"]',
-        scrub: 0.65,
-        start: '-=100 center',
+        scrub: 0.45,
+        start: '-=120 center',
         end: 'center center',
       },
     });
