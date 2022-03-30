@@ -1,43 +1,36 @@
-const path = require('path');
-
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const paths = require('./paths');
+
 // Common webpack config
 module.exports = {
-  // 1 base directory
-  // https://webpack.js.org/configuration/entry-context/#context
-  context: path.resolve(__dirname, './src'),
-  // 2 the entry file(s) Where webpack looks to start building the bundle
-  // https://webpack.js.org/configuration/entry-context/#entry
+  context: paths.src,
   entry: {
-    main: {
-      import: path.resolve(__dirname, './src/index.ts'),
+    app: {
+      import: paths.src + '/index.ts',
       dependOn: 'vendors',
     },
     vendors: ['@splidejs/splide', 'gsap'],
   },
-  // 3 the output file(s) Where webpack outputs the assets and bundles
-  // https://webpack.js.org/configuration/output/#outputpath
-  // https://webpack.js.org/configuration/output/#outputpublicpath
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: './',
+    clean: true,
+    path: paths.build,
     filename: 'js/[name].[contenthash].bundle.js',
     assetModuleFilename: 'assets/[hash][ext][query]',
+    publicPath: '/',
   },
-  // 4 Resolve typescript
-  // https://webpack.js.org/configuration/resolve/#resolveextensions
   resolve: {
+    modules: [paths.src, 'node_modules'],
     extensions: ['.ts', '.js'],
+    alias: {
+      '@': paths.src,
+      public: paths.public,
+    },
   },
-  // 5 Plugins Customize the webpack build process
-  // https://webpack.js.org/configuration/plugins/#plugins
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       favicon: './favicon.ico',
-      template: path.resolve(__dirname, './src/template.html'),
+      template: paths.src + '/template.html',
       filename: 'index.html',
     }),
     new MiniCssExtractPlugin({
@@ -45,8 +38,6 @@ module.exports = {
       chunkFilename: 'css/[id].[contenthash].css',
     }),
   ],
-  // 6 Modules (Loaders)
-  // https://webpack.js.org/configuration/module/#ruleloaders
   module: {
     rules: [
       // Typescript rules
@@ -62,13 +53,13 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '../',
+              emit: true,
             },
           },
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1,
+              importLoaders: 2,
             },
           },
           'postcss-loader',
